@@ -2,6 +2,7 @@
 
 # dependencies
 /src/study/node_modules
+/src/study/package-lock.json
 /.pnp
 .pnp.js
 
