@@ -1,0 +1,27 @@
+//   const users = [
+  //     {
+  //       id: 1,
+  //       name: "123",
+  //       img: [{ name: 1 }],
+  //     },
+  //     {
+  //       id: 2,
+  //       name: "123",
+  //     },
+  //   ];
+
+  //   users.map((item, index) => (
+  //     <div key={index}>
+  //         <span>{item.id}</span>
+  //         <span>{item.name}</span>
+  //         <ul>
+  //             <li>
+  //                 {
+  //                     item.img.map((imgItem, imageIndex) => (
+  //                         <img key={imageIndex}>{imgItem}</img>
+  //                     ))
+  //                 }
+  //             </li>
+  //         </ul>
+  //     </div>
+  //   ));

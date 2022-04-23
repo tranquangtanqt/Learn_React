@@ -1,12 +1,11 @@
 import React from "react";
-import "./index.scss";
 
 import MasterLayout from "../../themes/masterLayout";
 
-const Home = () => {
+const About = () => {
   return <MasterLayout>
-       <h1>Home</h1>
+      <h1>About</h1>
   </MasterLayout>;
 };
 
-export default Home;
+export default About;

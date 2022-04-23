@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Home from "./homePage/Index";
+import About from "./about";
+import Home from "./homePage";
 import './index.scss';
 
 const RoutesRoot = () => {
@@ -8,6 +9,7 @@ const RoutesRoot = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
       </Routes>
     </BrowserRouter>
   );
