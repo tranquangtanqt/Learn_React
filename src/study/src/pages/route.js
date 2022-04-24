@@ -7,7 +7,7 @@ import './index.scss';
 
 const RoutesRoot = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/Learn_React">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
