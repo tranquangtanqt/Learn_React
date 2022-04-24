@@ -37,8 +37,8 @@ const MasterLayout = ({ children }) => {
     {
       key: "3",
       icon: <UploadOutlined />,
-      label: "Categories",
-      link: "/",
+      label: "HighLightCode",
+      link: "/highlightcode",
     },
   ];
 
