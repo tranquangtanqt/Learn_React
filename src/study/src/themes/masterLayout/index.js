@@ -9,7 +9,6 @@ import {
   // VideoCameraOutlined,
   // UploadOutlined,
 } from "@ant-design/icons";
-// import { Link } from "react-router-dom";
 import SubMenu from "antd/lib/menu/SubMenu";
 
 const { Header, Sider, Content } = Layout;
@@ -21,39 +20,11 @@ const MasterLayout = ({ children }) => {
     setCollapsed(!collapsed);
   };
 
-  // const menus = [
-  //   {
-  //     key: "1",
-  //     icon: <UserOutlined />,
-  //     label: "Dashboard",
-  //     link: "/",
-  //   },
-  //   {
-  //     key: "2",
-  //     icon: <VideoCameraOutlined />,
-  //     label: "About",
-  //     link: "/about",
-  //   },
-  //   {
-  //     key: "3",
-  //     icon: <UploadOutlined />,
-  //     label: "HighLightCode",
-  //     link: "/highlightcode",
-  //   }
-  // ];
-
   return (
     <Layout>
       <Sider trigger={null} collapsible collapsed={collapsed}>
         <div className="logo" />
         <Menu theme="dark" defaultSelectedKeys={["1"]} mode="inline">
-          {/* {menus.map((item) => (
-            <Menu.Item key={item.key}>
-              {item.icon}
-              <span>{item.label}</span>
-              <Link to={item.link} />
-            </Menu.Item>
-          ))} */}
           {
             <SubMenu key="sub4" title={
                 <span>
