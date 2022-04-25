@@ -10,6 +10,8 @@ import {
   // UploadOutlined,
 } from "@ant-design/icons";
 import SubMenu from "antd/lib/menu/SubMenu";
+import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 const { Header, Sider, Content } = Layout;
 
@@ -26,27 +28,26 @@ const MasterLayout = ({ children }) => {
         <div className="logo" />
         <Menu theme="dark" defaultSelectedKeys={["1"]} mode="inline">
           {
-            <SubMenu key="sub4" title={
+            <SubMenu key="sub_Utilities" title={
                 <span>
                   <UserOutlined />
                   <span>Utilities</span>
                 </span>
               }
             >
-              <Menu.Item>Chill menu 1</Menu.Item>
-              <SubMenu title={
-                  <span>
-                    <span>Chill menu 2</span>
-                  </span>
-                }
-              >
-                <Menu.Item>Chill menu 2 - 2</Menu.Item>
-              </SubMenu>
-              <Menu.Item>Chill menu 3</Menu.Item>
-              <Menu.Item>Chill menu 4</Menu.Item>
+              <Menu.Item key={"sub1_sub_Utilities_TinyMCE"}> 
+              TinyMCE 
+              <Link to={"/utilities/tinyMCE"} />
+              </Menu.Item>
+              <Menu.Item key={"sub1_sub_Utilities_TextLoop"}> 
+              TextLoop 
+              <Link to={"/utilities/textLoop"} />
+              </Menu.Item>
+
+              
             </SubMenu>
           }
-          {
+          {/* {
             <SubMenu key="demo" title={
                 <span>
                   <UserOutlined />
@@ -66,7 +67,7 @@ const MasterLayout = ({ children }) => {
               <Menu.Item>Chill menu 3</Menu.Item>
               <Menu.Item>Chill menu 4</Menu.Item>
             </SubMenu>
-          }
+          } */}
         </Menu>
       </Sider>
       <Layout className="site-layout">

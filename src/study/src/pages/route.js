@@ -4,6 +4,8 @@ import About from "./about";
 import HightLightCode from "./highlight";
 import Home from "./homePage";
 import './index.scss';
+import TextLoop from "./utilities/textLoop";
+import TinyMCE from "./utilities/tinyMCE";
 
 const RoutesRoot = () => {
   return (
@@ -12,6 +14,8 @@ const RoutesRoot = () => {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/highlightcode" element={<HightLightCode />} />
+        <Route path="/utilities/tinyMCE" element={<TinyMCE />} />
+        <Route path="/utilities/textLoop" element={<TextLoop />} />
       </Routes>
     </BrowserRouter>
   );
