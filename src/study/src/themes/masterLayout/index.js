@@ -6,12 +6,11 @@ import {
   MenuUnfoldOutlined,
   MenuFoldOutlined,
   UserOutlined,
-  // VideoCameraOutlined,
+  DatabaseOutlined,
   // UploadOutlined,
 } from "@ant-design/icons";
 import SubMenu from "antd/lib/menu/SubMenu";
 import { Link } from "react-router-dom";
-// import { Link } from "react-router-dom";
 
 const { Header, Sider, Content } = Layout;
 
@@ -26,27 +25,22 @@ const MasterLayout = ({ children }) => {
     <Layout>
       <Sider trigger={null} collapsible collapsed={collapsed}>
         <div className="logo" />
-        <Menu
-          key={"menu_Utilities"}
-          theme="dark"
-          defaultSelectedKeys={["1"]}
-          mode="inline"
-        >
+        <Menu key={"menu_"} theme="dark" defaultSelectedKeys={["1"]} mode="inline">
           {
-            <SubMenu
-              key="sub_Utilities"
-              title={
-                <span>
-                  <UserOutlined />
-                  <span>Utilities</span>
-                </span>
-              }
-            >
-              <Menu.Item key={"sub1_sub_Utilities_TinyMCE"}>
+            <SubMenu key="sub_database" title={ <span> <DatabaseOutlined /> <span>Database</span> </span> } >
+              <Menu.Item key={"sub_database_oracle"}>
+                Oracle
+                <Link to={"/database/oracle"} />
+              </Menu.Item>
+            </SubMenu>
+          }
+          {
+            <SubMenu key="sub_utilities" title={ <span> <UserOutlined /> <span>Utilities</span> </span> } >
+              <Menu.Item key={"sub_utilities_tinyMCE"}>
                 TinyMCE
                 <Link to={"/utilities/tinyMCE"} />
               </Menu.Item>
-              <Menu.Item key={"sub1_sub_Utilities_TextLoop"}>
+              <Menu.Item key={"sub_utilities_textLoop"}>
                 TextLoop
                 <Link to={"/utilities/textLoop"} />
               </Menu.Item>
