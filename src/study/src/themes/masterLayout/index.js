@@ -44,6 +44,10 @@ const MasterLayout = ({ children }) => {
                 TextLoop
                 <Link to={"/utilities/textLoop"} />
               </Menu.Item>
+              <Menu.Item key={"sub_utilities_listFileSelected"}>
+                ListFileSelected
+                <Link to={"/utilities/listFileSelected"} />
+              </Menu.Item>
             </SubMenu>
           }
         </Menu>
