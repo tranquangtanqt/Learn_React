@@ -7,7 +7,6 @@ const RepeatTextMulti = () => {
   const inputStartArr = [
     {
       type: "text",
-      id: 1,
       value: "",
     },
   ];
@@ -19,7 +18,6 @@ const RepeatTextMulti = () => {
       return [
         ...s,
         {
-          type: "text",
           value: "",
         },
       ];
@@ -35,6 +33,7 @@ const RepeatTextMulti = () => {
       newArr[index].value = e.target.value;
       return newArr;
     });
+    console.log(arr)
   };
 
   return (
