@@ -41,8 +41,8 @@ const MasterLayout = ({ children }) => {
                 <Link to={"/utilities/tinyMCE"} />
               </Menu.Item>
               <Menu.Item key={"sub_utilities_textLoop"}>
-                TextLoop
-                <Link to={"/utilities/textLoop"} />
+                RepeatText
+                <Link to={"/utilities/repeatText"} />
               </Menu.Item>
               <Menu.Item key={"sub_utilities_listFileSelected"}>
                 ListFileSelected
