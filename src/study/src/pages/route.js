@@ -7,6 +7,8 @@ import Home from "./homePage";
 import './index.scss';
 import ListFileSelected from "./utilities/listFileSelected";
 import RepeatText from "./utilities/repeatText";
+import ReplaceText from "./utilities/replaceText";
+
 import TinyMCE from "./utilities/tinyMCE";
 
 const RoutesRoot = () => {
@@ -19,6 +21,7 @@ const RoutesRoot = () => {
         <Route path="/utilities/tinyMCE" element={<TinyMCE />} />
         <Route path="/utilities/repeatText" element={<RepeatText />} />
         <Route path="/utilities/listFileSelected" element={<ListFileSelected />} />
+        <Route path="/utilities/replaceText" element={<ReplaceText />} />
         <Route path="/database/oracle" element={<OracleTrick />} />
       </Routes>
     </BrowserRouter>

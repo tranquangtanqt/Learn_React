@@ -44,6 +44,10 @@ const MasterLayout = ({ children }) => {
                 RepeatText
                 <Link to={"/utilities/repeatText"} />
               </Menu.Item>
+              <Menu.Item key={"sub_utilities_replaceText"}>
+                ReplaceText
+                <Link to={"/utilities/replaceText"} />
+              </Menu.Item>
               <Menu.Item key={"sub_utilities_listFileSelected"}>
                 ListFileSelected
                 <Link to={"/utilities/listFileSelected"} />

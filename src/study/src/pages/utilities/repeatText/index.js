@@ -4,7 +4,7 @@ import MasterLayout from "../../../themes/masterLayout";
 
 const RepeatText = () => {
   
-  const [input, setInput] = useState("###replace###");
+  const [input, setInput] = useState("###repeat###");
   const [output, setOutput] = useState("");
   const [start, setStart] = useState(null);
   const [end, setEnd] = useState(null);
@@ -15,7 +15,7 @@ const RepeatText = () => {
       let startNumber = start.charCodeAt(0);
       let endNumber = end.charCodeAt(0);
       for (let i = startNumber; i <= endNumber; i++) {
-        let str = replaceAll(input, "###replace###", String.fromCharCode(i));
+        let str = replaceAll(input, "###repeat###", String.fromCharCode(i));
 
         outputStr += str;
         outputStr += "\r\n";
@@ -23,7 +23,7 @@ const RepeatText = () => {
     } else {
       // number
       for (let i = parseInt(start); i <= parseInt(end); i++) {
-        let str = replaceAll(input, "###replace###", i);
+        let str = replaceAll(input, "###repeat###", i);
         outputStr += str;
         outputStr += "\r\n";
       }

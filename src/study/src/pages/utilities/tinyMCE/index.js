@@ -15,7 +15,8 @@ const TinyMCE = () => {
         }
     };
 
-  return <MasterLayout>
+  return (
+    <MasterLayout>
        <Editor
          onInit={(evt, editor) => editorRef.current = editor}
          initialValue=""
@@ -36,7 +37,8 @@ const TinyMCE = () => {
             <Textarea value={ textareaVal }></Textarea>
         </Col>
         </Row>
-  </MasterLayout>;
+  </MasterLayout>
+  );
 };
 
 export default TinyMCE;
