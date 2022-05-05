@@ -5,9 +5,10 @@ import { Layout, Menu } from "antd";
 import {
   MenuUnfoldOutlined,
   MenuFoldOutlined,
-  UserOutlined,
+  SettingOutlined,
   DatabaseOutlined,
-  // UploadOutlined,
+  QuestionCircleOutlined
+
 } from "@ant-design/icons";
 import SubMenu from "antd/lib/menu/SubMenu";
 import { Link } from "react-router-dom";
@@ -35,7 +36,7 @@ const MasterLayout = ({ children }) => {
             </SubMenu>
           }
           {
-            <SubMenu key="sub_utilities" title={ <span> <UserOutlined /> <span>Utilities</span> </span> } >
+            <SubMenu key="sub_utilities" title={ <span> <SettingOutlined /> <span>Utilities</span> </span> } >
               <Menu.Item key={"sub_utilities_tinyMCE"}>
                 TinyMCE
                 <Link to={"/utilities/tinyMCE"} />
@@ -51,6 +52,14 @@ const MasterLayout = ({ children }) => {
               <Menu.Item key={"sub_utilities_listFileSelected"}>
                 ListFileSelected
                 <Link to={"/utilities/listFileSelected"} />
+              </Menu.Item>
+            </SubMenu>
+          }
+          {
+            <SubMenu key="sub_demo" title={ <span> <QuestionCircleOutlined /> <span>Demo</span> </span> } >
+              <Menu.Item key={"sub_demo_connect_API"}>
+                Connect API
+                <Link to={"/demo/connectAPI"} />
               </Menu.Item>
             </SubMenu>
           }
