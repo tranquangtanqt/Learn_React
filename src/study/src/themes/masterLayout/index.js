@@ -7,7 +7,8 @@ import {
   MenuFoldOutlined,
   SettingOutlined,
   DatabaseOutlined,
-  QuestionCircleOutlined
+  QuestionCircleOutlined,
+  HighlightOutlined
 
 } from "@ant-design/icons";
 import SubMenu from "antd/lib/menu/SubMenu";
@@ -56,10 +57,26 @@ const MasterLayout = ({ children }) => {
             </SubMenu>
           }
           {
+            <SubMenu key="sub_tutorial" title={ <span> <HighlightOutlined /> <span>Tutorials</span> </span> } >
+              <Menu.Item key={"sub_tutorial_net_angular"}>
+                Net - Angular
+                <Link to={"/tutorial/net-angular"} />
+              </Menu.Item>
+              <Menu.Item key={"sub_tutorial_net_angular_lesson1"}>
+                Lesson 1
+                <Link to={"/tutorial/net-angular/lesson1"} />
+              </Menu.Item>
+            </SubMenu>
+          }
+          {
             <SubMenu key="sub_demo" title={ <span> <QuestionCircleOutlined /> <span>Demo</span> </span> } >
               <Menu.Item key={"sub_demo_connect_API"}>
                 Connect API
                 <Link to={"/demo/connectAPI"} />
+              </Menu.Item>
+              <Menu.Item key={"sub_demo_highlightcode"}>
+                HighLight Code
+                <Link to={"/demo/highlightcode"} />
               </Menu.Item>
             </SubMenu>
           }

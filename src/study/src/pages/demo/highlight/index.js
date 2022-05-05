@@ -1,7 +1,7 @@
 import React from "react";
-import Code from "../../components/modules/code";
+import Code from "../../../components/modules/code";
 
-import MasterLayout from "../../themes/masterLayout";
+import MasterLayout from "../../../themes/masterLayout";
 
 const code = `const App = props => {
     return (
