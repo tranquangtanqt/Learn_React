@@ -12,24 +12,24 @@ import TinyMCE from "./utilities/tinyMCE";
 import ConnectAPI from "./demo/connectAPI";
 import NetAngular from "./netAngular";
 import NALesson1 from "./netAngular/naLesson1";
+import RandomInsertSQL from "./utilities/randomInsertSQL";
 
 const RoutesRoot = () => {
   return (
     <BrowserRouter basename="/Learn_React">
       <Routes>
         <Route path="/" element={<Home />} />
-       
-       
 
         <Route path="/demo/connectAPI" element={<ConnectAPI />} />
         <Route path="/demo/highlightcode" element={<HightLightCode />} />
         
         <Route path="/database/oracle" element={<OracleTrick />} />
 
-        <Route path="/utilities/tinyMCE" element={<TinyMCE />} />
-        <Route path="/utilities/repeatText" element={<RepeatText />} />
         <Route path="/utilities/listFileSelected" element={<ListFileSelected />} />
+        <Route path="/utilities/randomInsertSQL" element={<RandomInsertSQL />} />
+        <Route path="/utilities/repeatText" element={<RepeatText />} />
         <Route path="/utilities/replaceText" element={<ReplaceText />} />
+        <Route path="/utilities/tinyMCE" element={<TinyMCE />} />
 
         <Route path="/tutorial/net-angular" element={<NetAngular />} />
         <Route path="/tutorial/net-angular/lesson1" element={<NALesson1 />} />

@@ -1,5 +1,6 @@
 import { Button, Col, Divider, Input, Row } from "antd";
 import { useState } from "react";
+import Utils from "../../../themes/utils";
 
 const RepeatTextOne = () => {
   const [input, setInput] = useState("###replace###");
@@ -13,7 +14,7 @@ const RepeatTextOne = () => {
       let startNumber = start.charCodeAt(0);
       let endNumber = end.charCodeAt(0);
       for (let i = startNumber; i <= endNumber; i++) {
-        let str = replaceAll(input, "###replace###", String.fromCharCode(i));
+        let str = Utils.replaceAll(input, "###replace###", String.fromCharCode(i));
 
         outputStr += str;
         outputStr += "\r\n";
@@ -21,17 +22,13 @@ const RepeatTextOne = () => {
     } else {
       // number
       for (let i = parseInt(start); i <= parseInt(end); i++) {
-        let str = replaceAll(input, "###replace###", i);
+        let str = Utils.replaceAll(input, "###replace###", i);
         outputStr += str;
         outputStr += "\r\n";
       }
     }
 
     setOutput(outputStr);
-  };
-
-  const replaceAll = (string, search, replace) => {
-    return string.split(search).join(replace);
   };
 
   return (

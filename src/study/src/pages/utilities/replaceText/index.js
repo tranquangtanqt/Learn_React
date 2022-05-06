@@ -1,6 +1,7 @@
 import { Button, Col, Divider, Row } from "antd";
 import React, { useState } from "react";
 import MasterLayout from "../../../themes/masterLayout";
+import Utils from "../../../themes/utils";
 
 const ReplaceText = () => {
   
@@ -20,13 +21,9 @@ const ReplaceText = () => {
         if(arrFindText[i] === ""){
             continue;
         }
-        outputStr = replaceAll(outputStr, arrFindText[i], arrReplaceWith[i]);
+        outputStr = Utils.replaceAll(outputStr, arrFindText[i], arrReplaceWith[i]);
       }
     setOutput(outputStr);
-  };
-
-  const replaceAll = (string, search, replace) => {
-    return string.split(search).join(replace);
   };
 
   return (

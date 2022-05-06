@@ -38,21 +38,25 @@ const MasterLayout = ({ children }) => {
           }
           {
             <SubMenu key="sub_utilities" title={ <span> <SettingOutlined /> <span>Utilities</span> </span> } >
-              <Menu.Item key={"sub_utilities_tinyMCE"}>
-                TinyMCE
-                <Link to={"/utilities/tinyMCE"} />
+              <Menu.Item key={"sub_utilities_listFileSelected"}>
+                List File Selected
+                <Link to={"/utilities/listFileSelected"} />
+              </Menu.Item>
+              <Menu.Item key={"sub_utilities_randomInsertSQL"}>
+                Random Insert SQL
+                <Link to={"/utilities/randomInsertSQL"} />
               </Menu.Item>
               <Menu.Item key={"sub_utilities_textLoop"}>
-                RepeatText
+                Repeat Text
                 <Link to={"/utilities/repeatText"} />
               </Menu.Item>
               <Menu.Item key={"sub_utilities_replaceText"}>
-                ReplaceText
+                Replace Text
                 <Link to={"/utilities/replaceText"} />
               </Menu.Item>
-              <Menu.Item key={"sub_utilities_listFileSelected"}>
-                ListFileSelected
-                <Link to={"/utilities/listFileSelected"} />
+              <Menu.Item key={"sub_utilities_tinyMCE"}>
+                TinyMCE
+                <Link to={"/utilities/tinyMCE"} />
               </Menu.Item>
             </SubMenu>
           }
@@ -61,10 +65,6 @@ const MasterLayout = ({ children }) => {
               <Menu.Item key={"sub_tutorial_net_angular"}>
                 Net - Angular
                 <Link to={"/tutorial/net-angular"} />
-              </Menu.Item>
-              <Menu.Item key={"sub_tutorial_net_angular_lesson1"}>
-                Lesson 1
-                <Link to={"/tutorial/net-angular/lesson1"} />
               </Menu.Item>
             </SubMenu>
           }
