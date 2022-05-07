@@ -6,10 +6,14 @@ const NetAngular = () => {
   return (
     <MasterLayout>
       <Row justify="start">
-        <Col span={6}>
+        <Col span={8}>
           <Card title="Creating the .Net API Project">
             <Link to={"/tutorial/net-angular/lesson1"}>
-              {"Creating the .Net API Project using the dotnet CLI"}
+              {"1. Building a walking skeleton API"}
+            </Link>
+            <br />
+            <Link to={"/tutorial/net-angular/lesson2"}>
+              {"2. Introduction to Entity Framework"}
             </Link>
           </Card>
         </Col>
