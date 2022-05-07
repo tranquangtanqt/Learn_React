@@ -1,7 +1,7 @@
 import { Button, Col, Divider, Input, Row } from "antd";
 import { useState } from "react";
 import MasterLayout from "../../../themes/masterLayout";
-import Utils from "../../../themes/utils";
+import StringUtils from "../../../utils/StringUtils";
 
 const RandomInsertSQL = () => {
   const [tableName, setTableName] = useState("");
@@ -19,7 +19,7 @@ const RandomInsertSQL = () => {
 
     for (let i = 0; i < columnArr.length; i++) {
       let arr = columnArr[i].trim().split(" ");
-      let columnName = Utils.replaceAll(arr[0], `"`, "");
+      let columnName = StringUtils.replaceAll(arr[0], `"`, "");
       outputStr += columnName + ",";
     }
 
@@ -31,7 +31,7 @@ const RandomInsertSQL = () => {
       for (let i = start; i <= end; i++) {
         for (let j = 0; j < columnArr.length; j++) {
           let arr = columnArr[j].trim().split(" ");
-          let columnName = Utils.replaceAll(arr[0], `"`, "");
+          let columnName = StringUtils.replaceAll(arr[0], `"`, "");
 
           if (columnArr[j]) {
             let start = columnArr[j].indexOf("(");
@@ -43,7 +43,7 @@ const RandomInsertSQL = () => {
             let value = columnName.substring(0, charEnd);
 
             let zero = charEnd - value.length;
-            value = value + Utils.padZero(i, zero);
+            value = value + StringUtils.padZero(i, zero);
             outputStr += "'" + value + "',";
           }
         }
