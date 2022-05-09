@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Learn_React/static/css/main.eda85dca.css",
-    "main.js": "/Learn_React/static/js/main.bd2dda1d.js",
+    "main.css": "/Learn_React/static/css/main.58c34d62.css",
+    "main.js": "/Learn_React/static/js/main.bad413e6.js",
     "static/media/Trich_8.jpg": "/Learn_React/static/media/Trich_8.6634caa9c2b7b4e26c45.jpg",
     "static/media/Trich_9.jpg": "/Learn_React/static/media/Trich_9.1e0e7f7d3b32f01586ad.jpg",
     "static/media/Trich_7.jpg": "/Learn_React/static/media/Trich_7.52d254d58d5cb6c9302f.jpg",
@@ -13,13 +13,14 @@
     "static/media/Trich_4.jpg": "/Learn_React/static/media/Trich_4.6ef20d12ca756cda6fce.jpg",
     "static/media/Trich_2.jpg": "/Learn_React/static/media/Trich_2.69ca8851ddd29c43579f.jpg",
     "static/media/Trich_3.jpg": "/Learn_React/static/media/Trich_3.69ca8851ddd29c43579f.jpg",
+    "static/media/Net_Angular_4.jpg": "/Learn_React/static/media/Net_Angular_4.6b4d9faed334c9312875.jpg",
     "static/media/Net_Angular_1.jpg": "/Learn_React/static/media/Net_Angular_1.42c838b3cb2daea6df26.jpg",
     "index.html": "/Learn_React/index.html",
-    "main.eda85dca.css.map": "/Learn_React/static/css/main.eda85dca.css.map",
-    "main.bd2dda1d.js.map": "/Learn_React/static/js/main.bd2dda1d.js.map"
+    "main.58c34d62.css.map": "/Learn_React/static/css/main.58c34d62.css.map",
+    "main.bad413e6.js.map": "/Learn_React/static/js/main.bad413e6.js.map"
   },
   "entrypoints": [
-    "static/css/main.eda85dca.css",
-    "static/js/main.bd2dda1d.js"
+    "static/css/main.58c34d62.css",
+    "static/js/main.bad413e6.js"
   ]
 }
