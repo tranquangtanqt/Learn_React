@@ -26,6 +26,7 @@ const NALesson1 = () => {
         <Col span={23} offset={1}>
           <p>+ System.IdentityModel.Tokens.Jwt</p>
           <p>+ Microsoft.AspNetCore.Authentication.JwtBearer</p>
+          <p>+ Microsoft.Entityframeworkcore.Sqlite</p>
         </Col>
 
         <Col span={24}>

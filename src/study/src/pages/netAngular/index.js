@@ -15,6 +15,10 @@ const NetAngular = () => {
             <Link to={"/tutorial/net-angular/lesson2"}>
               {"2. Introduction to Entity Framework"}
             </Link>
+            <br />
+            <Link to={"/tutorial/net-angular/lesson3"}>
+              {"3. Adding Entity Framework"}
+            </Link>
           </Card>
         </Col>
       </Row>
