@@ -41,6 +41,7 @@ const RandomProcedureInsertSQL = () => {
       let arr = columnArr[i].trim().split(" ");
       let columnName = StringUtils.replaceAll(arr[0], `"`, "");
       outputStr += columnName + ", ";
+      console.log(i + "----- " + columnName);
     }
 
     // remove "," last
@@ -66,7 +67,9 @@ const RandomProcedureInsertSQL = () => {
             return val.toLowerCase();
           });
           value = arr[lowerArr.indexOf("default") + 1];
-          outputStr += "\t\t\t" + value + ", \n";
+          value = "\t\t\t" + value + ", \n";
+          outputStr += value;
+          console.log(i + "----- " + value);
         } else if (columnArr[i].toLowerCase().includes("char")) {
           let start = columnArr[i].indexOf("(");
           let end = columnArr[i].indexOf(")");
@@ -92,17 +95,22 @@ const RandomProcedureInsertSQL = () => {
               "') + 1)), \n";
             outputStr += value;
           } else {
-            outputStr += "\t\t\t'" + value + "', \n";
+            value = "\t\t\t'" + value + "', \n";
+            outputStr += value;
           }
+          console.log(i + "----- " + value);
         } else if (columnArr[i].toLowerCase().includes("timestamp")) {
           let start = columnArr[i].indexOf("(");
           let end = columnArr[i].indexOf(")");
           let charLimitStr = columnArr[i].substring(start + 1, end);
           let charLimit = charLimitStr.match(/\d+/g)[0];
-          value = new Date().getTime();
-          outputStr += "\t\t\tcurrent_timestamp (" + charLimit + "), \n";
+          value = "\t\t\tcurrent_timestamp (" + charLimit + "), \n";
+          outputStr += value;
+          console.log(i + "----- " + value);
         } else if (columnArr[i].toLowerCase().includes("date")) {
-          outputStr += "\t\t\tcurrent_date, \n";
+          value = "\t\t\tcurrent_date, \n";
+          outputStr += value;
+          console.log(i + "----- " + value);
         } else if (columnArr[i].toLowerCase().includes("number")) {
           let start = columnArr[i].indexOf("(");
           let end = columnArr[i].indexOf(")");
@@ -117,13 +125,14 @@ const RandomProcedureInsertSQL = () => {
 
             let natural = Number(maxNaturalStr);
             let decimal = charLimitArr[1];
-
-            outputStr +=
+            let value =
               "\t\t\t ROUND(dbms_random.value(0, " +
               natural +
               "), " +
               decimal +
               "), \n";
+            outputStr += value;
+            console.log(i + "----- " + value);
           }
         }
       }
