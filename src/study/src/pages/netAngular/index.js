@@ -29,6 +29,30 @@ const NetAngular = () => {
             </Link>
           </Card>
         </Col>
+
+        <Col span={8}>
+          <Card title="Creating the Angular application">
+            <Link to={"/tutorial/net-angular/lesson6"}>
+              {"6. Creating the Angular application"}
+            </Link>
+             <br />
+            <Link to={"/tutorial/net-angular/lesson7"}>
+              {"7. Making HTTP requests in Angular"}
+            </Link>
+            <br />
+            <Link to={"/tutorial/net-angular/lesson8"}>
+              {"8. Adding CORS support in the API"}
+            </Link>
+           {/* <br />
+            <Link to={"/tutorial/net-angular/lesson4"}>
+              {"4. Setting donet-ef"}
+            </Link>
+            <br />
+            <Link to={"/tutorial/net-angular/lesson5"}>
+              {"5. Adding a new API Controller"}
+            </Link> */}
+          </Card>
+        </Col>
       </Row>
     </MasterLayout>
   );
