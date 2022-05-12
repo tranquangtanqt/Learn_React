@@ -16,6 +16,7 @@ import RandomInsertSQL from "./utilities/randomInsertSQL";
 import NALesson2 from "./netAngular/naLesson2";
 import NALesson3 from "./netAngular/naLesson3";
 import NALesson4 from "./netAngular/naLesson4";
+import NALesson5 from "./netAngular/naLesson5";
 
 const RoutesRoot = () => {
   return (
@@ -39,6 +40,7 @@ const RoutesRoot = () => {
         <Route path="/tutorial/net-angular/lesson2" element={<NALesson2 />} />
         <Route path="/tutorial/net-angular/lesson3" element={<NALesson3 />} />
         <Route path="/tutorial/net-angular/lesson4" element={<NALesson4 />} />
+        <Route path="/tutorial/net-angular/lesson5" element={<NALesson5 />} />
 
         <Route path="/demo/connectAPI" element={<ConnectAPI />} />
       </Routes>

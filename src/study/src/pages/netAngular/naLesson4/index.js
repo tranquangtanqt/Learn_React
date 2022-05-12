@@ -1,9 +1,14 @@
 import { Col, Row, Divider, Image } from "antd";
 import Code from "../../../components/modules/code";
 import MasterLayout from "../../../themes/masterLayout";
-import { naLesson4Data } from './data';
 
 const NALesson4 = () => {
+  const sql = `INSERT INTO Users (Id, UserName)
+VALUES (1, "Bob");
+INSERT INTO Users (Id, UserName)
+VALUES (2, "Tom");
+INSERT INTO Users (Id, UserName)
+VALUES (3, "Jane");`;
 
   return (
     <MasterLayout>
@@ -20,26 +25,15 @@ const NALesson4 = () => {
           <Image
             src={require("../../../resources/img/netAngular/Net_Angular_5.jpg")}
           />
-        </Col>
-
-        {/* <Col span={24}>
-          <h1>2. Adding a DBContext class</h1>
-        </Col>
-        <Col span={23} offset={1}>
-          <p>- Add folder: API\Data</p>
-          <p>- Add class: DataContext</p>
-          <Code code={naLesson3Data.dataContex} language="csharp" />
+          <br />
+          <p>- Run command: dotnet ef migrations add InitialCreate -o Data/Migrations</p>
+          <p>- Run command: dotnet ef database update</p>
         </Col>
 
         <Col span={24}>
-          <h1>3. Creating the connection string</h1>
+          <h1>2. Insert Data</h1>
+          <Code code={sql} language="sql" />
         </Col>
-        <Col span={23} offset={1}>
-          <p>- Editing appsettings.Development.json</p>
-          <Code code={naLesson3Data.appsettings} language="json" />
-          <p>- Startup.cs</p>
-          <Code code={naLesson3Data.startUp} language="csharp" />
-        </Col> */}
       </Row>
     </MasterLayout>
   );
