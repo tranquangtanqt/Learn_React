@@ -20,6 +20,7 @@ import NALesson5 from "./netAngular/naLesson5";
 import NALesson6 from "./netAngular/naLesson6";
 import NALesson7 from "./netAngular/naLesson7";
 import NALesson8 from "./netAngular/naLesson8";
+import NALesson9 from "./netAngular/naLesson9";
 
 const RoutesRoot = () => {
   return (
@@ -47,6 +48,7 @@ const RoutesRoot = () => {
         <Route path="/tutorial/net-angular/lesson6" element={<NALesson6 />} />
         <Route path="/tutorial/net-angular/lesson7" element={<NALesson7 />} />
         <Route path="/tutorial/net-angular/lesson8" element={<NALesson8 />} />
+        <Route path="/tutorial/net-angular/lesson9" element={<NALesson9 />} />
 
         <Route path="/demo/connectAPI" element={<ConnectAPI />} />
       </Routes>
