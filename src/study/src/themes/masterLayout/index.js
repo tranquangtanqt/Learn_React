@@ -37,6 +37,12 @@ const MasterLayout = ({ children }) => {
             </SubMenu>
           }
           {
+            <Menu.Item key={"sub_utilities"} >
+              <span> <SettingOutlined /> <span>Utilities</span> </span>
+              <Link to={"/utilities"} />
+            </Menu.Item>
+          }
+          {
             <SubMenu key="sub_utilities" title={ <span> <SettingOutlined /> <span>Utilities</span> </span> } >
               <Menu.Item key={"sub_utilities_listFileSelected"}>
                 List File Selected
