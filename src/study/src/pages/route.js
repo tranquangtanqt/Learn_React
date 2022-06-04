@@ -4,15 +4,19 @@ import OracleTrick from "./database/oracle/trick";
 import HightLightCode from "./demo/highlight";
 import Home from "./homePage";
 import './index.scss';
+
+import Utilities from "./utilities";
+import ReadContentMultiFile from "./utilities/readContentMultiFile";
 import ListFileSelected from "./utilities/listFileSelected";
 import RepeatText from "./utilities/repeatText";
 import ReplaceText from "./utilities/replaceText";
 
 import TinyMCE from "./utilities/tinyMCE";
 import ConnectAPI from "./demo/connectAPI";
+import RandomInsertSQL from "./utilities/randomInsertSQL";
+
 import NetAngular from "./netAngular";
 import NALesson1 from "./netAngular/naLesson1";
-import RandomInsertSQL from "./utilities/randomInsertSQL";
 import NALesson2 from "./netAngular/naLesson2";
 import NALesson3 from "./netAngular/naLesson3";
 import NALesson4 from "./netAngular/naLesson4";
@@ -33,9 +37,11 @@ const RoutesRoot = () => {
         
         <Route path="/database/oracle" element={<OracleTrick />} />
 
+        <Route path="/utilities" element={<Utilities />} />
         <Route path="/utilities/listFileSelected" element={<ListFileSelected />} />
         <Route path="/utilities/randomInsertSQL" element={<RandomInsertSQL />} />
         <Route path="/utilities/repeatText" element={<RepeatText />} />
+        <Route path="/utilities/readContentMultiFile" element={<ReadContentMultiFile />} />
         <Route path="/utilities/replaceText" element={<ReplaceText />} />
         <Route path="/utilities/tinyMCE" element={<TinyMCE />} />
 

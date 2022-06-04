@@ -43,30 +43,6 @@ const MasterLayout = ({ children }) => {
             </Menu.Item>
           }
           {
-            <SubMenu key="sub_utilities" title={ <span> <SettingOutlined /> <span>Utilities</span> </span> } >
-              <Menu.Item key={"sub_utilities_listFileSelected"}>
-                List File Selected
-                <Link to={"/utilities/listFileSelected"} />
-              </Menu.Item>
-              <Menu.Item key={"sub_utilities_randomInsertSQL"}>
-                Random Insert SQL
-                <Link to={"/utilities/randomInsertSQL"} />
-              </Menu.Item>
-              <Menu.Item key={"sub_utilities_textLoop"}>
-                Repeat Text
-                <Link to={"/utilities/repeatText"} />
-              </Menu.Item>
-              <Menu.Item key={"sub_utilities_replaceText"}>
-                Replace Text
-                <Link to={"/utilities/replaceText"} />
-              </Menu.Item>
-              <Menu.Item key={"sub_utilities_tinyMCE"}>
-                TinyMCE
-                <Link to={"/utilities/tinyMCE"} />
-              </Menu.Item>
-            </SubMenu>
-          }
-          {
             <SubMenu key="sub_tutorial" title={ <span> <HighlightOutlined /> <span>Tutorials</span> </span> } >
               <Menu.Item key={"sub_tutorial_net_angular"}>
                 Net - Angular

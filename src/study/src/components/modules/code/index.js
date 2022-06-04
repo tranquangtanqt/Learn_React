@@ -18,3 +18,10 @@ return (
     />
   );
 }
+
+/*
+------ language of the code ------
+language: json,javascript,jsx,tsx,typescript
+html,vue,angular,css,sass,markup
+java,php,csharp,c,cpp,sql,xml
+*/
