@@ -25,7 +25,7 @@ const NALesson9 = () => {
           <br />
           <p>-  Update database: <i>dotnet ef database update</i></p>
           <Image
-            src={require("../../../../resources/img/netAngular/Net_Angular_9.jpg")}
+            src={require("../../../../resources/img/tutorials/netAngular/Net_Angular_9.jpg")}
           />
           <br />
           <br />

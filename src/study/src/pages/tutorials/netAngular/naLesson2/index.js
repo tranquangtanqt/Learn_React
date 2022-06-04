@@ -16,7 +16,7 @@ const NALesson2 = () => {
             the database
           </p>
           <Image
-            src={require("../../../../resources/img/netAngular/Net_Angular_4.jpg")}
+            src={require("../../../../resources/img/tutorials/netAngular/Net_Angular_4.jpg")}
           />
         </Col>
         <Col span={24}>

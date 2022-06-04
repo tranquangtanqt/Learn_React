@@ -23,7 +23,7 @@ VALUES (3, "Jane");`;
           <p>- Select version</p>
           <p>- Run command: dotnet tool install --global dotnet-ef --version 5.0.14</p>
           <Image
-            src={require("../../../../resources/img/netAngular/Net_Angular_5.jpg")}
+            src={require("../../../../resources/img/tutorials/netAngular/Net_Angular_5.jpg")}
           />
           <br />
           <p>- Run command: dotnet ef migrations add InitialCreate -o Data/Migrations</p>

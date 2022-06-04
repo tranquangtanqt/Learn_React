@@ -39,7 +39,7 @@ const NALesson6 = () => {
         </Col>
         <Col span={23} offset={1}>
           <Image
-            src={require("../../../../resources/img/netAngular/Net_Angular_6.jpg")}
+            src={require("../../../../resources/img/tutorials/netAngular/Net_Angular_6.jpg")}
           />
           <br />
           <br />
@@ -48,7 +48,7 @@ const NALesson6 = () => {
             -ExecutionPolicy RemoteSigned -Scope CurrentUser
           </p>
           <Image
-            src={require("../../../../resources/img/netAngular/Net_Angular_7.jpg")}
+            src={require("../../../../resources/img/tutorials/netAngular/Net_Angular_7.jpg")}
           />
         </Col>
       </Row>
