@@ -19,7 +19,7 @@ const NALesson9 = () => {
           <br />
           <p>- Update migrate: <i>dotnet ef migrations add UserPasswordAdded</i></p>
           <Image
-            src={require("../../../../resources/img/netAngular/Net_Angular_8.jpg")}
+            src={require("../../../../resources/img/tutorials/netAngular/Net_Angular_8.jpg")}
           />
           <br />
           <br />
