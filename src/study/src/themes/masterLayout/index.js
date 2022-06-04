@@ -8,8 +8,8 @@ import {
   SettingOutlined,
   DatabaseOutlined,
   QuestionCircleOutlined,
-  HighlightOutlined
-
+  HighlightOutlined,
+  AndroidOutlined
 } from "@ant-design/icons";
 import SubMenu from "antd/lib/menu/SubMenu";
 import { Link } from "react-router-dom";
@@ -47,6 +47,14 @@ const MasterLayout = ({ children }) => {
               <Menu.Item key={"sub_tutorial_net_angular"}>
                 Net - Angular
                 <Link to={"/tutorial/net-angular"} />
+              </Menu.Item>
+            </SubMenu>
+          }
+          {
+            <SubMenu key="sub_programming" title={ <span> <AndroidOutlined /> <span>Programming</span> </span> } >
+              <Menu.Item key={"sub_programming-csharp"}>
+                C#
+                <Link to={"/programming-csharp"} />
               </Menu.Item>
             </SubMenu>
           }
