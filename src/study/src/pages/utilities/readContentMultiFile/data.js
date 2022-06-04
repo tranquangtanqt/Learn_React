@@ -97,5 +97,5 @@ function copyText(ele, str){
     document.execCommand('copy');
     document.body.removeChild(el);
     alert("copied");
-} \n`
+}`
 }

@@ -11,11 +11,11 @@ const ProgrammingCSharp = () => {
       <Row justify="start">
         <Col span={8}>
           <Card title="File">
-            <Link to={"/"}>
+            <Link to={"/programming-csharp/getAllFileInFolder"}>
               {"1. Get all file in folder"}
             </Link>
             <br />
-            <Link to={"/"}>
+            <Link to={"/programming-csharp/readFileExcel"}>
               {"2. Read file excel"}
             </Link>
           </Card>
@@ -23,11 +23,11 @@ const ProgrammingCSharp = () => {
 
         <Col span={8}>
           <Card title="Database">
-            <Link to={"/"}>
+            <Link to={"/programming-csharp/connectPostgresql"}>
               {"1. Connect and select Postgresql"}
             </Link>
             <br />
-            <Link to={"/"}>
+            <Link to={"/programming-csharp/connectOracle"}>
               {"2. Connect and select Oracle"}
             </Link>
           </Card>

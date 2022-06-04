@@ -25,7 +25,12 @@ import NALesson6 from "./tutorials/netAngular/naLesson6";
 import NALesson7 from "./tutorials/netAngular/naLesson7";
 import NALesson8 from "./tutorials/netAngular/naLesson8";
 import NALesson9 from "./tutorials/netAngular/naLesson9";
+
 import ProgrammingCSharp from "./programming/cSharp";
+import GetAllFileInFolder from "./programming/cSharp/getAllFileInFolder";
+import ReadFileExcel from "./programming/cSharp/readFileExcel";
+import ConnectOracleCSharp from "./programming/cSharp/connectOracle";
+import ConnectPostgresqlCsharp from "./programming/cSharp/connectPostgresql";
 
 const RoutesRoot = () => {
   return (
@@ -58,7 +63,13 @@ const RoutesRoot = () => {
         <Route path="/tutorial/net-angular/lesson9" element={<NALesson9 />} />
 
         <Route path="/programming-csharp" element={<ProgrammingCSharp />} />
-
+        <Route path="/programming-csharp/connectOracle" element={<ConnectOracleCSharp />} />
+        <Route path="/programming-csharp/connectPostgresql" element={<ConnectPostgresqlCsharp />} />
+        <Route path="/programming-csharp/getAllFileInFolder" element={<GetAllFileInFolder />} />
+        <Route path="/programming-csharp/readFileExcel" element={<ReadFileExcel />} />
+        
+        
+        
         <Route path="/demo/connectAPI" element={<ConnectAPI />} />
       </Routes>
     </BrowserRouter>
