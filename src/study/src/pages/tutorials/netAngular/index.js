@@ -1,5 +1,5 @@
 import { Col, Row, Card } from "antd";
-import MasterLayout from "../../themes/masterLayout";
+import MasterLayout from "../../../themes/masterLayout";
 import { Link } from "react-router-dom";
 
 const NetAngular = () => {

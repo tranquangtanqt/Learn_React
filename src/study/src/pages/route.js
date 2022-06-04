@@ -15,16 +15,16 @@ import TinyMCE from "./utilities/tinyMCE";
 import ConnectAPI from "./demo/connectAPI";
 import RandomInsertSQL from "./utilities/randomInsertSQL";
 
-import NetAngular from "./netAngular";
-import NALesson1 from "./netAngular/naLesson1";
-import NALesson2 from "./netAngular/naLesson2";
-import NALesson3 from "./netAngular/naLesson3";
-import NALesson4 from "./netAngular/naLesson4";
-import NALesson5 from "./netAngular/naLesson5";
-import NALesson6 from "./netAngular/naLesson6";
-import NALesson7 from "./netAngular/naLesson7";
-import NALesson8 from "./netAngular/naLesson8";
-import NALesson9 from "./netAngular/naLesson9";
+import NetAngular from "./tutorials/netAngular";
+import NALesson1 from "./tutorials/netAngular/naLesson1";
+import NALesson2 from "./tutorials/netAngular/naLesson2";
+import NALesson3 from "./tutorials/netAngular/naLesson3";
+import NALesson4 from "./tutorials/netAngular/naLesson4";
+import NALesson5 from "./tutorials/netAngular/naLesson5";
+import NALesson6 from "./tutorials/netAngular/naLesson6";
+import NALesson7 from "./tutorials/netAngular/naLesson7";
+import NALesson8 from "./tutorials/netAngular/naLesson8";
+import NALesson9 from "./tutorials/netAngular/naLesson9";
 
 const RoutesRoot = () => {
   return (

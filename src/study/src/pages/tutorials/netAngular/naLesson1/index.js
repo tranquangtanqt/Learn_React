@@ -1,5 +1,5 @@
 import { Col, Row, Divider, Image } from "antd";
-import MasterLayout from "../../../themes/masterLayout";
+import MasterLayout from "../../../../themes/masterLayout";
 
 const NALesson1 = () => {
   return (
@@ -50,16 +50,16 @@ const NALesson1 = () => {
           <p>+ C# Genenate Constructor</p>
           <p>+ Auto save for VS Code</p>
           <Image
-            src={require("../../../resources/img/netAngular/Net_Angular_1.jpg")}
+            src={require("../../../../resources/img/netAngular/Net_Angular_1.jpg")}
           />
           <p>+ Hidden folder in menu left</p>
           <Image
-            src={require("../../../resources/img/netAngular/Net_Angular_2.jpg")}
+            src={require("../../../../resources/img/netAngular/Net_Angular_2.jpg")}
           />
           <br />
           <br />
           <Image
-            src={require("../../../resources/img/netAngular/Net_Angular_3.jpg")}
+            src={require("../../../../resources/img/netAngular/Net_Angular_3.jpg")}
           />
         </Col>
       </Row>

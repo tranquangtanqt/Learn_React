@@ -1,5 +1,5 @@
 import { Col, Row, Divider, Image } from "antd";
-import MasterLayout from "../../../themes/masterLayout";
+import MasterLayout from "../../../../themes/masterLayout";
 
 const NALesson2 = () => {
   return (
@@ -16,7 +16,7 @@ const NALesson2 = () => {
             the database
           </p>
           <Image
-            src={require("../../../resources/img/netAngular/Net_Angular_4.jpg")}
+            src={require("../../../../resources/img/netAngular/Net_Angular_4.jpg")}
           />
         </Col>
         <Col span={24}>

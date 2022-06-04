@@ -1,6 +1,6 @@
 import { Col, Row, Divider, Image } from "antd";
-import Code from "../../../components/modules/code";
-import MasterLayout from "../../../themes/masterLayout";
+import Code from "../../../../components/modules/code";
+import MasterLayout from "../../../../themes/masterLayout";
 import { naLesson3Data } from "./data";
 
 const NALesson9 = () => {
@@ -19,13 +19,13 @@ const NALesson9 = () => {
           <br />
           <p>- Update migrate: <i>dotnet ef migrations add UserPasswordAdded</i></p>
           <Image
-            src={require("../../../resources/img/netAngular/Net_Angular_8.jpg")}
+            src={require("../../../../resources/img/netAngular/Net_Angular_8.jpg")}
           />
           <br />
           <br />
           <p>-  Update database: <i>dotnet ef database update</i></p>
           <Image
-            src={require("../../../resources/img/netAngular/Net_Angular_9.jpg")}
+            src={require("../../../../resources/img/netAngular/Net_Angular_9.jpg")}
           />
           <br />
           <br />
