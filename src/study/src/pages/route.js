@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import OracleTrick from "./database/oracle/trick";
+import TipsForOracleSQLDeveloper from "./database/oracle/tipsForOracleSQLDeveloper";
 import HightLightCode from "./demo/highlight";
 import Home from "./homePage";
 import './index.scss';
@@ -31,6 +31,11 @@ import GetAllFileInFolder from "./programming/cSharp/getAllFileInFolder";
 import ReadFileExcel from "./programming/cSharp/readFileExcel";
 import ConnectOracleCSharp from "./programming/cSharp/connectOracle";
 import ConnectPostgresqlCsharp from "./programming/cSharp/connectPostgresql";
+import DatabaseOracle from "./database/oracle";
+import DatabasePostgresql from "./database/postgresql";
+import ConfigPghba from "./database/postgresql/configPghba";
+import ChangeLanguageOracleSQLDeveloper from "./database/oracle/changeLanguageOracleSQLDeveloper";
+import ImportDumpOracle from "./database/oracle/importDumpOracle";
 
 const RoutesRoot = () => {
   return (
@@ -41,8 +46,14 @@ const RoutesRoot = () => {
         <Route path="/demo/connectAPI" element={<ConnectAPI />} />
         <Route path="/demo/highlightcode" element={<HightLightCode />} />
         
-        <Route path="/database/oracle" element={<OracleTrick />} />
+        <Route path="/database/postgresql" element={<DatabasePostgresql />} />
+        <Route path="/database/postgresql/configPghba" element={<ConfigPghba />} />
 
+        <Route path="/database/oracle" element={<DatabaseOracle />} />
+        <Route path="/database/oracle/changeLanguageOracleSQLDeveloper" element={<ChangeLanguageOracleSQLDeveloper />} />
+        <Route path="/database/oracle/importDumpOracle" element={<ImportDumpOracle />} />
+        <Route path="/database/oracle/tipsForOracleSQLDeveloper" element={<TipsForOracleSQLDeveloper />} />
+        
         <Route path="/utilities" element={<Utilities />} />
         <Route path="/utilities/listFileSelected" element={<ListFileSelected />} />
         <Route path="/utilities/randomInsertSQL" element={<RandomInsertSQL />} />
@@ -67,8 +78,6 @@ const RoutesRoot = () => {
         <Route path="/programming-csharp/connectPostgresql" element={<ConnectPostgresqlCsharp />} />
         <Route path="/programming-csharp/getAllFileInFolder" element={<GetAllFileInFolder />} />
         <Route path="/programming-csharp/readFileExcel" element={<ReadFileExcel />} />
-        
-        
         
         <Route path="/demo/connectAPI" element={<ConnectAPI />} />
       </Routes>

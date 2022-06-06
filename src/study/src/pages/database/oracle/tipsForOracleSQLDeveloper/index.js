@@ -2,7 +2,7 @@ import { Col, Image, Row } from "antd";
 import React from "react";
 import MasterLayout from "../../../../themes/masterLayout";
 
-const OracleTrick = () => {
+const TipsForOracleSQLDeveloper = () => {
   return (
     <MasterLayout>
       <Row>
@@ -118,4 +118,4 @@ const OracleTrick = () => {
   );
 };
 
-export default OracleTrick;
+export default TipsForOracleSQLDeveloper;

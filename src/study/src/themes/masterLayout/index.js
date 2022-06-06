@@ -30,6 +30,10 @@ const MasterLayout = ({ children }) => {
         <Menu key={"menu_"} theme="dark" defaultSelectedKeys={["1"]} mode="inline">
           {
             <SubMenu key="sub_database" title={ <span> <DatabaseOutlined /> <span>Database</span> </span> } >
+              <Menu.Item key={"sub_database_postgresql"}>
+                Postgresql
+                <Link to={"/database/postgresql"} />
+              </Menu.Item>
               <Menu.Item key={"sub_database_oracle"}>
                 Oracle
                 <Link to={"/database/oracle"} />
