@@ -10,19 +10,21 @@ const Home = () => {
       <Row justify="start">
         <Col span={8}>
           <Card title="Database">
-            <a href="https://dbfiddle.uk/" target="_blank" rel="noopener noreferrer">dbfiddle</a>
+            <a href="https://dbfiddle.uk/" target="_blank" rel="noopener noreferrer">1. dbfiddle</a>
           </Card>
         </Col>
 
         <Col span={8}>
           <Card title="Image - Video">
-            <a href="https://www.usebubbles.com/" target="_blank" rel="noopener noreferrer">usebubbles _ screen</a>
+            <a href="https://www.usebubbles.com/" target="_blank" rel="noopener noreferrer">1. usebubbles _ screen</a>
           </Card>
         </Col>
 
         <Col span={8}>
-          <Card title="SQL">
-            
+          <Card title="Algorithm">
+            <a href="https://projecteuler.net/" target="_blank" rel="noopener noreferrer">1. Project Euler</a>
+            <br />
+            <a href="http://oj.husc.edu.vn/" target="_blank" rel="noopener noreferrer">2. Husc</a>
           </Card>
         </Col>
       </Row>

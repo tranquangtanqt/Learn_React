@@ -36,6 +36,7 @@ import DatabasePostgresql from "./database/postgresql";
 import ConfigPghba from "./database/postgresql/configPghba";
 import ChangeLanguageOracleSQLDeveloper from "./database/oracle/changeLanguageOracleSQLDeveloper";
 import ImportDumpOracle from "./database/oracle/importDumpOracle";
+import ListenerAndTnsnames from "./database/oracle/listenerAndTnsnames";
 
 const RoutesRoot = () => {
   return (
@@ -52,6 +53,7 @@ const RoutesRoot = () => {
         <Route path="/database/oracle" element={<DatabaseOracle />} />
         <Route path="/database/oracle/changeLanguageOracleSQLDeveloper" element={<ChangeLanguageOracleSQLDeveloper />} />
         <Route path="/database/oracle/importDumpOracle" element={<ImportDumpOracle />} />
+        <Route path="/database/oracle/listenerAndTnsnames" element={<ListenerAndTnsnames />} />
         <Route path="/database/oracle/tipsForOracleSQLDeveloper" element={<TipsForOracleSQLDeveloper />} />
         
         <Route path="/utilities" element={<Utilities />} />

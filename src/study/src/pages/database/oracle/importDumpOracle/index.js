@@ -28,6 +28,34 @@ const ImportDumpOracle = () => {
           <Code code={ImportDumpOracleData.two} language="sql" />
         </Col>
       </Row>
+
+      <Row justify="start">
+        <Col span={24}>
+          <h1>4.</h1>
+          <Code code={ImportDumpOracleData.three} language="sql" />
+        </Col>
+      </Row>
+
+      <Row justify="start">
+        <Col span={24}>
+          <h1>5.</h1>
+          <Code code={ImportDumpOracleData.four} language="sql" />
+        </Col>
+      </Row>
+
+      <Row justify="start">
+        <Col span={24}>
+          <h1>6. Tạo DIRECTORY</h1>
+          <Code code={ImportDumpOracleData.five} language="sql" />
+        </Col>
+      </Row>
+
+      <Row justify="start">
+        <Col span={24}>
+          <h1>7. Mở CMD mới</h1>
+          <Code code={ImportDumpOracleData.six} language="markup" />
+        </Col>
+      </Row>
     </MasterLayout>
   );
 };
