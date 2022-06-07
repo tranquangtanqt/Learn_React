@@ -42,6 +42,8 @@ import SystemOracle from "./database/oracle/tips/system";
 import SqltextSessionProcess from "./database/oracle/sqltextSessionProcess";
 import Tips from "./tips";
 import VisualStudioCode from "./tips/software/visualStudioCode";
+import VocabularyUnit1 from "./japan/vocabulary/unit1";
+import Vocabulary from "./japan/vocabulary";
 
 const RoutesRoot = () => {
   return (
@@ -64,6 +66,9 @@ const RoutesRoot = () => {
         <Route path="/database/oracle/tips/system" element={<SystemOracle />} />
         <Route path="/database/oracle/tipsForOracleSQLDeveloper" element={<TipsForOracleSQLDeveloper />} />
         
+        <Route path="/japan/vocabulary" element={<Vocabulary />} />
+        <Route path="/japan/vocabulary/unit1" element={<VocabularyUnit1 />} />
+
         <Route path="/tips" element={<Tips />} />
         <Route path="/tips/software/visualStudioCode" element={<VisualStudioCode />} />
 

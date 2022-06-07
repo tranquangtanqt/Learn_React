@@ -9,7 +9,8 @@ import {
   DatabaseOutlined,
   QuestionCircleOutlined,
   HighlightOutlined,
-  AndroidOutlined
+  AndroidOutlined,
+  FileAddOutlined
 } from "@ant-design/icons";
 import SubMenu from "antd/lib/menu/SubMenu";
 import { Link } from "react-router-dom";
@@ -37,6 +38,14 @@ const MasterLayout = ({ children }) => {
               <Menu.Item key={"sub_database_oracle"}>
                 Oracle
                 <Link to={"/database/oracle"} />
+              </Menu.Item>
+            </SubMenu>
+          }
+          {
+            <SubMenu key="sub_japan" title={ <span> <FileAddOutlined /> <span>Japan</span> </span> } >
+              <Menu.Item key={"sub_japan_vocabulary"}>
+                Vocabulary
+                <Link to={"/japan/vocabulary"} />
               </Menu.Item>
             </SubMenu>
           }
