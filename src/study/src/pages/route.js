@@ -37,6 +37,11 @@ import ConfigPghba from "./database/postgresql/configPghba";
 import ChangeLanguageOracleSQLDeveloper from "./database/oracle/changeLanguageOracleSQLDeveloper";
 import ImportDumpOracle from "./database/oracle/importDumpOracle";
 import ListenerAndTnsnames from "./database/oracle/listenerAndTnsnames";
+import StringOracle from "./database/oracle/tips/string";
+import SystemOracle from "./database/oracle/tips/system";
+import SqltextSessionProcess from "./database/oracle/sqltextSessionProcess";
+import Tips from "./tips";
+import VisualStudioCode from "./tips/software/visualStudioCode";
 
 const RoutesRoot = () => {
   return (
@@ -54,8 +59,14 @@ const RoutesRoot = () => {
         <Route path="/database/oracle/changeLanguageOracleSQLDeveloper" element={<ChangeLanguageOracleSQLDeveloper />} />
         <Route path="/database/oracle/importDumpOracle" element={<ImportDumpOracle />} />
         <Route path="/database/oracle/listenerAndTnsnames" element={<ListenerAndTnsnames />} />
+        <Route path="/database/oracle/sqltextSessionProcess" element={<SqltextSessionProcess />} />
+        <Route path="/database/oracle/tips/string" element={<StringOracle />} />
+        <Route path="/database/oracle/tips/system" element={<SystemOracle />} />
         <Route path="/database/oracle/tipsForOracleSQLDeveloper" element={<TipsForOracleSQLDeveloper />} />
         
+        <Route path="/tips" element={<Tips />} />
+        <Route path="/tips/software/visualStudioCode" element={<VisualStudioCode />} />
+
         <Route path="/utilities" element={<Utilities />} />
         <Route path="/utilities/listFileSelected" element={<ListFileSelected />} />
         <Route path="/utilities/randomInsertSQL" element={<RandomInsertSQL />} />

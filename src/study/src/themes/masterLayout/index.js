@@ -41,10 +41,18 @@ const MasterLayout = ({ children }) => {
             </SubMenu>
           }
           {
-            <Menu.Item key={"sub_utilities"} >
-              <span> <SettingOutlined /> <span>Utilities</span> </span>
-              <Link to={"/utilities"} />
-            </Menu.Item>
+            <SubMenu key="sub_programming" title={ <span> <AndroidOutlined /> <span>Programming</span> </span> } >
+              <Menu.Item key={"sub_programming-csharp"}>
+                C#
+                <Link to={"/programming-csharp"} />
+              </Menu.Item>
+            </SubMenu>
+          }
+          {
+            <Menu.Item key={"sub_tips"} >
+            <span> <QuestionCircleOutlined /> <span>Tips</span> </span>
+            <Link to={"/tips"} />
+          </Menu.Item>
           }
           {
             <SubMenu key="sub_tutorial" title={ <span> <HighlightOutlined /> <span>Tutorials</span> </span> } >
@@ -55,12 +63,10 @@ const MasterLayout = ({ children }) => {
             </SubMenu>
           }
           {
-            <SubMenu key="sub_programming" title={ <span> <AndroidOutlined /> <span>Programming</span> </span> } >
-              <Menu.Item key={"sub_programming-csharp"}>
-                C#
-                <Link to={"/programming-csharp"} />
-              </Menu.Item>
-            </SubMenu>
+            <Menu.Item key={"sub_utilities"} >
+              <span> <SettingOutlined /> <span>Utilities</span> </span>
+              <Link to={"/utilities"} />
+            </Menu.Item>
           }
           {
             <SubMenu key="sub_demo" title={ <span> <QuestionCircleOutlined /> <span>Demo</span> </span> } >

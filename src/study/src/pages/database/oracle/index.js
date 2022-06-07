@@ -23,17 +23,33 @@ const DatabaseOracle = () => {
 
         <Col span={8}>
           <Card title="Dump">
-          <Link to={"/database/oracle/importDumpOracle"}>
+            <Link to={"/database/oracle/importDumpOracle"}>
               {"1. Import file dump Oracle"}
             </Link>
           </Card>
         </Col>
 
         <Col span={8}>
-          <Card title="Config">
-          <Link to={"/database/oracle/listenerAndTnsnames"}>
-              {"1. Listener and Tnsnames"}
+          <Card title="System">
+            <Link to={"/database/oracle/tips/system"}>
+              {"1. Tips system"}
             </Link>
+            <br />
+            <Link to={"/database/oracle/listenerAndTnsnames"}>
+              {"2. Listener and Tnsnames"}
+            </Link>
+            <br />
+            <Link to={"/database/oracle/sqltextSessionProcess"}>
+              {"3. Sqltext Session Process"}
+            </Link>
+          </Card>
+        </Col>
+      </Row>
+
+      <Row justify="start">
+        <Col span={8}>
+          <Card title="Tips">
+            <Link to={"/database/oracle/tips/string"}>{"1. String"}</Link>
           </Card>
         </Col>
       </Row>

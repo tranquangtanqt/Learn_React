@@ -20,17 +20,11 @@ const Utilities = () => {
 
         <Col span={8}>
           <Card title="Text">
-            <Link to={"/utilities/repeatText"}>
-              {"1. Repeat Text"}
-            </Link>
+            <Link to={"/utilities/repeatText"}>{"1. Repeat Text"}</Link>
             <br />
-            <Link to={"/utilities/replaceText"}>
-              {"2. Replace Text"}
-            </Link>
+            <Link to={"/utilities/replaceText"}>{"2. Replace Text"}</Link>
             <br />
-            <Link to={"/utilities/tinyMCE"}>
-              {"3. Tiny MCE"}
-            </Link>
+            <Link to={"/utilities/tinyMCE"}>{"3. Tiny MCE"}</Link>
           </Card>
         </Col>
 
