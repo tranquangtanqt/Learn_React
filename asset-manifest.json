@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Learn_React/static/css/main.d56e8c07.css",
-    "main.js": "/Learn_React/static/js/main.26c2e761.js",
+    "main.js": "/Learn_React/static/js/main.ff344df7.js",
     "static/media/CSharp1.jpg": "/Learn_React/static/media/CSharp1.2622dab89258473a5a73.jpg",
     "static/media/Trich_8.jpg": "/Learn_React/static/media/Trich_8.6634caa9c2b7b4e26c45.jpg",
     "static/media/Trich_9.jpg": "/Learn_React/static/media/Trich_9.1e0e7f7d3b32f01586ad.jpg",
@@ -25,10 +25,10 @@
     "static/media/soffware_2.jpg": "/Learn_React/static/media/soffware_2.f95d3e16442288d3d4f8.jpg",
     "index.html": "/Learn_React/index.html",
     "main.d56e8c07.css.map": "/Learn_React/static/css/main.d56e8c07.css.map",
-    "main.26c2e761.js.map": "/Learn_React/static/js/main.26c2e761.js.map"
+    "main.ff344df7.js.map": "/Learn_React/static/js/main.ff344df7.js.map"
   },
   "entrypoints": [
     "static/css/main.d56e8c07.css",
-    "static/js/main.26c2e761.js"
+    "static/js/main.ff344df7.js"
   ]
 }
