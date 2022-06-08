@@ -65,6 +65,10 @@ const MasterLayout = ({ children }) => {
           }
           {
             <SubMenu key="sub_tutorial" title={ <span> <HighlightOutlined /> <span>Tutorials</span> </span> } >
+              <Menu.Item key={"sub_tutorial_excel"}>
+                Excel
+                <Link to={"/tutorial/excel"} />
+              </Menu.Item>
               <Menu.Item key={"sub_tutorial_net_angular"}>
                 Net - Angular
                 <Link to={"/tutorial/net-angular"} />

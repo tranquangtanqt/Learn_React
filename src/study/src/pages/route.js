@@ -44,6 +44,8 @@ import Tips from "./tips";
 import VisualStudioCode from "./tips/software/visualStudioCode";
 import VocabularyUnit1 from "./japan/vocabulary/unit1";
 import Vocabulary from "./japan/vocabulary";
+import ExcelTutorial from "./tutorials/excel";
+import ExcelFilter1 from "./tutorials/excel/sortAndFilter/filter1.js";
 
 const RoutesRoot = () => {
   return (
@@ -79,6 +81,10 @@ const RoutesRoot = () => {
         <Route path="/utilities/readContentMultiFile" element={<ReadContentMultiFile />} />
         <Route path="/utilities/replaceText" element={<ReplaceText />} />
         <Route path="/utilities/tinyMCE" element={<TinyMCE />} />
+
+        <Route path="/tutorial/excel" element={<ExcelTutorial />} />
+        <Route path="/tutorial/excel/filter1" element={<ExcelFilter1 />} />
+        
 
         <Route path="/tutorial/net-angular" element={<NetAngular />} />
         <Route path="/tutorial/net-angular/lesson1" element={<NALesson1 />} />
