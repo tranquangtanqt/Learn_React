@@ -10,6 +10,7 @@ import {
   QuestionCircleOutlined,
   HighlightOutlined,
   AndroidOutlined,
+  // eslint-disable-next-line
   FileAddOutlined
 } from "@ant-design/icons";
 import SubMenu from "antd/lib/menu/SubMenu";
@@ -41,19 +42,23 @@ const MasterLayout = ({ children }) => {
               </Menu.Item>
             </SubMenu>
           }
-          {
+          {/* {
             <SubMenu key="sub_japan" title={ <span> <FileAddOutlined /> <span>Japan</span> </span> } >
               <Menu.Item key={"sub_japan_vocabulary"}>
                 Vocabulary
                 <Link to={"/japan/vocabulary"} />
               </Menu.Item>
             </SubMenu>
-          }
+          } */}
           {
             <SubMenu key="sub_programming" title={ <span> <AndroidOutlined /> <span>Programming</span> </span> } >
               <Menu.Item key={"sub_programming-csharp"}>
                 C#
                 <Link to={"/programming-csharp"} />
+              </Menu.Item>
+              <Menu.Item key={"sub_programming-java"}>
+                Java
+                <Link to={"/programming-java"} />
               </Menu.Item>
             </SubMenu>
           }

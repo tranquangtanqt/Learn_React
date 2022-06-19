@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Route, Routes, HashRouter } from "react-router-dom";
 import TipsForOracleSQLDeveloper from "./database/oracle/tipsForOracleSQLDeveloper";
 import HightLightCode from "./demo/highlight";
 import Home from "./homePage";
@@ -47,9 +47,16 @@ import Vocabulary from "./japan/vocabulary";
 import ExcelTutorial from "./tutorials/excel";
 import ExcelFilter1 from "./tutorials/excel/sortAndFilter/filter1.js";
 
+import ProgrammingJava from "./programming/java";
+import SettingMaven from "./programming/java/settingMaven";
+import SelectData1 from "./programming/java/selectData1";
+import InsertData1 from "./programming/java/insertData1";
+import UpdateData1 from "./programming/java/updateData1";
+import DeleteData1 from "./programming/java/deleteData1";
+
 const RoutesRoot = () => {
   return (
-    <BrowserRouter basename="/Learn_React">
+    <HashRouter>
       <Routes>
         <Route path="/" element={<Home />} />
 
@@ -103,9 +110,18 @@ const RoutesRoot = () => {
         <Route path="/programming-csharp/getAllFileInFolder" element={<GetAllFileInFolder />} />
         <Route path="/programming-csharp/readFileExcel" element={<ReadFileExcel />} />
         
+        <Route path="/programming-java" element={<ProgrammingJava />} />
+        <Route path="/programming-java/settingMaven" element={<SettingMaven />} />
+        <Route path="/programming-java/selectData1" element={<SelectData1 />} />
+        <Route path="/programming-java/insertData1" element={<InsertData1 />} />
+        <Route path="/programming-java/updateData1" element={<UpdateData1 />} />
+        <Route path="/programming-java/deleteData1" element={<DeleteData1 />} />
+        
+
+
         <Route path="/demo/connectAPI" element={<ConnectAPI />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter >
   );
 };
 
