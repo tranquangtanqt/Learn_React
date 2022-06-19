@@ -53,6 +53,7 @@ import SelectData1 from "./programming/java/selectData1";
 import InsertData1 from "./programming/java/insertData1";
 import UpdateData1 from "./programming/java/updateData1";
 import DeleteData1 from "./programming/java/deleteData1";
+import SelectData2 from "./programming/java/selectData2";
 
 const RoutesRoot = () => {
   return (
@@ -116,7 +117,7 @@ const RoutesRoot = () => {
         <Route path="/programming-java/insertData1" element={<InsertData1 />} />
         <Route path="/programming-java/updateData1" element={<UpdateData1 />} />
         <Route path="/programming-java/deleteData1" element={<DeleteData1 />} />
-        
+        <Route path="/programming-java/selectData2" element={<SelectData2 />} />
 
 
         <Route path="/demo/connectAPI" element={<ConnectAPI />} />

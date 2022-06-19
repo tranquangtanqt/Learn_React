@@ -34,7 +34,7 @@ const ProgrammingJava = () => {
             </Link>
 
             <br />
-            <Link to={"/programming-java/"}>
+            <Link to={"/programming-java/selectData2"}>
               {"3.1 Select dữ liệu"}
             </Link>
 
