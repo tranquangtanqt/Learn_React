@@ -54,6 +54,9 @@ import InsertData1 from "./programming/java/insertData1";
 import UpdateData1 from "./programming/java/updateData1";
 import DeleteData1 from "./programming/java/deleteData1";
 import SelectData2 from "./programming/java/selectData2";
+import ProgrammingPHP from "./programming/PHP";
+import PHPConvertDatetime from "./programming/PHP/ConvertDatetime";
+import PHPConvertUnicode from "./programming/PHP/ConvertUnicode";
 
 const RoutesRoot = () => {
   return (
@@ -118,6 +121,11 @@ const RoutesRoot = () => {
         <Route path="/programming-java/updateData1" element={<UpdateData1 />} />
         <Route path="/programming-java/deleteData1" element={<DeleteData1 />} />
         <Route path="/programming-java/selectData2" element={<SelectData2 />} />
+
+        <Route path="/programming-php" element={<ProgrammingPHP />} />
+        <Route path="/programming-php/convertDatetime" element={<PHPConvertDatetime />} />
+        <Route path="/programming-php/convertUnicode" element={<PHPConvertUnicode />} />
+        
 
 
         <Route path="/demo/connectAPI" element={<ConnectAPI />} />

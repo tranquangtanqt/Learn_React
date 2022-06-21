@@ -28,6 +28,29 @@ const Home = () => {
           </Card>
         </Col>
       </Row>
+
+<hr />
+      <Row justify="start">
+        <Col span={8}>
+          <Card title="CSharp">
+            <a href="https://github.com/thangchung/awesome-dotnet-core" target="_blank" rel="noopener noreferrer">1. Awesome dotnet core</a>
+          </Card>
+        </Col>
+
+        <Col span={8}>
+          <Card title="Java">
+            <a href="https://github.com/akullpp/awesome-java" target="_blank" rel="noopener noreferrer">1. Awesome java</a>
+            <br/>
+            <a href="https://github.com/Blankj/awesome-java-leetcode" target="_blank" rel="noopener noreferrer">1. Awesome java leetcode</a>
+          </Card>
+        </Col>
+
+        <Col span={8}>
+          <Card title="Javascript">
+            <a href="https://github.com/sorrycc/awesome-javascript" target="_blank" rel="noopener noreferrer">1. Awesome javascript</a>
+          </Card>
+        </Col>
+      </Row>
     </MasterLayout>
   );
 };

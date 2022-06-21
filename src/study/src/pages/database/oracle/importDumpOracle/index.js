@@ -56,6 +56,12 @@ const ImportDumpOracle = () => {
           <Code code={ImportDumpOracleData.six} language="markup" />
         </Col>
       </Row>
+
+      <Row justify="start">
+        <Col span={24}>
+          <p><i>Thư mục lưu file tablespace: D:\app\tantq\virtual\product\12.2.0\dbhome_1\database</i></p>
+        </Col>
+      </Row>
     </MasterLayout>
   );
 };
