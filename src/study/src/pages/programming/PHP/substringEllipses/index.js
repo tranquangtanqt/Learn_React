@@ -7,7 +7,7 @@ import { PHPSubstringEllipsesData } from "./data";
 const PHPSubstringEllipses = () => {
   return (
     <MasterLayout>
-      <h1>Chuyển chuỗi Unicode thành chuỗi không dấu</h1>
+      <h1>Cắt chuỗi với dấu chấm lửng (ellipses)</h1>
       <Row justify="start">
         <Col span={24}>
          <Code code={PHPSubstringEllipsesData.one} language="php" />
