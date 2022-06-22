@@ -23,6 +23,10 @@ const ProgrammingPHP = () => {
               {"3. Cắt chuỗi với dấu ba chấm (ellipses)"}
             </Link>
             <br />
+            <Link to={"/programming-php/phpDeleteFile"}>
+              {"4. Xóa tệp"}
+            </Link>
+            <br />
           </Card>
         </Col>
       </Row>

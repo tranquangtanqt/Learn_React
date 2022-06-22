@@ -59,6 +59,7 @@ import PHPConvertDatetime from "./programming/PHP/convertDatetime";
 import PHPConvertUnicode from "./programming/PHP/convertUnicode";
 import EPPlus from "./programming/cSharp/epplus";
 import PHPSubstringEllipses from "./programming/PHP/substringEllipses";
+import PHPDeleteFile from "./programming/PHP/phpDeleteFile";
 
 const RoutesRoot = () => {
   return (
@@ -129,6 +130,7 @@ const RoutesRoot = () => {
         <Route path="/programming-php/convertDatetime" element={<PHPConvertDatetime />} />
         <Route path="/programming-php/convertUnicode" element={<PHPConvertUnicode />} />
         <Route path="/programming-php/substringEllipses" element={<PHPSubstringEllipses />} />
+        <Route path="/programming-php/phpDeleteFile" element={<PHPDeleteFile />} />
 
 
         <Route path="/demo/connectAPI" element={<ConnectAPI />} />
