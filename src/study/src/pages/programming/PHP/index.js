@@ -16,7 +16,11 @@ const ProgrammingPHP = () => {
             </Link>
             <br />
             <Link to={"/programming-php/convertUnicode"}>
-              {"1. Chuyển chuỗi Unicode thành chuỗi không dấu"}
+              {"2. Chuyển chuỗi Unicode thành chuỗi không dấu"}
+            </Link>
+            <br />
+            <Link to={"/programming-php/substringEllipses"}>
+              {"3. Cắt chuỗi với dấu ba chấm (ellipses)"}
             </Link>
             <br />
           </Card>

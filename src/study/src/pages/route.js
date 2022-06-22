@@ -55,8 +55,10 @@ import UpdateData1 from "./programming/java/updateData1";
 import DeleteData1 from "./programming/java/deleteData1";
 import SelectData2 from "./programming/java/selectData2";
 import ProgrammingPHP from "./programming/PHP";
-import PHPConvertDatetime from "./programming/PHP/ConvertDatetime";
-import PHPConvertUnicode from "./programming/PHP/ConvertUnicode";
+import PHPConvertDatetime from "./programming/PHP/convertDatetime";
+import PHPConvertUnicode from "./programming/PHP/convertUnicode";
+import EPPlus from "./programming/cSharp/epplus";
+import PHPSubstringEllipses from "./programming/PHP/substringEllipses";
 
 const RoutesRoot = () => {
   return (
@@ -113,6 +115,7 @@ const RoutesRoot = () => {
         <Route path="/programming-csharp/connectPostgresql" element={<ConnectPostgresqlCsharp />} />
         <Route path="/programming-csharp/getAllFileInFolder" element={<GetAllFileInFolder />} />
         <Route path="/programming-csharp/readFileExcel" element={<ReadFileExcel />} />
+        <Route path="/programming-csharp/EPPlus" element={<EPPlus />} />
         
         <Route path="/programming-java" element={<ProgrammingJava />} />
         <Route path="/programming-java/settingMaven" element={<SettingMaven />} />
@@ -125,7 +128,7 @@ const RoutesRoot = () => {
         <Route path="/programming-php" element={<ProgrammingPHP />} />
         <Route path="/programming-php/convertDatetime" element={<PHPConvertDatetime />} />
         <Route path="/programming-php/convertUnicode" element={<PHPConvertUnicode />} />
-        
+        <Route path="/programming-php/substringEllipses" element={<PHPSubstringEllipses />} />
 
 
         <Route path="/demo/connectAPI" element={<ConnectAPI />} />
