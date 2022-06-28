@@ -5,6 +5,7 @@ import MasterLayout from "../../../../themes/masterLayout";
 const ExcelFilter1 = () => {
   return (
     <MasterLayout>
+      <h1>Filter</h1>
       <Row>
         <Col span={24}>
           <h1>1. Chọn vùng văn bản và nhấn tổ hợp phím CTRT + T</h1>

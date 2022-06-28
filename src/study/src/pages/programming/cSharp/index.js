@@ -10,6 +10,14 @@ const ProgrammingCSharp = () => {
       <h1>C Sharp</h1>
       <Row justify="start">
         <Col span={8}>
+          <Card title="Coding">
+            <Link to={"/programming-csharp/nameControlWinform"}>
+              {"1. Name Control Winform"}
+            </Link>
+            <br />
+          </Card>
+        </Col>
+        <Col span={8}>
           <Card title="File">
             <Link to={"/programming-csharp/getAllFileInFolder"}>
               {"1. Get all file in folder"}
@@ -32,12 +40,12 @@ const ProgrammingCSharp = () => {
             </Link>
           </Card>
         </Col>
+      </Row>
 
+      <Row justify="start">
         <Col span={8}>
           <Card title="Library">
-            <Link to={"/programming-csharp/EPPlus"}>
-              {"1. EPPLUS"}
-            </Link>
+            <Link to={"/programming-csharp/EPPlus"}>{"1. EPPLUS"}</Link>
           </Card>
         </Col>
       </Row>

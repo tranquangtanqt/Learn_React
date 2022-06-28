@@ -60,6 +60,8 @@ import PHPConvertUnicode from "./programming/PHP/convertUnicode";
 import EPPlus from "./programming/cSharp/epplus";
 import PHPSubstringEllipses from "./programming/PHP/substringEllipses";
 import PHPDeleteFile from "./programming/PHP/phpDeleteFile";
+import CharactersInExcel from "./tutorials/excel/charactersInExcel";
+import NameControlWinform from "./programming/cSharp/nameControlWinform";
 
 const RoutesRoot = () => {
   return (
@@ -98,6 +100,7 @@ const RoutesRoot = () => {
 
         <Route path="/tutorial/excel" element={<ExcelTutorial />} />
         <Route path="/tutorial/excel/filter1" element={<ExcelFilter1 />} />
+        <Route path="/tutorial/excel/charactersInExcel" element={<CharactersInExcel />} />
         
 
         <Route path="/tutorial/net-angular" element={<NetAngular />} />
@@ -117,6 +120,8 @@ const RoutesRoot = () => {
         <Route path="/programming-csharp/getAllFileInFolder" element={<GetAllFileInFolder />} />
         <Route path="/programming-csharp/readFileExcel" element={<ReadFileExcel />} />
         <Route path="/programming-csharp/EPPlus" element={<EPPlus />} />
+        <Route path="/programming-csharp/nameControlWinform" element={<NameControlWinform />} />
+        
         
         <Route path="/programming-java" element={<ProgrammingJava />} />
         <Route path="/programming-java/settingMaven" element={<SettingMaven />} />

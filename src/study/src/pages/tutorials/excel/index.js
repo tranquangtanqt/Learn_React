@@ -7,6 +7,15 @@ const ExcelTutorial = () => {
   return (
     <MasterLayout>
       <Row justify="start">
+      <Col span={8}>
+          <Card title="Title">
+            <Link to={"/tutorial/excel/charactersInExcel"}>
+              {"1. Characters in Excel"}
+            </Link>
+            <br />
+          </Card>
+        </Col>
+
         <Col span={8}>
           <Card title="Sort and Filter">
             <Link to={"/tutorial/excel/filter1"}>
@@ -15,6 +24,7 @@ const ExcelTutorial = () => {
             <br />
           </Card>
         </Col>
+        
       </Row>
     </MasterLayout>
   );
