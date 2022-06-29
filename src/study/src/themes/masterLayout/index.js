@@ -82,6 +82,10 @@ const MasterLayout = ({ children }) => {
                 Net - Angular
                 <Link to={"/tutorial/net-angular"} />
               </Menu.Item>
+              <Menu.Item key={"sub_tutorial_postgreSQL"}>
+              PostgreSQL
+                <Link to={"/tutorial/postgreSQL"} />
+              </Menu.Item>
             </SubMenu>
           }
           {

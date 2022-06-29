@@ -63,6 +63,8 @@ import PHPDeleteFile from "./programming/PHP/phpDeleteFile";
 import CharactersInExcel from "./tutorials/excel/charactersInExcel";
 import NameControlWinform from "./programming/cSharp/nameControlWinform";
 import TextCommon from "./utilities/textCommon";
+import PostgreSQL from "./tutorials/postgreSQL";
+import PostgreSQLChapter1 from "./tutorials/postgreSQL/chapter1";
 
 const RoutesRoot = () => {
   return (
@@ -114,6 +116,10 @@ const RoutesRoot = () => {
         <Route path="/tutorial/net-angular/lesson7" element={<NALesson7 />} />
         <Route path="/tutorial/net-angular/lesson8" element={<NALesson8 />} />
         <Route path="/tutorial/net-angular/lesson9" element={<NALesson9 />} />
+
+        <Route path="/tutorial/postgreSQL" element={<PostgreSQL />} />
+        <Route path="/tutorial/postgreSQL/chapter1" element={<PostgreSQLChapter1 />} />
+
 
         <Route path="/programming-csharp" element={<ProgrammingCSharp />} />
         <Route path="/programming-csharp/connectOracle" element={<ConnectOracleCSharp />} />
