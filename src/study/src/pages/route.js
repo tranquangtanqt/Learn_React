@@ -8,8 +8,8 @@ import './index.scss';
 import Utilities from "./utilities";
 import ReadContentMultiFile from "./utilities/readContentMultiFile";
 import ListFileSelected from "./utilities/listFileSelected";
-import RepeatText from "./utilities/repeatText";
-import ReplaceText from "./utilities/replaceText";
+import TextRepeat from "./utilities/textRepeat";
+import TextReplace from "./utilities/textReplace";
 
 import TinyMCE from "./utilities/tinyMCE";
 import ConnectAPI from "./demo/connectAPI";
@@ -62,6 +62,7 @@ import PHPSubstringEllipses from "./programming/PHP/substringEllipses";
 import PHPDeleteFile from "./programming/PHP/phpDeleteFile";
 import CharactersInExcel from "./tutorials/excel/charactersInExcel";
 import NameControlWinform from "./programming/cSharp/nameControlWinform";
+import TextCommon from "./utilities/textCommon";
 
 const RoutesRoot = () => {
   return (
@@ -93,15 +94,15 @@ const RoutesRoot = () => {
         <Route path="/utilities" element={<Utilities />} />
         <Route path="/utilities/listFileSelected" element={<ListFileSelected />} />
         <Route path="/utilities/randomInsertSQL" element={<RandomInsertSQL />} />
-        <Route path="/utilities/repeatText" element={<RepeatText />} />
+        <Route path="/utilities/textRepeat" element={<TextRepeat />} />
         <Route path="/utilities/readContentMultiFile" element={<ReadContentMultiFile />} />
-        <Route path="/utilities/replaceText" element={<ReplaceText />} />
+        <Route path="/utilities/textReplace" element={<TextReplace />} />
+        <Route path="/utilities/textCommon" element={<TextCommon />} />
         <Route path="/utilities/tinyMCE" element={<TinyMCE />} />
 
         <Route path="/tutorial/excel" element={<ExcelTutorial />} />
         <Route path="/tutorial/excel/filter1" element={<ExcelFilter1 />} />
         <Route path="/tutorial/excel/charactersInExcel" element={<CharactersInExcel />} />
-        
 
         <Route path="/tutorial/net-angular" element={<NetAngular />} />
         <Route path="/tutorial/net-angular/lesson1" element={<NALesson1 />} />
@@ -121,8 +122,7 @@ const RoutesRoot = () => {
         <Route path="/programming-csharp/readFileExcel" element={<ReadFileExcel />} />
         <Route path="/programming-csharp/EPPlus" element={<EPPlus />} />
         <Route path="/programming-csharp/nameControlWinform" element={<NameControlWinform />} />
-        
-        
+
         <Route path="/programming-java" element={<ProgrammingJava />} />
         <Route path="/programming-java/settingMaven" element={<SettingMaven />} />
         <Route path="/programming-java/selectData1" element={<SelectData1 />} />
@@ -136,7 +136,6 @@ const RoutesRoot = () => {
         <Route path="/programming-php/convertUnicode" element={<PHPConvertUnicode />} />
         <Route path="/programming-php/substringEllipses" element={<PHPSubstringEllipses />} />
         <Route path="/programming-php/phpDeleteFile" element={<PHPDeleteFile />} />
-
 
         <Route path="/demo/connectAPI" element={<ConnectAPI />} />
       </Routes>

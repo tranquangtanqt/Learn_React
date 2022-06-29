@@ -3,7 +3,7 @@ import { useState } from "react";
 import MasterLayout from "../../../themes/masterLayout";
 import StringUtils from "../../../utils/StringUtils";
 
-const RepeatText = () => {
+const TextRepeat = () => {
   
   const [input, setInput] = useState("###repeat###");
   const [output, setOutput] = useState("");
@@ -79,4 +79,4 @@ const RepeatText = () => {
   );
 };
 
-export default RepeatText;
+export default TextRepeat;
