@@ -10,6 +10,7 @@ const TextCommon = () => {
   const [upperUnderscore, setUpperUnderscore] = useState("");
   const [lowerUnderscore, setLowerUnderscore] = useState("");
   const [camel, setCamel] = useState("");
+  const [numberVNToJP, setNumberVNToJP] = useState("");
 
   const renderText = (e) => {
     let inputVal = e.target.value;
@@ -19,6 +20,7 @@ const TextCommon = () => {
     setUpperUnderscore(inputVal.toUpperCase().trim().replace(/ /g, "_"));
     setLowerUnderscore(inputVal.toLowerCase().trim().replace(/ /g, "_"));
     setCamel(StringUtils.camelize(inputVal));
+    setNumberVNToJP(StringUtils.numberVNToJP(inputVal));
   };
 
   return (
@@ -79,13 +81,22 @@ const TextCommon = () => {
       </Row>
 
       <Row justify="start">
-        <Col span={24}>
+        <Col span={12}>
           <Divider orientation="left">Camel</Divider>
           <textarea
             value={camel}
             onChange={(e) => setCamel(e.target.value)}
             style={{ height: 100, width: "100%" }}
             placeholder={"camel"}
+          />
+        </Col>
+        <Col span={12}>
+          <Divider orientation="left">Number VN To JP</Divider>
+          <textarea
+            value={numberVNToJP}
+            onChange={(e) => setNumberVNToJP(e.target.value)}
+            style={{ height: 100, width: "100%" }}
+            placeholder={"number VN To JP"}
           />
         </Col>
       </Row>
