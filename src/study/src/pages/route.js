@@ -65,6 +65,12 @@ import NameControlWinform from "./programming/cSharp/nameControlWinform";
 import TextCommon from "./utilities/textCommon";
 import PostgreSQL from "./tutorials/postgreSQL";
 import PostgreSQLChapter1 from "./tutorials/postgreSQL/chapter1";
+import PostgreSQLChapter2 from "./tutorials/postgreSQL/chapter2";
+import PostgreSQLChapter3 from "./tutorials/postgreSQL/chapter3";
+import PostgreSQLChapter4 from "./tutorials/postgreSQL/chapter4";
+import PostgreSQLChapter5 from "./tutorials/postgreSQL/chapter5";
+import PostgreSQLChapter6 from "./tutorials/postgreSQL/chapter6";
+import PostgreSQLChapter7 from "./tutorials/postgreSQL/chapter7";
 
 const RoutesRoot = () => {
   return (
@@ -119,7 +125,12 @@ const RoutesRoot = () => {
 
         <Route path="/tutorial/postgreSQL" element={<PostgreSQL />} />
         <Route path="/tutorial/postgreSQL/chapter1" element={<PostgreSQLChapter1 />} />
-
+        <Route path="/tutorial/postgreSQL/chapter2" element={<PostgreSQLChapter2 />} />
+        <Route path="/tutorial/postgreSQL/chapter3" element={<PostgreSQLChapter3 />} />
+        <Route path="/tutorial/postgreSQL/chapter4" element={<PostgreSQLChapter4 />} />
+        <Route path="/tutorial/postgreSQL/chapter5" element={<PostgreSQLChapter5 />} />
+        <Route path="/tutorial/postgreSQL/chapter6" element={<PostgreSQLChapter6 />} />
+        <Route path="/tutorial/postgreSQL/chapter7" element={<PostgreSQLChapter7 />} />
 
         <Route path="/programming-csharp" element={<ProgrammingCSharp />} />
         <Route path="/programming-csharp/connectOracle" element={<ConnectOracleCSharp />} />

@@ -6,7 +6,7 @@ import { PostgreSQLChapter1Data } from "./data";
 const PostgreSQLChapter1 = () => {
   return (
     <MasterLayout>
-      <Divider orientation="left">Data Types</Divider>
+      <Divider orientation="left">1. Data Types</Divider>
       <Row justify="start">
         <Col span={24}>
           <h1>1.1 Numeric Types</h1>
