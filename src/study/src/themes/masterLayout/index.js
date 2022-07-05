@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./index.scss";
+import "./utils.scss";
 
 import { Layout, Menu } from "antd";
 import {
@@ -29,7 +30,7 @@ const MasterLayout = ({ children }) => {
     <Layout>
       <Sider trigger={null} collapsible collapsed={collapsed}>
         <div className="logo">
-          <div className="custom-logo">LEARNING</div>
+          <div className="custom-logo"><Link to={"/"}>LEARNING</Link></div>
         </div>
         <Menu key={"menu_"} theme="dark" defaultSelectedKeys={["1"]} mode="inline">
           {

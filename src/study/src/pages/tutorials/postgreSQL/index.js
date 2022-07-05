@@ -71,6 +71,17 @@ const PostgreSQL = () => {
               <div className="m-l-20">{"7.6 UPSERT - INSERT ... ON CONFLICT DO UPDATE.."}</div>
               <div className="m-l-20">{"7.7 SELECT data into file"}</div>
             </Link>
+            <br />
+            <Link to={"/tutorial/postgreSQL/chapter8"}>
+              <div>{"8. UPDATE"}</div>
+              <div className="m-l-20">{"7.1 Insert data using COPY"}</div>
+              <div className="m-l-20">{"7.2 Inserting multiple rows"}</div>
+              <div className="m-l-20">{"7.3 INSERT data and RETURING values"}</div>
+              <div className="m-l-20">{"7.4 Basic INSERT"}</div>
+              <div className="m-l-20">{"7.5 Insert from select"}</div>
+              <div className="m-l-20">{"7.6 UPSERT - INSERT ... ON CONFLICT DO UPDATE.."}</div>
+              <div className="m-l-20">{"7.7 SELECT data into file"}</div>
+            </Link>
           </Card>
         </Col>
 
