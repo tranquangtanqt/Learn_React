@@ -74,14 +74,19 @@ const PostgreSQL = () => {
             <br />
             <Link to={"/tutorial/postgreSQL/chapter8"}>
               <div>{"8. UPDATE"}</div>
-              <div className="m-l-20">{"7.1 Insert data using COPY"}</div>
-              <div className="m-l-20">{"7.2 Inserting multiple rows"}</div>
-              <div className="m-l-20">{"7.3 INSERT data and RETURING values"}</div>
-              <div className="m-l-20">{"7.4 Basic INSERT"}</div>
-              <div className="m-l-20">{"7.5 Insert from select"}</div>
-              <div className="m-l-20">{"7.6 UPSERT - INSERT ... ON CONFLICT DO UPDATE.."}</div>
-              <div className="m-l-20">{"7.7 SELECT data into file"}</div>
+              <div className="m-l-20">{"8.1 Updating a table based on joining another table"}</div>
+              <div className="m-l-20">{"8.2 Update all rows in a table"}</div>
+              <div className="m-l-20">{"8.3 Update all rows meeting a condition"}</div>
+              <div className="m-l-20">{"8.4 Updating multiple columns in table"}</div>
             </Link>
+            <br />
+            <Link to={"/tutorial/postgreSQL/chapter9"}>
+              <div>{"9. JSON Support"}</div>
+              <div className="m-l-20">{"9.1 Using JSONb operators"}</div>
+              <div className="m-l-20">{"9.2 Querying complex JSON documentse"}</div>
+              <div className="m-l-20">{"9.3 Creating a pure JSON table"}</div>
+            </Link>
+
           </Card>
         </Col>
 

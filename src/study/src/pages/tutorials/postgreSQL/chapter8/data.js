@@ -1,9 +1,15 @@
-export const PostgreSQLChapter2Data = {
-    one: ``,
+export const PostgreSQLChapter8Data = {
+    one: `UPDATE person
+SET state_code = cities.state_code
+FROM cities
+WHERE cities.city = city;`,
 
-    two: ``,
+    two: `UPDATE person SET planet = 'Earth';`,
 
-    three: ``,
+    three: `UPDATE person SET state = 'NY' WHERE city = 'New York';`,
 
-    four: ``,
+    four: `UPDATE person
+    SET country = 'USA',
+    state = 'NY'
+WHERE city = 'New York';`,
 }

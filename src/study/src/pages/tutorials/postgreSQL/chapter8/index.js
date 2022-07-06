@@ -1,30 +1,74 @@
 import { Col, Row, Divider } from "antd";
 import Code from "../../../../components/modules/code";
 import MasterLayout from "../../../../themes/masterLayout";
-import { PostgreSQLChapter2Data } from "./data";
+import { PostgreSQLChapter8Data } from "./data";
 
-const PostgreSQLChapter2 = () => {
+const PostgreSQLChapter8 = () => {
   return (
     <MasterLayout>
       <Divider orientation="left"> 8. UPDATE</Divider>
       <Row justify="start" className="m-t-20">
         <Col span={24}>
-          <h1>1.6 : Arrays</h1>
+          <h1>1. Updating a table based on joining another table</h1>
         </Col>
         <Col span={23} offset={1}>
           <p>
-            In PostgreSQL you can create Arrays of any built-in, user-defined or
-            enum type. In default there is no limit to an Array, but you can
-            specify it.
+            You can also update data in a table based on data from another
+            table:
           </p>
-          <b>Declaring an Array</b>
         </Col>
         <Col span={22} offset={2}>
-          <Code code={PostgreSQLChapter2Data.one} language="sql" />
+          <Code code={PostgreSQLChapter8Data.one} language="sql" />
+        </Col>
+        <Col span={23} offset={1}>
+          <p>
+            Here we are joining the person city column to the cities city column
+            in order to get the city's state code. This is then used to update
+            the state_code column in the person table.
+          </p>
+        </Col>
+      </Row>
+
+      <Row justify="start" className="m-t-20">
+        <Col span={24}>
+          <h1>2. Update all rows in a table</h1>
+        </Col>
+        <Col span={23} offset={1}>
+          <p>
+            You update all rows in table by simply providing a column_name =
+            VALUE:
+          </p>
+        </Col>
+        <Col span={22} offset={2}>
+          <Code code={PostgreSQLChapter8Data.two} language="sql" />
+        </Col>
+      </Row>
+
+      <Row justify="start" className="m-t-20">
+        <Col span={24}>
+          <h1>3. Update all rows meeting a condition</h1>
+        </Col>
+        <Col span={22} offset={2}>
+          <Code code={PostgreSQLChapter8Data.three} language="sql" />
+        </Col>
+      </Row>
+
+      <Row justify="start" className="m-t-20">
+        <Col span={24}>
+          <h1>4. Updating multiple columns in table</h1>
+        </Col>
+        <Col span={23} offset={1}>
+          <p>
+            You can update multiple columns in a table in the same statement,
+            separating col=val pairs with commas:
+          </p>
+        </Col>
+        <Col span={22} offset={2}>
+          <Code code={PostgreSQLChapter8Data.four} language="sql" />
         </Col>
       </Row>
     </MasterLayout>
   );
 };
 
-export default PostgreSQLChapter2;
+export default PostgreSQLChapter8;
