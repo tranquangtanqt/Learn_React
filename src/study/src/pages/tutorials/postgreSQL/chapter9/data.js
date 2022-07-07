@@ -100,6 +100,32 @@ GROUP BY visitor_id;`,
     fourteen: `SELECT AVG(CAST(browser->'resolution'->>'x' AS INTEGER)) AS width,
     AVG(CAST(browser->'resolution'->>'y' AS INTEGER)) AS height
 FROM events;
-`
+`,
+
+    fifteen: `CREATE TABLE mytable (DATA JSONB NOT NULL);
+CREATE INDEX mytable_idx ON mytable USING gin (DATA jsonb_path_ops);
+INSERT INTO mytable 
+VALUES 
+  (
+    $$ { "name" : "Alice", "emails" : [ "alice1@test.com", 
+    "alice2@test.com" ], "events" : [ { "type" : "birthday", 
+    "date" : "1970-01-01" }, { "type" : "anniversary", 
+    "date" : "2001-05-05" } ], "locations" : { "home" : { "city" : "London", 
+    "country" : "United Kingdom" }, "work" : { "city" : "Edinburgh", 
+    "country" : "United Kingdom" } } } $$
+  );
+`,
+    sixteen: `SELECT DATA->>'name' FROM mytable WHERE DATA @> '{"name":"Alice"}';`,
+    seventeen: `SELECT DATA->>'name' FROM mytable WHERE DATA @> '{"emails":["alice1@test.com"]}';`,
+    eighteen: `SELECT DATA->>'name' FROM mytable WHERE DATA @> '{"events":[{"type":"anniversary"}]}';`,
+    nineteen: `SELECT DATA->>'name' FROM mytable WHERE DATA @> '{"locations":{"home":{"city":"London"}}}';`,
+    twenty: `SELECT DATA FROM mytable WHERE DATA @> '{"name":"Alice"}';
+SELECT DATA FROM mytable WHERE DATA->'name' = '"Alice"';
+SELECT DATA FROM mytable WHERE DATA->>'name' = 'Alice';`,
+    twentyOne: `SELECT DATA->'locations'->'work' FROM mytable WHERE DATA @> '{"name":"Alice"}';
+SELECT DATA->'locations'->'work'->>'city' FROM mytable WHERE DATA @> '{"name":"Alice"}';`,
+
+    twentyTwo: `CREATE TABLE mytable (DATA JSONB NOT NULL);`,
+    twentyThree: `CREATE INDEX mytable_idx ON mytable USING gin (DATA jsonb_path_ops);`
 
 }

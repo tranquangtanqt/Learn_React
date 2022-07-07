@@ -519,7 +519,7 @@ const PostgreSQLChapter9 = () => {
         <Col span={23} offset={1}>
           <p className="m-t-15">
             More examples and documentation{": "}
-            <br/>
+            <br />
             <a
               href="https://schinckel.net/2014/05/25/querying-json-in-postgres/"
               target={"_blank"}
@@ -527,7 +527,7 @@ const PostgreSQLChapter9 = () => {
             >
               https://schinckel.net/2014/05/25/querying-json-in-postgres/
             </a>{" "}
-            <br/>
+            <br />
             <a
               href="https://clarkdave.net/2013/06/what-can-you-do-with-postgresql-and-json/"
               target={"_blank"}
@@ -536,6 +536,115 @@ const PostgreSQLChapter9 = () => {
               https://clarkdave.net/2013/06/what-can-you-do-with-postgresql-and-json/
             </a>{" "}
             .
+          </p>
+        </Col>
+      </Row>
+
+      <Row justify="start">
+        <Col span={24}>
+          <h1>2. Querying complex JSON documents</h1>
+        </Col>
+        <Col span={23} offset={1}>
+          <p>Taking a complex JSON document in a table:</p>
+        </Col>
+        <Col span={22} offset={2}>
+          <Code code={PostgreSQLChapter9Data.fifteen} language="sql" />
+        </Col>
+      </Row>
+
+      <Row justify="start">
+        <Col span={23} offset={1}>
+          <p>Query for a top-level element:</p>
+        </Col>
+        <Col span={22} offset={2}>
+          <Code code={PostgreSQLChapter9Data.sixteen} language="sql" />
+        </Col>
+      </Row>
+
+      <Row justify="start">
+        <Col span={23} offset={1}>
+          <p>Query for a simple item in an array:</p>
+        </Col>
+        <Col span={22} offset={2}>
+          <Code code={PostgreSQLChapter9Data.seventeen} language="sql" />
+        </Col>
+      </Row>
+
+      <Row justify="start">
+        <Col span={23} offset={1}>
+          <p>Query for an object in an array</p>
+        </Col>
+        <Col span={22} offset={2}>
+          <Code code={PostgreSQLChapter9Data.eighteen} language="sql" />
+        </Col>
+      </Row>
+
+      <Row justify="start">
+        <Col span={23} offset={1}>
+          <p>Query for a nested object:</p>
+        </Col>
+        <Col span={22} offset={2}>
+          <Code code={PostgreSQLChapter9Data.nineteen} language="sql" />
+        </Col>
+      </Row>
+
+      <Row justify="start">
+        <Col span={23} offset={1}>
+          <b>
+            Performance of @{">"} compared to -{">"} and -{">"}
+            {">"}
+          </b>
+          <p>
+            It is important to understand the performance difference between
+            using @{">"}, -{">"} and -{">"}
+            {">"} in the WHERE part of the query. Although these two queries
+            appear to be broadly equivalent:
+          </p>
+        </Col>
+        <Col span={22} offset={2}>
+          <Code code={PostgreSQLChapter9Data.twenty} language="sql" />
+        </Col>
+        <Col span={23} offset={1}>
+          <p>
+            the first statement will use the index created above whereas the
+            latter two will not, requiring a complete table scan.
+          </p>
+          <p>
+            It is still allowable to use the -{">"} operator when obtaining
+            resultant data, so the following queries will also use the index:
+          </p>
+        </Col>
+        <Col span={22} offset={2}>
+          <Code code={PostgreSQLChapter9Data.twentyOne} language="sql" />
+        </Col>
+      </Row>
+
+      <Row justify="start">
+        <Col span={24}>
+          <h1>3. Creating a pure JSON table</h1>
+        </Col>
+        <Col span={23} offset={1}>
+          <p>
+            To create a pure JSON table you need to provide a single field with
+            the type JSONB:
+          </p>
+        </Col>
+        <Col span={22} offset={2}>
+          <Code code={PostgreSQLChapter9Data.twentyTwo} language="sql" />
+        </Col>
+      </Row>
+
+      <Row justify="start">
+        <Col span={23} offset={1}>
+          <p>You should also create a basic index:</p>
+        </Col>
+        <Col span={22} offset={2}>
+          <Code code={PostgreSQLChapter9Data.twentyThree} language="sql" />
+        </Col>
+        <Col span={23} offset={1}>
+          <p>
+            At this point you can insert data in to the table and query it
+            efficiently.
           </p>
         </Col>
       </Row>
