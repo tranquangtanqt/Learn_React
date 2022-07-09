@@ -22,9 +22,11 @@ const Utilities = () => {
           <Card title="Text">
             <Link to={"/utilities/textCommon"}>{"1. Common"}</Link>
             <br />
-            <Link to={"/utilities/textRepeat"}>{"2. Repeat"}</Link>
+            <Link to={"/utilities/findTextDuplicates"}>{"2. Find Text Duplicates"}</Link>
             <br />
-            <Link to={"/utilities/textReplace"}>{"3. Replace"}</Link>
+            <Link to={"/utilities/textRepeat"}>{"3. Repeat"}</Link>
+            <br />
+            <Link to={"/utilities/textReplace"}>{"4. Replace"}</Link>
             <br />
             <Link to={"/utilities/tinyMCE"}>{"4. Tiny MCE"}</Link>
           </Card>

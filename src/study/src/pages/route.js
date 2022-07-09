@@ -73,6 +73,7 @@ import PostgreSQLChapter6 from "./tutorials/postgreSQL/chapter6";
 import PostgreSQLChapter7 from "./tutorials/postgreSQL/chapter7";
 import PostgreSQLChapter8 from "./tutorials/postgreSQL/chapter8";
 import PostgreSQLChapter9 from "./tutorials/postgreSQL/chapter9";
+import FindTextDuplicates from "./utilities/findTextDuplicates";
 
 const RoutesRoot = () => {
   return (
@@ -102,6 +103,7 @@ const RoutesRoot = () => {
         <Route path="/tips/software/visualStudioCode" element={<VisualStudioCode />} />
 
         <Route path="/utilities" element={<Utilities />} />
+        <Route path="/utilities/findTextDuplicates" element={<FindTextDuplicates />} />
         <Route path="/utilities/listFileSelected" element={<ListFileSelected />} />
         <Route path="/utilities/randomInsertSQL" element={<RandomInsertSQL />} />
         <Route path="/utilities/textRepeat" element={<TextRepeat />} />
