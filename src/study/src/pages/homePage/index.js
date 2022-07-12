@@ -9,6 +9,15 @@ const Home = () => {
       <h1>Home page</h1>
       <Row justify="start">
         <Col span={8}>
+          <Card title="Me">
+            <a href="https://portal.office365.com" target="_blank" rel="noopener noreferrer" title="office365(E3): tantq@mitani.com&#10;Email: tantq@mitani.co.jp">1. office365</a>
+            <br />
+            <a href="http://172.30.5.100/pe4j" target="_blank" rel="noopener noreferrer">2. WT</a>
+            <br />
+            <a href="http://pe/pe4j/" target="_blank" rel="noopener noreferrer">3. WR</a>
+          </Card>
+        </Col>
+        <Col span={8}>
           <Card title="Database">
             <a href="https://dbfiddle.uk/" target="_blank" rel="noopener noreferrer">1. dbfiddle</a>
           </Card>
@@ -19,7 +28,10 @@ const Home = () => {
             <a href="https://www.usebubbles.com/" target="_blank" rel="noopener noreferrer">1. usebubbles _ screen</a>
           </Card>
         </Col>
+      </Row>
 
+<hr />
+      <Row justify="start">
         <Col span={8}>
           <Card title="Algorithm">
             <a href="https://projecteuler.net/" target="_blank" rel="noopener noreferrer">1. Project Euler</a>
@@ -27,10 +39,6 @@ const Home = () => {
             <a href="http://oj.husc.edu.vn/" target="_blank" rel="noopener noreferrer">2. Husc</a>
           </Card>
         </Col>
-      </Row>
-
-<hr />
-      <Row justify="start">
         <Col span={8}>
           <Card title="CSharp">
             <a href="https://github.com/thangchung/awesome-dotnet-core" target="_blank" rel="noopener noreferrer">1. Awesome dotnet core</a>
@@ -44,7 +52,9 @@ const Home = () => {
             <a href="https://github.com/Blankj/awesome-java-leetcode" target="_blank" rel="noopener noreferrer">1. Awesome java leetcode</a>
           </Card>
         </Col>
-
+      </Row>
+<hr />
+      <Row justify="start">
         <Col span={8}>
           <Card title="Javascript">
             <a href="https://github.com/sorrycc/awesome-javascript" target="_blank" rel="noopener noreferrer">1. Awesome javascript</a>

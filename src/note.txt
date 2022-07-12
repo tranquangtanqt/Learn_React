@@ -1,0 +1,8 @@
+- Xuống hàng trong title html: https://stackoverflow.com/questions/5193385/how-can-i-display-the-html-title-attribute-in-multiple-lines-in-firefox
+You can enter &#10;
+- https://helpex.vn/question/noi-cac-cot-voi-dau-phay-trung-lap-trong-oracle-60bd700cd24b80926dbe6ea9
+
+- abc.*
+
+connect DB oracle 
+sqlplus sys/mypassword@XE as sysdba
