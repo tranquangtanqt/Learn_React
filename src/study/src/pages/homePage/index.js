@@ -20,6 +20,8 @@ const Home = () => {
         <Col span={8}>
           <Card title="Database">
             <a href="https://dbfiddle.uk/" target="_blank" rel="noopener noreferrer">1. dbfiddle</a>
+            <br />
+            <a href="https://www.mockaroo.com/" target="_blank" rel="noopener noreferrer">2. mockaroo</a>
           </Card>
         </Col>
 
