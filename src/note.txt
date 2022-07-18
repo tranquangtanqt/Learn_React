@@ -6,3 +6,12 @@ You can enter &#10;
 
 connect DB oracle 
 sqlplus sys/mypassword@XE as sysdba
+
+
+swap data 2 cell excel
+Nice tip Chester. There is also a keyboard shortcut, by following the below steps.  
+1) Select the cell you want to swap
+
+2) Press Ctrl + X  on the keyboard and go to cell you want to swap with using the arrow keys
+
+3) Press Ctrl + Shift + = on the keyboard
