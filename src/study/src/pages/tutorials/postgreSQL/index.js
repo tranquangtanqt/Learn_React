@@ -86,14 +86,27 @@ const PostgreSQL = () => {
               <div className="m-l-20">{"9.2 Querying complex JSON documentse"}</div>
               <div className="m-l-20">{"9.3 Creating a pure JSON table"}</div>
             </Link>
+            <br />
+            <Link to={"/tutorial/postgreSQL/chapter10"}>
+              <div>{"10. Aggregate Functions"}</div>
+              <div className="m-l-20">{"10.1 Simple statistics: min(), max(), avg()"}</div>
+              <div className="m-l-20">{"10.2 regr_slope(Y, X)"}</div>
+              <div className="m-l-20">{"10.3 string_agg(expression, delimiter)"}</div>
+            </Link>
 
           </Card>
         </Col>
 
         <Col span={8}>
-          <Card title="Chapter 11 - 15"></Card>
+          <Card title="Chapter 11 - 15">
+            <Link to={"/tutorial/postgreSQL/chapter11"}>
+              <div>{"11. Common Table Expressions (WITH)"}</div>
+              <div className="m-l-20">{"11.1 Common Table Expressions in SELECT Queries"}</div>
+              <div className="m-l-20">{"11.2 Traversing tree using WITH RECURSIVE"}</div>
+            </Link></Card>
         </Col>
       </Row>
+      <hr />
     </MasterLayout>
   );
 };

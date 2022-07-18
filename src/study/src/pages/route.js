@@ -74,6 +74,8 @@ import PostgreSQLChapter7 from "./tutorials/postgreSQL/chapter7";
 import PostgreSQLChapter8 from "./tutorials/postgreSQL/chapter8";
 import PostgreSQLChapter9 from "./tutorials/postgreSQL/chapter9";
 import FindTextDuplicates from "./utilities/findTextDuplicates";
+import PostgreSQLChapter10 from "./tutorials/postgreSQL/chapter10";
+import PostgreSQLChapter11 from "./tutorials/postgreSQL/chapter11";
 
 const RoutesRoot = () => {
   return (
@@ -137,6 +139,8 @@ const RoutesRoot = () => {
         <Route path="/tutorial/postgreSQL/chapter7" element={<PostgreSQLChapter7 />} />
         <Route path="/tutorial/postgreSQL/chapter8" element={<PostgreSQLChapter8 />} />
         <Route path="/tutorial/postgreSQL/chapter9" element={<PostgreSQLChapter9 />} />
+        <Route path="/tutorial/postgreSQL/chapter10" element={<PostgreSQLChapter10 />} />
+        <Route path="/tutorial/postgreSQL/chapter11" element={<PostgreSQLChapter11 />} />
 
         <Route path="/programming-csharp" element={<ProgrammingCSharp />} />
         <Route path="/programming-csharp/connectOracle" element={<ConnectOracleCSharp />} />

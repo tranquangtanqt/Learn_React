@@ -62,6 +62,12 @@ const Home = () => {
             <a href="https://github.com/sorrycc/awesome-javascript" target="_blank" rel="noopener noreferrer">1. Awesome javascript</a>
           </Card>
         </Col>
+
+        <Col span={8}>
+          <Card title="Book">
+            <a href="https://books.goalkicker.com/" target="_blank" rel="noopener noreferrer">1. goalkicker</a>
+          </Card>
+        </Col>
       </Row>
     </MasterLayout>
   );

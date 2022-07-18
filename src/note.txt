@@ -1,4 +1,4 @@
-- Xuống hàng trong title html: https://stackoverflow.com/questions/5193385/how-can-i-display-the-html-title-attribute-in-multiple-lines-in-firefox
+﻿- Xuống hàng trong title html: https://stackoverflow.com/questions/5193385/how-can-i-display-the-html-title-attribute-in-multiple-lines-in-firefox
 You can enter &#10;
 - https://helpex.vn/question/noi-cac-cot-voi-dau-phay-trung-lap-trong-oracle-60bd700cd24b80926dbe6ea9
 
@@ -15,3 +15,12 @@ Nice tip Chester. There is also a keyboard shortcut, by following the below step
 2) Press Ctrl + X  on the keyboard and go to cell you want to swap with using the arrow keys
 
 3) Press Ctrl + Shift + = on the keyboard
+
+
+extends:
++ Auto Import
++ Git history
++ Git lens
++ Live server
++ One Monokai themes
++ Prettier
