@@ -103,7 +103,27 @@ const PostgreSQL = () => {
               <div>{"11. Common Table Expressions (WITH)"}</div>
               <div className="m-l-20">{"11.1 Common Table Expressions in SELECT Queries"}</div>
               <div className="m-l-20">{"11.2 Traversing tree using WITH RECURSIVE"}</div>
-            </Link></Card>
+            </Link>
+            <br />
+            <Link to={"/tutorial/postgreSQL/chapter12"}>
+              <div>{"12. Window Functions"}</div>
+              <div className="m-l-20">{"12.1 Generic example"}</div>
+              <div className="m-l-20">{"12.2 Column values vs dense_rank vs rank vs row_number"}</div>
+            </Link>
+            <br />
+            <Link to={"/tutorial/postgreSQL/chapter13"}>
+              <div>{"13. Recursive queries"}</div>
+              <div className="m-l-20">{"13.1 Sum of Integers"}</div>
+            </Link>
+            <br />
+            <Link to={"/tutorial/postgreSQL/chapter14"}>
+              <div>{"14. Programming with PL/pgSQL"}</div>
+              <div className="m-l-20">{"14.1 Basic PL/pgSQL Function"}</div>
+              <div className="m-l-20">{"14.2 Custom exceptions"}</div>
+              <div className="m-l-20">{"14.3 PL/pgSQL Syntax"}</div>
+              <div className="m-l-20">{"14.3 RETURNS Block"}</div>
+            </Link>
+          </Card>
         </Col>
       </Row>
       <hr />

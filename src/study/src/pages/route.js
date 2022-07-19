@@ -76,6 +76,9 @@ import PostgreSQLChapter8 from "./tutorials/postgreSQL/1_10/chapter8";
 import PostgreSQLChapter9 from "./tutorials/postgreSQL/1_10/chapter9";
 import PostgreSQLChapter10 from "./tutorials/postgreSQL/1_10/chapter10";
 import PostgreSQLChapter11 from "./tutorials/postgreSQL/11_20/chapter11";
+import PostgreSQLChapter12 from "./tutorials/postgreSQL/11_20/chapter12";
+import PostgreSQLChapter13 from "./tutorials/postgreSQL/11_20/chapter13";
+import PostgreSQLChapter14 from "./tutorials/postgreSQL/11_20/chapter14";
 
 const RoutesRoot = () => {
   return (
@@ -141,6 +144,9 @@ const RoutesRoot = () => {
         <Route path="/tutorial/postgreSQL/chapter9" element={<PostgreSQLChapter9 />} />
         <Route path="/tutorial/postgreSQL/chapter10" element={<PostgreSQLChapter10 />} />
         <Route path="/tutorial/postgreSQL/chapter11" element={<PostgreSQLChapter11 />} />
+        <Route path="/tutorial/postgreSQL/chapter12" element={<PostgreSQLChapter12 />} />
+        <Route path="/tutorial/postgreSQL/chapter13" element={<PostgreSQLChapter13 />} />
+        <Route path="/tutorial/postgreSQL/chapter14" element={<PostgreSQLChapter14 />} />
 
         <Route path="/programming-csharp" element={<ProgrammingCSharp />} />
         <Route path="/programming-csharp/connectOracle" element={<ConnectOracleCSharp />} />

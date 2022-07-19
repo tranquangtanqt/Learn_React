@@ -24,3 +24,4 @@ extends:
 + Live server
 + One Monokai themes
 + Prettier
++ Auto Close Tag
