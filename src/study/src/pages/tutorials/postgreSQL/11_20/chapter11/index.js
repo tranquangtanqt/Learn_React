@@ -1,6 +1,6 @@
 import { Col, Row, Divider } from "antd";
-import Code from "../../../../components/modules/code";
-import MasterLayout from "../../../../themes/masterLayout";
+import Code from "../../../../../components/modules/code";
+import MasterLayout from "../../../../../themes/masterLayout";
 import { PostgreSQLChapter11Data } from "./data";
 
 const PostgreSQLChapter11 = () => {

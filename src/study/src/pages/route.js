@@ -63,19 +63,19 @@ import PHPDeleteFile from "./programming/PHP/phpDeleteFile";
 import CharactersInExcel from "./tutorials/excel/charactersInExcel";
 import NameControlWinform from "./programming/cSharp/nameControlWinform";
 import TextCommon from "./utilities/textCommon";
-import PostgreSQL from "./tutorials/postgreSQL";
-import PostgreSQLChapter1 from "./tutorials/postgreSQL/chapter1";
-import PostgreSQLChapter2 from "./tutorials/postgreSQL/chapter2";
-import PostgreSQLChapter3 from "./tutorials/postgreSQL/chapter3";
-import PostgreSQLChapter4 from "./tutorials/postgreSQL/chapter4";
-import PostgreSQLChapter5 from "./tutorials/postgreSQL/chapter5";
-import PostgreSQLChapter6 from "./tutorials/postgreSQL/chapter6";
-import PostgreSQLChapter7 from "./tutorials/postgreSQL/chapter7";
-import PostgreSQLChapter8 from "./tutorials/postgreSQL/chapter8";
-import PostgreSQLChapter9 from "./tutorials/postgreSQL/chapter9";
 import FindTextDuplicates from "./utilities/findTextDuplicates";
-import PostgreSQLChapter10 from "./tutorials/postgreSQL/chapter10";
-import PostgreSQLChapter11 from "./tutorials/postgreSQL/chapter11";
+import PostgreSQL from "./tutorials/postgreSQL";
+import PostgreSQLChapter1 from "./tutorials/postgreSQL/1_10/chapter1";
+import PostgreSQLChapter2 from "./tutorials/postgreSQL/1_10/chapter2";
+import PostgreSQLChapter3 from "./tutorials/postgreSQL/1_10/chapter3";
+import PostgreSQLChapter4 from "./tutorials/postgreSQL/1_10/chapter4";
+import PostgreSQLChapter5 from "./tutorials/postgreSQL/1_10/chapter5";
+import PostgreSQLChapter6 from "./tutorials/postgreSQL/1_10/chapter6";
+import PostgreSQLChapter7 from "./tutorials/postgreSQL/1_10/chapter7";
+import PostgreSQLChapter8 from "./tutorials/postgreSQL/1_10/chapter8";
+import PostgreSQLChapter9 from "./tutorials/postgreSQL/1_10/chapter9";
+import PostgreSQLChapter10 from "./tutorials/postgreSQL/1_10/chapter10";
+import PostgreSQLChapter11 from "./tutorials/postgreSQL/11_20/chapter11";
 
 const RoutesRoot = () => {
   return (
