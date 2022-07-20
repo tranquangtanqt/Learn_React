@@ -37,6 +37,10 @@ const Utilities = () => {
             <Link to={"/utilities/randomInsertSQL"}>
               {"1. Random Insert SQL"}
             </Link>
+            <br />
+            <Link to={"/utilities/createTableFromExcel"}>
+              {"2. Create Table From Excel"}
+            </Link>
           </Card>
         </Col>
       </Row>

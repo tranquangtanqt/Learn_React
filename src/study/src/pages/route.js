@@ -78,6 +78,7 @@ import PostgreSQLChapter12 from "./tutorials/postgreSQL/11_20/chapter12";
 import PostgreSQLChapter13 from "./tutorials/postgreSQL/11_20/chapter13";
 import PostgreSQLChapter14 from "./tutorials/postgreSQL/11_20/chapter14";
 import ReadExcelDemo from "./demo/readExcel";
+import CreateTableFromExcel from "./utilities/createTableFromExcel";
 
 const RoutesRoot = () => {
   return (
@@ -107,6 +108,7 @@ const RoutesRoot = () => {
         <Route path="/tips/software/visualStudioCode" element={<VisualStudioCode />} />
 
         <Route path="/utilities" element={<Utilities />} />
+        <Route path="/utilities/createTableFromExcel" element={<CreateTableFromExcel />} />
         <Route path="/utilities/findTextDuplicates" element={<FindTextDuplicates />} />
         <Route path="/utilities/listFileSelected" element={<ListFileSelected />} />
         <Route path="/utilities/randomInsertSQL" element={<RandomInsertSQL />} />
