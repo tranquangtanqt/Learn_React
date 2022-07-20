@@ -4,11 +4,13 @@ import MasterLayout from "../../../../themes/masterLayout";
 import { Data } from "./data";
 
 const VocabularyUnit1 = () => {
+  // eslint-disable-next-line
   const [keyWord, setKeyWord] = useState("a");
-
+// eslint-disable-next-line
   const [indexAnswer, setIndexAnswer] = useState(Math.floor(Math.random() * Data.length));
 
   /* Mang chua cau tra loi */
+  // eslint-disable-next-line
   const [arrAnswer, setArrAnswer] = useState(initArrayAnswer());
 
   

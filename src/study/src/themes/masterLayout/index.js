@@ -107,6 +107,10 @@ const MasterLayout = ({ children }) => {
                 HighLight Code
                 <Link to={"/demo/highlightcode"} />
               </Menu.Item>
+              <Menu.Item key={"sub_demo_readExcel"}>
+                ReadExcel
+                <Link to={"/demo/readExcel"} />
+              </Menu.Item>
             </SubMenu>
           }
         </Menu>

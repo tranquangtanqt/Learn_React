@@ -42,8 +42,6 @@ import SystemOracle from "./database/oracle/tips/system";
 import SqltextSessionProcess from "./database/oracle/sqltextSessionProcess";
 import Tips from "./tips";
 import VisualStudioCode from "./tips/software/visualStudioCode";
-import VocabularyUnit1 from "./japan/vocabulary/unit1";
-import Vocabulary from "./japan/vocabulary";
 import ExcelTutorial from "./tutorials/excel";
 import ExcelFilter1 from "./tutorials/excel/sortAndFilter/filter1.js";
 
@@ -79,6 +77,7 @@ import PostgreSQLChapter11 from "./tutorials/postgreSQL/11_20/chapter11";
 import PostgreSQLChapter12 from "./tutorials/postgreSQL/11_20/chapter12";
 import PostgreSQLChapter13 from "./tutorials/postgreSQL/11_20/chapter13";
 import PostgreSQLChapter14 from "./tutorials/postgreSQL/11_20/chapter14";
+import ReadExcelDemo from "./demo/readExcel";
 
 const RoutesRoot = () => {
   return (
@@ -101,8 +100,8 @@ const RoutesRoot = () => {
         <Route path="/database/oracle/tips/system" element={<SystemOracle />} />
         <Route path="/database/oracle/tipsForOracleSQLDeveloper" element={<TipsForOracleSQLDeveloper />} />
         
-        <Route path="/japan/vocabulary" element={<Vocabulary />} />
-        <Route path="/japan/vocabulary/unit1" element={<VocabularyUnit1 />} />
+        {/* <Route path="/japan/vocabulary" element={<Vocabulary />} />
+        <Route path="/japan/vocabulary/unit1" element={<VocabularyUnit1 />} /> */}
 
         <Route path="/tips" element={<Tips />} />
         <Route path="/tips/software/visualStudioCode" element={<VisualStudioCode />} />
@@ -171,6 +170,7 @@ const RoutesRoot = () => {
         <Route path="/programming-php/phpDeleteFile" element={<PHPDeleteFile />} />
 
         <Route path="/demo/connectAPI" element={<ConnectAPI />} />
+        <Route path="/demo/readExcel" element={<ReadExcelDemo />} />
       </Routes>
     </HashRouter >
   );
