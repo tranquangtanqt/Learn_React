@@ -2,6 +2,7 @@ import { Button, Col, Divider, Row } from "antd";
 import { useState } from "react";
 import MasterLayout from "../../../themes/masterLayout";
 import * as XLSX from "xlsx";
+import ExportExcel from "../../../components/modules/exportExcel";
 
 const CreateTableFromExcel = () => {
   const [fileInput, setfileInput] = useState([]);
@@ -22,8 +23,13 @@ const CreateTableFromExcel = () => {
 
       for (let i = 0; i < data.length; i++) {
         const element = data[i];
-        console.log(element[0])
-        if (element[0] === 0 || element[0] === "0" || element[0] === 1 || element[0] === "1") {
+        console.log(element[0]);
+        if (
+          element[0] === 0 ||
+          element[0] === "0" ||
+          element[0] === 1 ||
+          element[0] === "1"
+        ) {
           outputStr += "\t" + element[1] + " ";
           if (element[2] === "C") {
             //Character
@@ -75,14 +81,14 @@ const CreateTableFromExcel = () => {
       for (let i = 0; i < data.length; i++) {
         const element = data[i];
         if (element[0] === 0 || element[0] === "0") {
-          count ++;
-          if(count === 1){
+          count++;
+          if (count === 1) {
             outputStr += "\tCONSTRAINT _PK PRIMARY KEY (";
           }
-          outputStr +=element[1] + ", ";
+          outputStr += element[1] + ", ";
         }
       }
-      
+
       outputStr = outputStr.slice(0, outputStr.lastIndexOf(","));
       outputStr += ")\n)";
       setOutput(outputStr);
@@ -95,6 +101,34 @@ const CreateTableFromExcel = () => {
     setfileInput([...fileInput, e.target.files[0]]);
   };
 
+  // eslint-disable-next-line
+  const [header, setHeader] = useState(customersData());
+
+  function customersData() {
+    const custs = [];
+    custs[0] = {
+      level: `Level`,
+      item_name: `Item name`,
+      type: `Type`,
+      digit: `Digit`,
+      null: `Null (y/n)`,
+      default: `Default`,
+      japanese: `Japanese`,
+    };
+
+    return custs;
+  }
+
+  const wscols = [
+    //width column
+    { wch: Math.max(...header.map((customer) => customer.level.length)) },
+    { wch: Math.max(...header.map((customer) => customer.item_name.length)) },
+    { wch: Math.max(...header.map((customer) => customer.type.length)) },
+    { wch: Math.max(...header.map((customer) => customer.null.length)) },
+    { wch: Math.max(...header.map((customer) => customer.default.length)) },
+    { wch: Math.max(...header.map((customer) => customer.japanese.length)) },
+  ];
+
   return (
     <MasterLayout>
       <Divider orientation="left">Create Table From Excel</Divider>
@@ -103,7 +137,9 @@ const CreateTableFromExcel = () => {
           <input type="file" onChange={onChange} />
         </Col>
 
-        <Col span={12}></Col>
+        <Col span={12}>
+          <ExportExcel csvData={header} fileName="Demo" wscols={wscols} />
+        </Col>
       </Row>
 
       <Row justify="start">

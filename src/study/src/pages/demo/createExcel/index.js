@@ -4,7 +4,7 @@ import MasterLayout from "../../../themes/masterLayout";
 import ExportExcel from "../../../components/modules/exportExcel";
 
 const CreateExel = () => {
-
+    // eslint-disable-next-line
     const [customers, setCustomers] = useState(customersData());
 
   function customersData() {
@@ -17,7 +17,6 @@ const CreateExel = () => {
         null: `Null (y/n)`,
         default: `Default`,
         japanese: `Japanese`,
-
     }
     
     return custs;
@@ -36,7 +35,7 @@ const CreateExel = () => {
   return <MasterLayout>
         <ExportExcel
             csvData={customers}
-            fileName="Customers_Infomation_xlsx"
+            fileName="Demo"
             wscols={wscols}
           />
   </MasterLayout>;
