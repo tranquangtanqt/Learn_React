@@ -79,6 +79,7 @@ import PostgreSQLChapter13 from "./tutorials/postgreSQL/11_20/chapter13";
 import PostgreSQLChapter14 from "./tutorials/postgreSQL/11_20/chapter14";
 import ReadExcelDemo from "./demo/readExcel";
 import CreateTableFromExcel from "./utilities/createTableFromExcel";
+import CreateExel from "./demo/createExcel";
 
 const RoutesRoot = () => {
   return (
@@ -173,6 +174,7 @@ const RoutesRoot = () => {
 
         <Route path="/demo/connectAPI" element={<ConnectAPI />} />
         <Route path="/demo/readExcel" element={<ReadExcelDemo />} />
+        <Route path="/demo/createExcel" element={<CreateExel />} />
       </Routes>
     </HashRouter >
   );

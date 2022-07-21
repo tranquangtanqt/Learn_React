@@ -111,6 +111,10 @@ const MasterLayout = ({ children }) => {
                 ReadExcel
                 <Link to={"/demo/readExcel"} />
               </Menu.Item>
+              <Menu.Item key={"sub_demo_createExcel"}>
+                CreateExcel
+                <Link to={"/demo/createExcel"} />
+              </Menu.Item>
             </SubMenu>
           }
         </Menu>
