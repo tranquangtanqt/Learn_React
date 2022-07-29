@@ -1,4 +1,4 @@
-import { Button, Col, Divider, Row } from "antd";
+import { Button, Col, Divider, Input, Row } from "antd";
 import { useState } from "react";
 import MasterLayout from "../../../themes/masterLayout";
 import * as XLSX from "xlsx";
@@ -7,9 +7,10 @@ import ExportExcel from "../../../components/modules/exportExcel";
 const CreateTableFromExcel = () => {
   const [fileInput, setfileInput] = useState([]);
   const [output, setOutput] = useState("");
+  const [tableName, setTableName] = useState("DEMO");
 
   const createTable = () => {
-    let outputStr = "CREATE TABLE DEMO (\n";
+    let outputStr = "CREATE TABLE " + tableName + " (\n";
 
     const reader = new FileReader();
 
@@ -90,7 +91,20 @@ const CreateTableFromExcel = () => {
       }
 
       outputStr = outputStr.slice(0, outputStr.lastIndexOf(","));
-      outputStr += ")\n)";
+      outputStr += "\n); \n";
+      //COMMENT
+      for (let i = 0; i < data.length; i++) {
+        const element = data[i];
+        if (
+          element[0] === 0 ||
+          element[0] === "0" ||
+          element[0] === 1 ||
+          element[0] === "1"
+        ) {
+          outputStr += "COMMENT ON COLUMN " + tableName + "." + element[1] + " IS '" + element[6] + "';\n";
+        }
+      }
+
       setOutput(outputStr);
     };
 
@@ -142,8 +156,21 @@ const CreateTableFromExcel = () => {
         </Col>
       </Row>
 
+      
+
+      <Divider orientation="left">Table name</Divider>
       <Row justify="start">
-        <Col span={18}>
+        <Col span={24}>
+            <Input
+            placeholder="Enter table name"
+            value={tableName}
+            onChange={(e) => setTableName(e.target.value)}
+          />
+        </Col>
+      </Row>
+
+      <Row justify="start">
+        <Col span={24}>
           <Divider orientation="left">
             <Button type="primary" onClick={() => createTable()}>
               Create
@@ -152,6 +179,7 @@ const CreateTableFromExcel = () => {
         </Col>
       </Row>
 
+      <Divider orientation="left">Output</Divider>
       <Row justify="start">
         <Col span={24}>
           <textarea
