@@ -1,5 +1,6 @@
 import { Card, Col, Row } from "antd";
 import React from "react";
+import { Link } from "react-router-dom";
 
 import MasterLayout from "../../themes/masterLayout";
 
@@ -12,9 +13,11 @@ const Home = () => {
           <Card title="Me">
             <a href="https://portal.office365.com" target="_blank" rel="noopener noreferrer" title="office365(E3): tantq@mitani.com&#10;Email: tantq@mitani.co.jp">1. office365</a>
             <br />
-            <a href="http://172.30.5.100/pe4j" target="_blank" rel="noopener noreferrer">2. WT</a>
+            <Link to={"/utilities/textSpecial"}>{"2. Special"}</Link>
             <br />
-            <a href="http://pe/pe4j/" target="_blank" rel="noopener noreferrer">3. WR</a>
+            <a href="http://172.30.5.100/pe4j" target="_blank" rel="noopener noreferrer">3. WT</a>
+            <br />
+            <a href="http://pe/pe4j/" target="_blank" rel="noopener noreferrer">4. WR</a>
           </Card>
         </Col>
         <Col span={8}>

@@ -80,6 +80,7 @@ import PostgreSQLChapter14 from "./tutorials/postgreSQL/11_20/chapter14";
 import ReadExcelDemo from "./demo/readExcel";
 import CreateTableFromExcel from "./utilities/createTableFromExcel";
 import CreateExel from "./demo/createExcel";
+import TextSpecial from "./utilities/textSpecial";
 
 const RoutesRoot = () => {
   return (
@@ -117,6 +118,7 @@ const RoutesRoot = () => {
         <Route path="/utilities/readContentMultiFile" element={<ReadContentMultiFile />} />
         <Route path="/utilities/textReplace" element={<TextReplace />} />
         <Route path="/utilities/textCommon" element={<TextCommon />} />
+        <Route path="/utilities/textSpecial" element={<TextSpecial />} />
         <Route path="/utilities/tinyMCE" element={<TinyMCE />} />
 
         <Route path="/tutorial/excel" element={<ExcelTutorial />} />

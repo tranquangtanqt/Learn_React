@@ -28,7 +28,9 @@ const Utilities = () => {
             <br />
             <Link to={"/utilities/textReplace"}>{"4. Replace"}</Link>
             <br />
-            <Link to={"/utilities/tinyMCE"}>{"4. Tiny MCE"}</Link>
+            <Link to={"/utilities/tinyMCE"}>{"5. Special"}</Link>
+            <br />
+            <Link to={"/utilities/tinyMCE"}>{"6. Tiny MCE"}</Link>
           </Card>
         </Col>
 
