@@ -81,6 +81,8 @@ import ReadExcelDemo from "./demo/readExcel";
 import CreateTableFromExcel from "./utilities/createTableFromExcel";
 import CreateExel from "./demo/createExcel";
 import TextSpecial from "./utilities/textSpecial";
+import FindTextColumnJP_EN from "./utilities/findTextColumnJP_EN";
+import FindTextColumnJPEN from "./utilities/findTextColumnJP_EN";
 
 const RoutesRoot = () => {
   return (
@@ -112,6 +114,7 @@ const RoutesRoot = () => {
         <Route path="/utilities" element={<Utilities />} />
         <Route path="/utilities/createTableFromExcel" element={<CreateTableFromExcel />} />
         <Route path="/utilities/findTextDuplicates" element={<FindTextDuplicates />} />
+        <Route path="/utilities/findTextColumnJP_EN" element={<FindTextColumnJPEN />} />
         <Route path="/utilities/listFileSelected" element={<ListFileSelected />} />
         <Route path="/utilities/randomInsertSQL" element={<RandomInsertSQL />} />
         <Route path="/utilities/textRepeat" element={<TextRepeat />} />

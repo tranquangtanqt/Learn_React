@@ -24,13 +24,15 @@ const Utilities = () => {
             <br />
             <Link to={"/utilities/findTextDuplicates"}>{"2. Find Text Duplicates"}</Link>
             <br />
-            <Link to={"/utilities/textRepeat"}>{"3. Repeat"}</Link>
+            <Link to={"/utilities/findTextColumnJP_EN"}>{"3. Find Text ColumnJP_EN"}</Link>
             <br />
-            <Link to={"/utilities/textReplace"}>{"4. Replace"}</Link>
+            <Link to={"/utilities/textRepeat"}>{"4. Repeat"}</Link>
             <br />
-            <Link to={"/utilities/tinyMCE"}>{"5. Special"}</Link>
+            <Link to={"/utilities/textReplace"}>{"5. Replace"}</Link>
             <br />
-            <Link to={"/utilities/tinyMCE"}>{"6. Tiny MCE"}</Link>
+            <Link to={"/utilities/tinyMCE"}>{"6. Special"}</Link>
+            <br />
+            <Link to={"/utilities/tinyMCE"}>{"7. Tiny MCE"}</Link>
           </Card>
         </Col>
 

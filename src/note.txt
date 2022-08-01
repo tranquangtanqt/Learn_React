@@ -28,3 +28,6 @@ extends:
 
 
 https://www.databasestar.com/sql-developer-dbms_output/
+
+
+https://hotkeysworld.com/oracle-sql-developer-for-windows
