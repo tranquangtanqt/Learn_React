@@ -3,7 +3,7 @@ import { useState } from "react";
 import MasterLayout from "../../../themes/masterLayout";
 
 const FindTextColumnJPEN = () => {
-  const [input1, setInput1] = useState("工程指図NO");
+  const [input1, setInput1] = useState("");
   const [input2, setInput2] = useState("");
   const [output, setOutput] = useState("");
 

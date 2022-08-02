@@ -81,8 +81,9 @@ import ReadExcelDemo from "./demo/readExcel";
 import CreateTableFromExcel from "./utilities/createTableFromExcel";
 import CreateExel from "./demo/createExcel";
 import TextSpecial from "./utilities/textSpecial";
-import FindTextColumnJP_EN from "./utilities/findTextColumnJP_EN";
 import FindTextColumnJPEN from "./utilities/findTextColumnJP_EN";
+import PostgreSQLChapter15 from "./tutorials/postgreSQL/11_20/chapter15";
+import PostgreSQLChapter16 from "./tutorials/postgreSQL/11_20/chapter16";
 
 const RoutesRoot = () => {
   return (
@@ -154,6 +155,8 @@ const RoutesRoot = () => {
         <Route path="/tutorial/postgreSQL/chapter12" element={<PostgreSQLChapter12 />} />
         <Route path="/tutorial/postgreSQL/chapter13" element={<PostgreSQLChapter13 />} />
         <Route path="/tutorial/postgreSQL/chapter14" element={<PostgreSQLChapter14 />} />
+        <Route path="/tutorial/postgreSQL/chapter15" element={<PostgreSQLChapter15 />} />
+        <Route path="/tutorial/postgreSQL/chapter16" element={<PostgreSQLChapter16 />} />
 
         <Route path="/programming-csharp" element={<ProgrammingCSharp />} />
         <Route path="/programming-csharp/connectOracle" element={<ConnectOracleCSharp />} />

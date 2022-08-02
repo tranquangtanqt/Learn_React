@@ -123,10 +123,65 @@ const PostgreSQL = () => {
               <div className="m-l-20">{"14.3 PL/pgSQL Syntax"}</div>
               <div className="m-l-20">{"14.3 RETURNS Block"}</div>
             </Link>
+            <br />
+            <Link to={"/tutorial/postgreSQL/chapter15"}>
+              <div>{"15. Inheritance"}</div>
+              <div className="m-l-20">{"15.1 Creating children tables"}</div>
+            </Link>
           </Card>
         </Col>
       </Row>
       <hr />
+      <Row justify="start">
+        <Col span={8}>
+          <Card title="Chapter 16 - 20">
+            <Link to={"/tutorial/postgreSQL/chapter16"}>
+              <div>{"16. Export PostgreSQL database table header and data to CSV file"}</div>
+              <div className="m-l-20">{"16.1 Copy from query"}</div>
+              <div className="m-l-20">{"16.2 Export PostgreSQL table to csv with header for some column(s)"}</div>
+              <div className="m-l-20">{"16.3 Full table backup to csv with header"}</div>
+            </Link>
+            <br />
+            <Link to={"/tutorial/postgreSQL/chapter17"}>
+              <div>{"17. "}</div>
+              <div className="m-l-20">{"17.1 "}</div>
+              <div className="m-l-20">{"17.2 "}</div>
+              <div className="m-l-20">{"17.3 "}</div>
+              <div className="m-l-20">{"17.4 "}</div>
+              <div className="m-l-20">{"17.5 "}</div>
+            </Link>
+            <br />
+            <Link to={"/tutorial/postgreSQL/chapter18"}>
+              <div>{"18. "}</div>
+              <div className="m-l-20">{"18.1 "}</div>
+              <div className="m-l-20">{"18.2 "}</div>
+              <div className="m-l-20">{"18.3 "}</div>
+              <div className="m-l-20">{"18.4 "}</div>
+              <div className="m-l-20">{"18.5 "}</div>
+            </Link>
+            <br />
+            <Link to={"/tutorial/postgreSQL/chapter19"}>
+              <div>{"19. "}</div>
+              <div className="m-l-20">{"19.1 "}</div>
+              <div className="m-l-20">{"19.2 "}</div>
+              <div className="m-l-20">{"19.3 "}</div>
+              <div className="m-l-20">{"19.4 "}</div>
+              <div className="m-l-20">{"19.5 "}</div>
+            </Link>
+            <br />
+            <Link to={"/tutorial/postgreSQL/chapter20"}>
+              <div>{"20. "}</div>
+              <div className="m-l-20">{"20.1 "}</div>
+              <div className="m-l-20">{"20.2 "}</div>
+              <div className="m-l-20">{"20.3 "}</div>
+              <div className="m-l-20">{"20.4 "}</div>
+              <div className="m-l-20">{"20.5 "}</div>
+            </Link>
+
+          </Card>
+        </Col>
+
+      </Row>
     </MasterLayout>
   );
 };
