@@ -143,39 +143,29 @@ const PostgreSQL = () => {
             </Link>
             <br />
             <Link to={"/tutorial/postgreSQL/chapter17"}>
-              <div>{"17. "}</div>
-              <div className="m-l-20">{"17.1 "}</div>
-              <div className="m-l-20">{"17.2 "}</div>
-              <div className="m-l-20">{"17.3 "}</div>
-              <div className="m-l-20">{"17.4 "}</div>
-              <div className="m-l-20">{"17.5 "}</div>
+              <div>{"17. Triggers and Trigger Functions"}</div>
+              <div className="m-l-20">{"17.1 Type of triggers"}</div>
+              <div className="m-l-20">{"17.2  Basic PL/pgSQL Trigger Function"}</div>
             </Link>
             <br />
             <Link to={"/tutorial/postgreSQL/chapter18"}>
-              <div>{"18. "}</div>
-              <div className="m-l-20">{"18.1 "}</div>
-              <div className="m-l-20">{"18.2 "}</div>
-              <div className="m-l-20">{"18.3 "}</div>
-              <div className="m-l-20">{"18.4 "}</div>
-              <div className="m-l-20">{"18.5 "}</div>
+              <div>{"18. Event Triggers"}</div>
+              <div className="m-l-20">{"18.1 Logging DDL Command Start Events"}</div>
             </Link>
             <br />
             <Link to={"/tutorial/postgreSQL/chapter19"}>
-              <div>{"19. "}</div>
-              <div className="m-l-20">{"19.1 "}</div>
-              <div className="m-l-20">{"19.2 "}</div>
-              <div className="m-l-20">{"19.3 "}</div>
-              <div className="m-l-20">{"19.4 "}</div>
-              <div className="m-l-20">{"19.5 "}</div>
+              <div>{"19. Role Management"}</div>
+              <div className="m-l-20">{"19.1 Create a user with a password"}</div>
+              <div className="m-l-20">{"19.2 Grant and Revoke Privileges"}</div>
+              <div className="m-l-20">{"19.3 Create Role and matching database"}</div>
+              <div className="m-l-20">{"19.4 Alter default search_path of user"}</div>
+              <div className="m-l-20">{"19.5 Create Read Only User"}</div>
+              <div className="m-l-20">{"19.6 Grant access privileges on objects created in the future"}</div>
             </Link>
             <br />
             <Link to={"/tutorial/postgreSQL/chapter20"}>
-              <div>{"20. "}</div>
-              <div className="m-l-20">{"20.1 "}</div>
-              <div className="m-l-20">{"20.2 "}</div>
-              <div className="m-l-20">{"20.3 "}</div>
-              <div className="m-l-20">{"20.4 "}</div>
-              <div className="m-l-20">{"20.5 "}</div>
+              <div>{"20. Postgres cryptographic functions"}</div>
+              <div className="m-l-20">{"20.1 digest"}</div>
             </Link>
 
           </Card>

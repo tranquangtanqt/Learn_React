@@ -84,6 +84,10 @@ import TextSpecial from "./utilities/textSpecial";
 import FindTextColumnJPEN from "./utilities/findTextColumnJP_EN";
 import PostgreSQLChapter15 from "./tutorials/postgreSQL/11_20/chapter15";
 import PostgreSQLChapter16 from "./tutorials/postgreSQL/11_20/chapter16";
+import PostgreSQLChapter17 from "./tutorials/postgreSQL/11_20/chapter17";
+import PostgreSQLChapter18 from "./tutorials/postgreSQL/11_20/chapter18";
+import PostgreSQLChapter19 from "./tutorials/postgreSQL/11_20/chapter19";
+import PostgreSQLChapter20 from "./tutorials/postgreSQL/11_20/chapter20";
 
 const RoutesRoot = () => {
   return (
@@ -157,6 +161,10 @@ const RoutesRoot = () => {
         <Route path="/tutorial/postgreSQL/chapter14" element={<PostgreSQLChapter14 />} />
         <Route path="/tutorial/postgreSQL/chapter15" element={<PostgreSQLChapter15 />} />
         <Route path="/tutorial/postgreSQL/chapter16" element={<PostgreSQLChapter16 />} />
+        <Route path="/tutorial/postgreSQL/chapter17" element={<PostgreSQLChapter17 />} />
+        <Route path="/tutorial/postgreSQL/chapter18" element={<PostgreSQLChapter18 />} />
+        <Route path="/tutorial/postgreSQL/chapter19" element={<PostgreSQLChapter19 />} />
+        <Route path="/tutorial/postgreSQL/chapter20" element={<PostgreSQLChapter20 />} />
 
         <Route path="/programming-csharp" element={<ProgrammingCSharp />} />
         <Route path="/programming-csharp/connectOracle" element={<ConnectOracleCSharp />} />

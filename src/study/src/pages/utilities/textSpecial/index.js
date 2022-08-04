@@ -26,6 +26,12 @@ const TextSpecial = () => {
                 <td>Đã đối ứng</td>
               </tr>
               <tr>
+                <td>対応したものを送り致します。</td>
+                <td>Gửi lại phần đã đối ứng</td>
+              </tr>
+              <tr>
+                <td>送りました。</td>
+                <td>Đã gửi</td>
               </tr>
             </tbody>
           </table>
