@@ -88,6 +88,13 @@ import PostgreSQLChapter17 from "./tutorials/postgreSQL/11_20/chapter17";
 import PostgreSQLChapter18 from "./tutorials/postgreSQL/11_20/chapter18";
 import PostgreSQLChapter19 from "./tutorials/postgreSQL/11_20/chapter19";
 import PostgreSQLChapter20 from "./tutorials/postgreSQL/11_20/chapter20";
+import PostgreSQLChapter21 from "./tutorials/postgreSQL/21_28/chapter21";
+import PostgreSQLChapter22 from "./tutorials/postgreSQL/21_28/chapter22";
+import PostgreSQLChapter23 from "./tutorials/postgreSQL/21_28/chapter23";
+import PostgreSQLChapter24 from "./tutorials/postgreSQL/21_28/chapter24";
+import PostgreSQLChapter25 from "./tutorials/postgreSQL/21_28/chapter25";
+import PostgreSQLChapter26 from "./tutorials/postgreSQL/21_28/chapter26";
+import PostgreSQLChapter27 from "./tutorials/postgreSQL/21_28/chapter27";
 
 const RoutesRoot = () => {
   return (
@@ -165,6 +172,13 @@ const RoutesRoot = () => {
         <Route path="/tutorial/postgreSQL/chapter18" element={<PostgreSQLChapter18 />} />
         <Route path="/tutorial/postgreSQL/chapter19" element={<PostgreSQLChapter19 />} />
         <Route path="/tutorial/postgreSQL/chapter20" element={<PostgreSQLChapter20 />} />
+        <Route path="/tutorial/postgreSQL/chapter21" element={<PostgreSQLChapter21 />} />
+        <Route path="/tutorial/postgreSQL/chapter22" element={<PostgreSQLChapter22 />} />
+        <Route path="/tutorial/postgreSQL/chapter23" element={<PostgreSQLChapter23 />} />
+        <Route path="/tutorial/postgreSQL/chapter24" element={<PostgreSQLChapter24 />} />
+        <Route path="/tutorial/postgreSQL/chapter25" element={<PostgreSQLChapter25 />} />
+        <Route path="/tutorial/postgreSQL/chapter26" element={<PostgreSQLChapter26 />} />
+        <Route path="/tutorial/postgreSQL/chapter27" element={<PostgreSQLChapter27 />} />
 
         <Route path="/programming-csharp" element={<ProgrammingCSharp />} />
         <Route path="/programming-csharp/connectOracle" element={<ConnectOracleCSharp />} />

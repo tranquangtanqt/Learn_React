@@ -171,6 +171,88 @@ const PostgreSQL = () => {
           </Card>
         </Col>
 
+        <Col span={8}>
+          <Card title="Chapter 21 - 25">
+            <Link to={"/tutorial/postgreSQL/chapter21"}>
+              <div>{"21. Comments in PostgreSQL"}</div>
+              <div className="m-l-20">{"21.1 COMMENT on Table"}</div>
+              <div className="m-l-20">{"21.2 Remove Comment"}</div>
+            </Link>
+            <br />
+             <Link to={"/tutorial/postgreSQL/chapter22"}>
+              <div>{"22. Backup and Restore"}</div>
+              <div className="m-l-20">{"22.1 Backing up one database"}</div>
+              <div className="m-l-20">{"22.2 Restoring backups"}</div>
+              <div className="m-l-20">{"22.3 Backing up the whole cluster"}</div>
+              <div className="m-l-20">{"22.4 Using psql to export data"}</div>
+              <div className="m-l-20">{"22.5 Using Copy to import"}</div>
+              <div className="m-l-20">{"22.6 Using Copy to export"}</div>
+            </Link>
+            <br />
+             <Link to={"/tutorial/postgreSQL/chapter23"}>
+              <div>{"23. Backup script for a production DB"}</div>
+              <div className="m-l-20">{"23.1 saveProdDb.sh"}</div>
+            </Link>
+            <br />
+             <Link to={"/tutorial/postgreSQL/chapter24"}>
+              <div>{"24. Accessing Data Programmatically"}</div>
+              <div className="m-l-20">{"24.1 Accessing PostgreSQL with the C-API"}</div>
+              <div className="m-l-20">{"24.2 Accessing PostgreSQL from python using psycopg2"}</div>
+              <div className="m-l-20">{"24.3 Accessing PostgreSQL from .NET using the Npgsql provider"}</div>
+              <div className="m-l-20">{"24.4 Accessing PostgreSQL from PHP using Pomm2"}</div>
+            </Link>
+            <br />
+             <Link to={"/tutorial/postgreSQL/chapter25"}>
+              <div>{"25. Connect to PostgreSQL from Java"}</div>
+              <div className="m-l-20">{"25.1 Connecting with java.sql.DriverManager"}</div>
+              <div className="m-l-20">{"25.2 Connecting with java.sql.DriverManager and Properties"}</div>
+              <div className="m-l-20">{"25.3 Connecting with javax.sql.DataSource using a"}</div>
+            </Link>
+          </Card>
+        </Col>
+
+        <Col span={8}>
+          <Card title="Chapter 26 - 30">
+            <Link to={"/tutorial/postgreSQL/chapter26"}>
+              <div>{"26. PostgreSQL High Availability"}</div>
+              <div className="m-l-20">{"26.1 Replication in PostgreSQL"}</div>
+            </Link>
+            <br />
+            <Link to={"/tutorial/postgreSQL/chapter27"}>
+              <div>{"27. EXTENSION dblink and postgres_fdw"}</div>
+              <div className="m-l-20">{"27.1 Extention FDW"}</div>
+              <div className="m-l-20">{"27.2 Foreign Data Wrapper"}</div>
+              <div className="m-l-20">{"27.3 Extention dblink"}</div>
+            </Link>
+            <br />
+            <Link to={"/tutorial/postgreSQL/chapter28"}>
+              <div>{"28. "}</div>
+              <div className="m-l-20">{"28.1 "}</div>
+              <div className="m-l-20">{"28.2 "}</div>
+              <div className="m-l-20">{"28.3 "}</div>
+              <div className="m-l-20">{"28.4 "}</div>
+              <div className="m-l-20">{"28.5 "}</div>
+            </Link>
+            <br />
+            <Link to={"/tutorial/postgreSQL/chapter29"}>
+              <div>{"29. "}</div>
+              <div className="m-l-20">{"29.1 "}</div>
+              <div className="m-l-20">{"29.2 "}</div>
+              <div className="m-l-20">{"29.3 "}</div>
+              <div className="m-l-20">{"29.4 "}</div>
+              <div className="m-l-20">{"29.5 "}</div>
+            </Link>
+            <br />
+            <Link to={"/tutorial/postgreSQL/chapter30"}>
+              <div>{"30. "}</div>
+              <div className="m-l-20">{"30.1 "}</div>
+              <div className="m-l-20">{"30.2 "}</div>
+              <div className="m-l-20">{"30.3 "}</div>
+              <div className="m-l-20">{"30.4 "}</div>
+              <div className="m-l-20">{"30.5 "}</div>
+            </Link>
+          </Card>
+        </Col>
       </Row>
     </MasterLayout>
   );

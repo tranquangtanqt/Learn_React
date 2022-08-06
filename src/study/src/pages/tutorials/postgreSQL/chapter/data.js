@@ -6,4 +6,24 @@ export const PostgreSQLChapter2Data = {
     three: ``,
 
     four: ``,
+
+    five: ``,
+
+    six: ``,
+
+    seven: ``,
+
+    eight: ``,
+
+    nine: ``,
+
+    ten: ``,
+
+    elevent: ``, 
+
+    twelve: ``,
+
+    thirteen: ``,
+
+    fourteen: ``
 }

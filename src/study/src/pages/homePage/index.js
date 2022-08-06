@@ -71,7 +71,22 @@ const Home = () => {
             <a href="https://books.goalkicker.com/" target="_blank" rel="noopener noreferrer">1. goalkicker</a>
           </Card>
         </Col>
+
+        <Col span={8}>
+          <Card title="CSS">
+            <a href="https://www.figma.com/" target="_blank" rel="noopener noreferrer">1. figma</a>
+          </Card>
+        </Col>
       </Row>
+<hr />
+      <Row justify="start">
+        <Col span={8}>
+          <Card title="Design Patterns">
+            <a href="https://refactoring.guru/design-patterns/" target="_blank" rel="noopener noreferrer">1.refactoring</a>
+          </Card>
+        </Col>
+      </Row>
+      
     </MasterLayout>
   );
 };
