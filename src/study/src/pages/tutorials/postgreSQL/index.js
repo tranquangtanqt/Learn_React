@@ -212,7 +212,7 @@ const PostgreSQL = () => {
         </Col>
 
         <Col span={8}>
-          <Card title="Chapter 26 - 30">
+          <Card title="Chapter 26 - 28">
             <Link to={"/tutorial/postgreSQL/chapter26"}>
               <div>{"26. PostgreSQL High Availability"}</div>
               <div className="m-l-20">{"26.1 Replication in PostgreSQL"}</div>
@@ -226,30 +226,13 @@ const PostgreSQL = () => {
             </Link>
             <br />
             <Link to={"/tutorial/postgreSQL/chapter28"}>
-              <div>{"28. "}</div>
-              <div className="m-l-20">{"28.1 "}</div>
-              <div className="m-l-20">{"28.2 "}</div>
-              <div className="m-l-20">{"28.3 "}</div>
-              <div className="m-l-20">{"28.4 "}</div>
-              <div className="m-l-20">{"28.5 "}</div>
-            </Link>
-            <br />
-            <Link to={"/tutorial/postgreSQL/chapter29"}>
-              <div>{"29. "}</div>
-              <div className="m-l-20">{"29.1 "}</div>
-              <div className="m-l-20">{"29.2 "}</div>
-              <div className="m-l-20">{"29.3 "}</div>
-              <div className="m-l-20">{"29.4 "}</div>
-              <div className="m-l-20">{"29.5 "}</div>
-            </Link>
-            <br />
-            <Link to={"/tutorial/postgreSQL/chapter30"}>
-              <div>{"30. "}</div>
-              <div className="m-l-20">{"30.1 "}</div>
-              <div className="m-l-20">{"30.2 "}</div>
-              <div className="m-l-20">{"30.3 "}</div>
-              <div className="m-l-20">{"30.4 "}</div>
-              <div className="m-l-20">{"30.5 "}</div>
+              <div>{"28. Postgres Tip and Tricks"}</div>
+              <div className="m-l-20">{"28.1 DATEADD alternative in Postgres"}</div>
+              <div className="m-l-20">{"28.2 Comma separated values of a column"}</div>
+              <div className="m-l-20">{"28.3 Delete duplicate records from postgres table"}</div>
+              <div className="m-l-20">{"28.4 Update query with join between two tables alternative since Postresql does not support join in update query"}</div>
+              <div className="m-l-20">{"28.5 Dierence between two date timestamps month wise and year wise"}</div>
+              <div className="m-l-20">{"28.6 Query to Copy/Move/Transafer table data from one database to other database table with same schema"}</div>
             </Link>
           </Card>
         </Col>
