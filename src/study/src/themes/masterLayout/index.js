@@ -11,6 +11,8 @@ import {
   QuestionCircleOutlined,
   HighlightOutlined,
   AndroidOutlined,
+  DoubleLeftOutlined,
+  DoubleRightOutlined,
   // eslint-disable-next-line
   FileAddOutlined
 } from "@ant-design/icons";
@@ -21,10 +23,23 @@ const { Header, Sider, Content } = Layout;
 
 const MasterLayout = ({ children }) => {
   const [collapsed, setCollapsed] = useState(false);
+  const [hidden, setHidden] = useState(false);
 
   const toggle = () => {
     setCollapsed(!collapsed);
   };
+
+  const hiddenMenu = () => {
+    let layoutSider = document.getElementsByClassName('ant-layout-sider');
+    console.log(layoutSider[0].classList.contains('hidden'))
+    if(layoutSider[0].classList.contains('hidden')) {
+      layoutSider[0].classList.remove('hidden');
+      setHidden(false);
+    } else {
+      layoutSider[0].classList.add('hidden');
+      setHidden(true);
+    }
+  }
 
   return (
     <Layout>
@@ -118,6 +133,8 @@ const MasterLayout = ({ children }) => {
           ) : (
             <MenuFoldOutlined className="trigger" onClick={toggle} />
           )}
+          <DoubleLeftOutlined onClick={hiddenMenu} className={`${hidden ? 'hidden' : ''}`}/>
+          <DoubleRightOutlined onClick={hiddenMenu} className={`${!hidden ? 'hidden' : ''}`}/>
         </Header>
 
         <Content className="site-layout-background-content">{children}</Content>
