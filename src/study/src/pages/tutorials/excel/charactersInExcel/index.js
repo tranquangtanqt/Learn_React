@@ -1,9 +1,8 @@
 import { Col, Row } from "antd";
-import MasterLayout from "../../../../themes/masterLayout";
 
 const CharactersInExcel = () => {
   return (
-    <MasterLayout>
+    <>
       <Row>
         <Col span={24}>
           <h1>Characters in Excel</h1>
@@ -1550,7 +1549,7 @@ const CharactersInExcel = () => {
           </table>
         </Col>
       </Row>
-    </MasterLayout>
+    </>
   );
 };
 

@@ -1,11 +1,10 @@
 import { Col, Row, Divider } from "antd";
 import Code from "../../../../../components/modules/code";
-import MasterLayout from "../../../../../themes/masterLayout";
 import { PostgreSQLChapter25Data } from "./data";
 
 const PostgreSQLChapter25 = () => {
   return (
-    <MasterLayout>
+    <>
       <Divider orientation="left">25. Connect to PostgreSQL from Java</Divider>
       <Row justify="start" className="m-t-20">
         <Col span={24}>
@@ -84,7 +83,7 @@ const PostgreSQLChapter25 = () => {
           <Code code={PostgreSQLChapter25Data.four} language="javascript" />
         </Col>
       </Row>
-    </MasterLayout>
+    </>
   );
 };
 

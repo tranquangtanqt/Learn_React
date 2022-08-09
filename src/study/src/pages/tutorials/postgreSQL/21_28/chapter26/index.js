@@ -1,11 +1,10 @@
 import { Col, Row, Divider } from "antd";
 import Code from "../../../../../components/modules/code";
-import MasterLayout from "../../../../../themes/masterLayout";
 import { PostgreSQLChapter26Data } from "./data";
 
 const PostgreSQLChapter26 = () => {
   return (
-    <MasterLayout>
+    <>
       <Divider orientation="left">26. PostgreSQL High Availability</Divider>
       <Row justify="start" className="m-t-20">
         <Col span={24}>
@@ -155,7 +154,7 @@ Replication with Hot Standby, with minor changes in formatting and examples and 
 was published under the Creative Commons Public License 3.0, which is maintained here.</p>
         </Col>
       </Row>
-    </MasterLayout>
+    </>
   );
 };
 

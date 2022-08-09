@@ -1,9 +1,8 @@
 import { Col, Row } from "antd";
-import MasterLayout from "../../../../themes/masterLayout";
 
 const NameControlWinform = () => {
   return (
-    <MasterLayout>
+    <>
       <Row>
         <Col span={24}>
           <h1>Name Control In Winform</h1>
@@ -275,7 +274,7 @@ const NameControlWinform = () => {
           </table>
         </Col>
       </Row>
-    </MasterLayout>
+    </>
   );
 };
 

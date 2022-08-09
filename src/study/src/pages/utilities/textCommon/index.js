@@ -1,6 +1,5 @@
 import { Col, Divider, Row } from "antd";
 import React, { useState } from "react";
-import MasterLayout from "../../../themes/masterLayout";
 import StringUtils from "../../../utils/StringUtils";
 
 const TextCommon = () => {
@@ -24,7 +23,7 @@ const TextCommon = () => {
   };
 
   return (
-    <MasterLayout>
+    <>
       <Divider orientation="left">Input</Divider>
       <Row justify="start">
         <Col span={24}>
@@ -100,7 +99,7 @@ const TextCommon = () => {
           />
         </Col>
       </Row>
-    </MasterLayout>
+    </>
   );
 };
 

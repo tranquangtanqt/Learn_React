@@ -1,6 +1,5 @@
 import { Col, Row, Divider } from "antd";
 import Code from "../../../../components/modules/code";
-import MasterLayout from "../../../../themes/masterLayout";
 
 const NALesson5 = () => {
   const controller = `using System.Collections.Generic;
@@ -41,7 +40,7 @@ namespace API.Controllers
 }
 `;
   return (
-    <MasterLayout>
+    <>
       <Divider orientation="left">Adding a new API Controller</Divider>
       <Row justify="start">
         <Col span={24}>
@@ -54,7 +53,7 @@ namespace API.Controllers
           <p>2. https://localhost:5001/api/users</p>
         </Col>
       </Row>
-    </MasterLayout>
+    </>
   );
 };
 

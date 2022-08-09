@@ -1,12 +1,11 @@
 import { Col, Row } from "antd";
 import React from "react";
 import Code from "../../../../components/modules/code";
-import MasterLayout from "../../../../themes/masterLayout";
 import { EPPlusData } from "./data";
 
 const EPPlus = () => {
   return (
-    <MasterLayout>
+    <>
       <h1>EPPlus</h1>
       <Row justify="start">
         <Col span={24}>
@@ -30,7 +29,7 @@ const EPPlus = () => {
           <Code code={EPPlusData.readExcel} language="csharp" />
         </Col>
       </Row>
-    </MasterLayout>
+    </>
   );
 };
 

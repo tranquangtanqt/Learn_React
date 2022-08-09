@@ -1,9 +1,8 @@
 import { Col, Row, Divider, Image } from "antd";
-import MasterLayout from "../../../../themes/masterLayout";
 
 const NALesson6 = () => {
   return (
-    <MasterLayout>
+    <>
       <Divider orientation="left">Creating the Angular application</Divider>
       <Row justify="start">
         <Col span={24}>
@@ -52,7 +51,7 @@ const NALesson6 = () => {
           />
         </Col>
       </Row>
-    </MasterLayout>
+    </>
   );
 };
 

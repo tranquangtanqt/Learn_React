@@ -2,7 +2,6 @@ import { Button, Col, Divider, notification, Row } from "antd";
 import { useState } from "react";
 import CopyToClipboard from "react-copy-to-clipboard";
 import Code from "../../../components/modules/code";
-import MasterLayout from "../../../themes/masterLayout";
 import { readContentMultiFileData } from "./data";
 
 const ReadContentMultiFile = () => {
@@ -58,7 +57,7 @@ const ReadContentMultiFile = () => {
   };
 
   return (
-    <MasterLayout>
+    <>
       <Divider orientation="left">
         Select multiple files to read from your system:
       </Divider>
@@ -117,7 +116,7 @@ const ReadContentMultiFile = () => {
           <Code code={readContentMultiFileData.script} language="javascript" />
         </Col>
       </Row>
-    </MasterLayout>
+    </>
   );
 };
 

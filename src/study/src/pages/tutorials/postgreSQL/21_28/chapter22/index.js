@@ -1,11 +1,10 @@
 import { Col, Row, Divider } from "antd";
 import Code from "../../../../../components/modules/code";
-import MasterLayout from "../../../../../themes/masterLayout";
 import { PostgreSQLChapter22Data } from "./data";
 
 const PostgreSQLChapter22 = () => {
   return (
-    <MasterLayout>
+    <>
       <Divider orientation="left">22. Backup and Restore</Divider>
       <Row justify="start" className="m-t-20">
         <Col span={24}>
@@ -228,7 +227,7 @@ const PostgreSQLChapter22 = () => {
           <p>Here program gzip is executed to compress user table data.</p>
         </Col>
       </Row>
-    </MasterLayout>
+    </>
   );
 };
 

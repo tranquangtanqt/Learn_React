@@ -1,12 +1,11 @@
 import { Col, Image, Row } from "antd";
 import React from "react";
 import Code from "../../../../components/modules/code";
-import MasterLayout from "../../../../themes/masterLayout";
 import { UpdateData1Data } from "./data";
 
 const UpdateData1 = () => {
   return (
-    <MasterLayout>
+    <>
       <h1>Update dữ liệu</h1>
       <Row justify="start">
         <Col span={24}>
@@ -149,7 +148,7 @@ const UpdateData1 = () => {
           <Image src={require("../../../../resources/img/programming/java/18.jpg")} />
         </Col>
       </Row>
-    </MasterLayout>
+    </>
   );
 };
 

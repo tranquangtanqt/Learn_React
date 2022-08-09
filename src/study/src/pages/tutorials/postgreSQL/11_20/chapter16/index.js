@@ -1,11 +1,10 @@
 import { Col, Row, Divider } from "antd";
 import Code from "../../../../../components/modules/code";
-import MasterLayout from "../../../../../themes/masterLayout";
 import { PostgreSQLChapter16Data } from "./data";
 
 const PostgreSQLChapter16 = () => {
   return (
-    <MasterLayout>
+    <>
       <Divider orientation="left">
         16. Export PostgreSQL database table header and data to CSV file
       </Divider>
@@ -36,7 +35,7 @@ const PostgreSQLChapter16 = () => {
           <Code code={PostgreSQLChapter16Data.three} language="sql" />
         </Col>
       </Row>
-    </MasterLayout>
+    </>
   );
 };
 

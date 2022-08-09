@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-import MasterLayout from "../../../themes/masterLayout";
-
 const ConnectAPI = () => {
   const [users, setUsers] = useState([]);
 
@@ -19,7 +17,7 @@ const ConnectAPI = () => {
   }, []);
 
   return (
-    <MasterLayout>
+    <>
       <h1>Demo</h1>
       <ul>
         { users.map((person) => (
@@ -28,7 +26,7 @@ const ConnectAPI = () => {
           )
         }
       </ul>
-    </MasterLayout>
+    </>
   );
 };
 

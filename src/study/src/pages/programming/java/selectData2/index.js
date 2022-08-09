@@ -1,12 +1,11 @@
 import { Col, Image, Row } from "antd";
 import React from "react";
 import Code from "../../../../components/modules/code";
-import MasterLayout from "../../../../themes/masterLayout";
 import { SelectData2Data } from "./data";
 
 const SelectData2 = () => {
   return (
-    <MasterLayout>
+    <>
       <h1>Select dữ liệu</h1>
       <Row justify="start">
         <Col span={24}>
@@ -133,7 +132,7 @@ const SelectData2 = () => {
           <Image src={require("../../../../resources/img/programming/java/24.jpg")} />
         </Col>
       </Row>
-    </MasterLayout>
+    </>
   );
 };
 

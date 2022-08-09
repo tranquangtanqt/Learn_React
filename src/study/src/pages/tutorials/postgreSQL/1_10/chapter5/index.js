@@ -1,11 +1,10 @@
 import { Col, Row, Divider } from "antd";
 import Code from "../../../../../components/modules/code";
-import MasterLayout from "../../../../../themes/masterLayout";
 import { PostgreSQLChapter5Data } from "./data";
 
 const PostgreSQLChapter5 = () => {
   return (
-    <MasterLayout>
+    <>
       <Divider orientation="left">5. Find String Length/Character Length</Divider>
       <Row justify="start" className="m-t-20">
         <Col span={24}>
@@ -31,7 +30,7 @@ const PostgreSQLChapter5 = () => {
           <Code code={PostgreSQLChapter5Data.two} language="sql" />
         </Col>
       </Row>
-    </MasterLayout>
+    </>
   );
 };
 

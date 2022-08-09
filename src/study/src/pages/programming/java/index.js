@@ -2,11 +2,9 @@ import { Card, Col, Row } from "antd";
 import React from "react";
 import { Link } from "react-router-dom";
 
-import MasterLayout from "../../../themes/masterLayout";
-
 const ProgrammingJava = () => {
   return (
-    <MasterLayout>
+    <>
       <h1>Java</h1>
       <Row justify="start">
         <Col span={8}>
@@ -55,7 +53,7 @@ const ProgrammingJava = () => {
           </Card>
         </Col>
       </Row>
-    </MasterLayout>
+    </>
   );
 };
 

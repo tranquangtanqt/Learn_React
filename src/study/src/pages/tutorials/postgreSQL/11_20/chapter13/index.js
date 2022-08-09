@@ -1,11 +1,10 @@
 import { Col, Row, Divider } from "antd";
 import Code from "../../../../../components/modules/code";
-import MasterLayout from "../../../../../themes/masterLayout";
 import { PostgreSQLChapter13Data } from "./data";
 
 const PostgreSQLChapter13 = () => {
   return (
-    <MasterLayout>
+    <>
       <Divider orientation="left">13. Recursive queries</Divider>
       <Row justify="start" className="m-t-20">
         <Col span={24}>
@@ -26,7 +25,7 @@ const PostgreSQLChapter13 = () => {
           </b>
         </Col>
       </Row>
-    </MasterLayout>
+    </>
   );
 };
 

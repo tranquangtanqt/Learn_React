@@ -1,7 +1,6 @@
 import { Col, Row, Table } from "antd";
 import React from "react";
 import Code from "../../../../components/modules/code";
-import MasterLayout from "../../../../themes/masterLayout";
 import { SqltextSessionProcessData } from "./data";
 
 const SqltextSessionProcess = () => {
@@ -67,7 +66,7 @@ const SqltextSessionProcess = () => {
     },
   ];
   return (
-    <MasterLayout>
+    <>
       <h1>Sqltext Session Process</h1>
       <Row justify="start">
         <Col span={24}>
@@ -90,7 +89,7 @@ const SqltextSessionProcess = () => {
           <Code code={SqltextSessionProcessData.sql3} language="sql" />
         </Col>
       </Row>
-    </MasterLayout>
+    </>
   );
 };
 

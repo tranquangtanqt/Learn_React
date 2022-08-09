@@ -1,9 +1,8 @@
 import { Col, Row, Divider, Image } from "antd";
-import MasterLayout from "../../../../themes/masterLayout";
 
 const NALesson1 = () => {
   return (
-    <MasterLayout>
+    <>
       <Divider orientation="left">
         Creating the .Net API Project using the dotnet CLI
       </Divider>
@@ -63,7 +62,7 @@ const NALesson1 = () => {
           />
         </Col>
       </Row>
-    </MasterLayout>
+    </>
   );
 };
 

@@ -1,6 +1,5 @@
 import { Button, Col, Divider, Row } from "antd";
 import { useState } from "react";
-import MasterLayout from "../../../themes/masterLayout";
 
 const FindTextColumnJPEN = () => {
   const [input1, setInput1] = useState("");
@@ -30,7 +29,7 @@ const FindTextColumnJPEN = () => {
   };
 
   return (
-    <MasterLayout>
+    <>
       <Divider orientation="left">Find Column</Divider>
       <Row justify="start">
         <Col span={6}>
@@ -71,7 +70,7 @@ const FindTextColumnJPEN = () => {
           />
         </Col>
       </Row>
-    </MasterLayout>
+    </>
   );
 };
 

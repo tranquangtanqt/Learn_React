@@ -1,5 +1,4 @@
 import React from "react";
-import MasterLayout from "../../../themes/masterLayout";
 import * as XLSX from "xlsx";
 
 const ReadExcelDemo = () => {
@@ -48,11 +47,11 @@ const ReadExcelDemo = () => {
   };
 
   return (
-    <MasterLayout>
+    <>
       <h1>ReadExcelDemo</h1>
       {/* <input class="upload-excel" type="file" id="fileUpload" onchange="Upload()"/> */}
       <input type="file" onChange={onChange} />
-    </MasterLayout>
+    </>
   );
 };
 

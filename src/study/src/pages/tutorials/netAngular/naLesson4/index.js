@@ -1,6 +1,5 @@
 import { Col, Row, Divider, Image } from "antd";
 import Code from "../../../../components/modules/code";
-import MasterLayout from "../../../../themes/masterLayout";
 
 const NALesson4 = () => {
   const sql = `INSERT INTO Users (Id, UserName)
@@ -11,7 +10,7 @@ INSERT INTO Users (Id, UserName)
 VALUES (3, "Jane");`;
 
   return (
-    <MasterLayout>
+    <>
       <Divider orientation="left">Setting donet-ef</Divider>
       <Row justify="start">
         <Col span={24}>
@@ -35,7 +34,7 @@ VALUES (3, "Jane");`;
           <Code code={sql} language="sql" />
         </Col>
       </Row>
-    </MasterLayout>
+    </>
   );
 };
 

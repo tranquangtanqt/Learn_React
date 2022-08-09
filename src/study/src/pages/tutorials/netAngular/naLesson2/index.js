@@ -1,9 +1,8 @@
 import { Col, Row, Divider, Image } from "antd";
-import MasterLayout from "../../../../themes/masterLayout";
 
 const NALesson2 = () => {
   return (
-    <MasterLayout>
+    <>
       <Divider orientation="left">Introduction to Entity Framework</Divider>
       <Row justify="start">
         <Col span={24}>
@@ -65,7 +64,7 @@ const NALesson2 = () => {
           </p>
         </Col>
       </Row>
-    </MasterLayout>
+    </>
   );
 };
 

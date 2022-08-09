@@ -2,11 +2,9 @@ import { Card, Col, Row } from "antd";
 import React from "react";
 import { Link } from "react-router-dom";
 
-import MasterLayout from "../../../themes/masterLayout";
-
 const ProgrammingPHP = () => {
   return (
-    <MasterLayout>
+    <>
       <h1>PHP</h1>
       <Row justify="start">
         <Col span={8}>
@@ -30,7 +28,7 @@ const ProgrammingPHP = () => {
           </Card>
         </Col>
       </Row>
-    </MasterLayout>
+    </>
   );
 };
 

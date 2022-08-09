@@ -1,5 +1,4 @@
 import { Tabs } from "antd";
-import MasterLayout from "../../../themes/masterLayout";
 import RandomMultiInsertSQL from "./randomMultiInsertSQL";
 import RandomProcedureInsertSQL from "./randomProcedureInsertSQL";
 
@@ -11,7 +10,7 @@ function callback(key) {
 
 const RandomInsertSQL = () => {
   return (
-    <MasterLayout>
+    <>
       <Tabs defaultActiveKey="1" onChange={callback}>
         <TabPane tab="INSERT" key="1">
           <RandomMultiInsertSQL />
@@ -20,7 +19,7 @@ const RandomInsertSQL = () => {
           <RandomProcedureInsertSQL />
         </TabPane>
       </Tabs>
-    </MasterLayout>
+    </>
   );
 };
 

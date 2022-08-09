@@ -96,118 +96,121 @@ import PostgreSQLChapter25 from "./tutorials/postgreSQL/21_28/chapter25";
 import PostgreSQLChapter26 from "./tutorials/postgreSQL/21_28/chapter26";
 import PostgreSQLChapter27 from "./tutorials/postgreSQL/21_28/chapter27";
 import PostgreSQLChapter28 from "./tutorials/postgreSQL/21_28/chapter28";
+import MasterLayout from "../themes/masterLayout";
 
 const RoutesRoot = () => {
   return (
     <HashRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
+      <MasterLayout> 
+        <Routes>
+          <Route path="/" element={<Home />} />
 
-        <Route path="/demo/connectAPI" element={<ConnectAPI />} />
-        <Route path="/demo/highlightcode" element={<HightLightCode />} />
-        
-        <Route path="/database/postgresql" element={<DatabasePostgresql />} />
-        <Route path="/database/postgresql/configPghba" element={<ConfigPghba />} />
+          <Route path="/demo/connectAPI" element={<ConnectAPI />} />
+          <Route path="/demo/highlightcode" element={<HightLightCode />} />
+          
+          <Route path="/database/postgresql" element={<DatabasePostgresql />} />
+          <Route path="/database/postgresql/configPghba" element={<ConfigPghba />} />
 
-        <Route path="/database/oracle" element={<DatabaseOracle />} />
-        <Route path="/database/oracle/changeLanguageOracleSQLDeveloper" element={<ChangeLanguageOracleSQLDeveloper />} />
-        <Route path="/database/oracle/importDumpOracle" element={<ImportDumpOracle />} />
-        <Route path="/database/oracle/listenerAndTnsnames" element={<ListenerAndTnsnames />} />
-        <Route path="/database/oracle/sqltextSessionProcess" element={<SqltextSessionProcess />} />
-        <Route path="/database/oracle/tips/string" element={<StringOracle />} />
-        <Route path="/database/oracle/tips/system" element={<SystemOracle />} />
-        <Route path="/database/oracle/tipsForOracleSQLDeveloper" element={<TipsForOracleSQLDeveloper />} />
-        
-        {/* <Route path="/japan/vocabulary" element={<Vocabulary />} />
-        <Route path="/japan/vocabulary/unit1" element={<VocabularyUnit1 />} /> */}
+          <Route path="/database/oracle" element={<DatabaseOracle />} />
+          <Route path="/database/oracle/changeLanguageOracleSQLDeveloper" element={<ChangeLanguageOracleSQLDeveloper />} />
+          <Route path="/database/oracle/importDumpOracle" element={<ImportDumpOracle />} />
+          <Route path="/database/oracle/listenerAndTnsnames" element={<ListenerAndTnsnames />} />
+          <Route path="/database/oracle/sqltextSessionProcess" element={<SqltextSessionProcess />} />
+          <Route path="/database/oracle/tips/string" element={<StringOracle />} />
+          <Route path="/database/oracle/tips/system" element={<SystemOracle />} />
+          <Route path="/database/oracle/tipsForOracleSQLDeveloper" element={<TipsForOracleSQLDeveloper />} />
+          
+          {/* <Route path="/japan/vocabulary" element={<Vocabulary />} />
+          <Route path="/japan/vocabulary/unit1" element={<VocabularyUnit1 />} /> */}
 
-        <Route path="/tips" element={<Tips />} />
-        <Route path="/tips/software/visualStudioCode" element={<VisualStudioCode />} />
+          <Route path="/tips" element={<Tips />} />
+          <Route path="/tips/software/visualStudioCode" element={<VisualStudioCode />} />
 
-        <Route path="/utilities" element={<Utilities />} />
-        <Route path="/utilities/createTableFromExcel" element={<CreateTableFromExcel />} />
-        <Route path="/utilities/findTextDuplicates" element={<FindTextDuplicates />} />
-        <Route path="/utilities/findTextColumnJP_EN" element={<FindTextColumnJPEN />} />
-        <Route path="/utilities/listFileSelected" element={<ListFileSelected />} />
-        <Route path="/utilities/randomInsertSQL" element={<RandomInsertSQL />} />
-        <Route path="/utilities/textRepeat" element={<TextRepeat />} />
-        <Route path="/utilities/readContentMultiFile" element={<ReadContentMultiFile />} />
-        <Route path="/utilities/textReplace" element={<TextReplace />} />
-        <Route path="/utilities/textCommon" element={<TextCommon />} />
-        <Route path="/utilities/textSpecial" element={<TextSpecial />} />
-        <Route path="/utilities/tinyMCE" element={<TinyMCE />} />
+          <Route path="/utilities" element={<Utilities />} />
+          <Route path="/utilities/createTableFromExcel" element={<CreateTableFromExcel />} />
+          <Route path="/utilities/findTextDuplicates" element={<FindTextDuplicates />} />
+          <Route path="/utilities/findTextColumnJP_EN" element={<FindTextColumnJPEN />} />
+          <Route path="/utilities/listFileSelected" element={<ListFileSelected />} />
+          <Route path="/utilities/randomInsertSQL" element={<RandomInsertSQL />} />
+          <Route path="/utilities/textRepeat" element={<TextRepeat />} />
+          <Route path="/utilities/readContentMultiFile" element={<ReadContentMultiFile />} />
+          <Route path="/utilities/textReplace" element={<TextReplace />} />
+          <Route path="/utilities/textCommon" element={<TextCommon />} />
+          <Route path="/utilities/textSpecial" element={<TextSpecial />} />
+          <Route path="/utilities/tinyMCE" element={<TinyMCE />} />
 
-        <Route path="/tutorial/excel" element={<ExcelTutorial />} />
-        <Route path="/tutorial/excel/filter1" element={<ExcelFilter1 />} />
-        <Route path="/tutorial/excel/charactersInExcel" element={<CharactersInExcel />} />
+          <Route path="/tutorial/excel" element={<ExcelTutorial />} />
+          <Route path="/tutorial/excel/filter1" element={<ExcelFilter1 />} />
+          <Route path="/tutorial/excel/charactersInExcel" element={<CharactersInExcel />} />
 
-        <Route path="/tutorial/net-angular" element={<NetAngular />} />
-        <Route path="/tutorial/net-angular/lesson1" element={<NALesson1 />} />
-        <Route path="/tutorial/net-angular/lesson2" element={<NALesson2 />} />
-        <Route path="/tutorial/net-angular/lesson3" element={<NALesson3 />} />
-        <Route path="/tutorial/net-angular/lesson4" element={<NALesson4 />} />
-        <Route path="/tutorial/net-angular/lesson5" element={<NALesson5 />} />
-        <Route path="/tutorial/net-angular/lesson6" element={<NALesson6 />} />
-        <Route path="/tutorial/net-angular/lesson7" element={<NALesson7 />} />
-        <Route path="/tutorial/net-angular/lesson8" element={<NALesson8 />} />
-        <Route path="/tutorial/net-angular/lesson9" element={<NALesson9 />} />
+          <Route path="/tutorial/net-angular" element={<NetAngular />} />
+          <Route path="/tutorial/net-angular/lesson1" element={<NALesson1 />} />
+          <Route path="/tutorial/net-angular/lesson2" element={<NALesson2 />} />
+          <Route path="/tutorial/net-angular/lesson3" element={<NALesson3 />} />
+          <Route path="/tutorial/net-angular/lesson4" element={<NALesson4 />} />
+          <Route path="/tutorial/net-angular/lesson5" element={<NALesson5 />} />
+          <Route path="/tutorial/net-angular/lesson6" element={<NALesson6 />} />
+          <Route path="/tutorial/net-angular/lesson7" element={<NALesson7 />} />
+          <Route path="/tutorial/net-angular/lesson8" element={<NALesson8 />} />
+          <Route path="/tutorial/net-angular/lesson9" element={<NALesson9 />} />
 
-        <Route path="/tutorial/postgreSQL" element={<PostgreSQL />} />
-        <Route path="/tutorial/postgreSQL/chapter1" element={<PostgreSQLChapter1 />} />
-        <Route path="/tutorial/postgreSQL/chapter2" element={<PostgreSQLChapter2 />} />
-        <Route path="/tutorial/postgreSQL/chapter3" element={<PostgreSQLChapter3 />} />
-        <Route path="/tutorial/postgreSQL/chapter4" element={<PostgreSQLChapter4 />} />
-        <Route path="/tutorial/postgreSQL/chapter5" element={<PostgreSQLChapter5 />} />
-        <Route path="/tutorial/postgreSQL/chapter6" element={<PostgreSQLChapter6 />} />
-        <Route path="/tutorial/postgreSQL/chapter7" element={<PostgreSQLChapter7 />} />
-        <Route path="/tutorial/postgreSQL/chapter8" element={<PostgreSQLChapter8 />} />
-        <Route path="/tutorial/postgreSQL/chapter9" element={<PostgreSQLChapter9 />} />
-        <Route path="/tutorial/postgreSQL/chapter10" element={<PostgreSQLChapter10 />} />
-        <Route path="/tutorial/postgreSQL/chapter11" element={<PostgreSQLChapter11 />} />
-        <Route path="/tutorial/postgreSQL/chapter12" element={<PostgreSQLChapter12 />} />
-        <Route path="/tutorial/postgreSQL/chapter13" element={<PostgreSQLChapter13 />} />
-        <Route path="/tutorial/postgreSQL/chapter14" element={<PostgreSQLChapter14 />} />
-        <Route path="/tutorial/postgreSQL/chapter15" element={<PostgreSQLChapter15 />} />
-        <Route path="/tutorial/postgreSQL/chapter16" element={<PostgreSQLChapter16 />} />
-        <Route path="/tutorial/postgreSQL/chapter17" element={<PostgreSQLChapter17 />} />
-        <Route path="/tutorial/postgreSQL/chapter18" element={<PostgreSQLChapter18 />} />
-        <Route path="/tutorial/postgreSQL/chapter19" element={<PostgreSQLChapter19 />} />
-        <Route path="/tutorial/postgreSQL/chapter20" element={<PostgreSQLChapter20 />} />
-        <Route path="/tutorial/postgreSQL/chapter21" element={<PostgreSQLChapter21 />} />
-        <Route path="/tutorial/postgreSQL/chapter22" element={<PostgreSQLChapter22 />} />
-        <Route path="/tutorial/postgreSQL/chapter23" element={<PostgreSQLChapter23 />} />
-        <Route path="/tutorial/postgreSQL/chapter24" element={<PostgreSQLChapter24 />} />
-        <Route path="/tutorial/postgreSQL/chapter25" element={<PostgreSQLChapter25 />} />
-        <Route path="/tutorial/postgreSQL/chapter26" element={<PostgreSQLChapter26 />} />
-        <Route path="/tutorial/postgreSQL/chapter27" element={<PostgreSQLChapter27 />} />
-        <Route path="/tutorial/postgreSQL/chapter28" element={<PostgreSQLChapter28 />} />
+          <Route path="/tutorial/postgreSQL" element={<PostgreSQL />} />
+          <Route path="/tutorial/postgreSQL/chapter1" element={<PostgreSQLChapter1 />} />
+          <Route path="/tutorial/postgreSQL/chapter2" element={<PostgreSQLChapter2 />} />
+          <Route path="/tutorial/postgreSQL/chapter3" element={<PostgreSQLChapter3 />} />
+          <Route path="/tutorial/postgreSQL/chapter4" element={<PostgreSQLChapter4 />} />
+          <Route path="/tutorial/postgreSQL/chapter5" element={<PostgreSQLChapter5 />} />
+          <Route path="/tutorial/postgreSQL/chapter6" element={<PostgreSQLChapter6 />} />
+          <Route path="/tutorial/postgreSQL/chapter7" element={<PostgreSQLChapter7 />} />
+          <Route path="/tutorial/postgreSQL/chapter8" element={<PostgreSQLChapter8 />} />
+          <Route path="/tutorial/postgreSQL/chapter9" element={<PostgreSQLChapter9 />} />
+          <Route path="/tutorial/postgreSQL/chapter10" element={<PostgreSQLChapter10 />} />
+          <Route path="/tutorial/postgreSQL/chapter11" element={<PostgreSQLChapter11 />} />
+          <Route path="/tutorial/postgreSQL/chapter12" element={<PostgreSQLChapter12 />} />
+          <Route path="/tutorial/postgreSQL/chapter13" element={<PostgreSQLChapter13 />} />
+          <Route path="/tutorial/postgreSQL/chapter14" element={<PostgreSQLChapter14 />} />
+          <Route path="/tutorial/postgreSQL/chapter15" element={<PostgreSQLChapter15 />} />
+          <Route path="/tutorial/postgreSQL/chapter16" element={<PostgreSQLChapter16 />} />
+          <Route path="/tutorial/postgreSQL/chapter17" element={<PostgreSQLChapter17 />} />
+          <Route path="/tutorial/postgreSQL/chapter18" element={<PostgreSQLChapter18 />} />
+          <Route path="/tutorial/postgreSQL/chapter19" element={<PostgreSQLChapter19 />} />
+          <Route path="/tutorial/postgreSQL/chapter20" element={<PostgreSQLChapter20 />} />
+          <Route path="/tutorial/postgreSQL/chapter21" element={<PostgreSQLChapter21 />} />
+          <Route path="/tutorial/postgreSQL/chapter22" element={<PostgreSQLChapter22 />} />
+          <Route path="/tutorial/postgreSQL/chapter23" element={<PostgreSQLChapter23 />} />
+          <Route path="/tutorial/postgreSQL/chapter24" element={<PostgreSQLChapter24 />} />
+          <Route path="/tutorial/postgreSQL/chapter25" element={<PostgreSQLChapter25 />} />
+          <Route path="/tutorial/postgreSQL/chapter26" element={<PostgreSQLChapter26 />} />
+          <Route path="/tutorial/postgreSQL/chapter27" element={<PostgreSQLChapter27 />} />
+          <Route path="/tutorial/postgreSQL/chapter28" element={<PostgreSQLChapter28 />} />
 
-        <Route path="/programming-csharp" element={<ProgrammingCSharp />} />
-        <Route path="/programming-csharp/connectOracle" element={<ConnectOracleCSharp />} />
-        <Route path="/programming-csharp/connectPostgresql" element={<ConnectPostgresqlCsharp />} />
-        <Route path="/programming-csharp/getAllFileInFolder" element={<GetAllFileInFolder />} />
-        <Route path="/programming-csharp/readFileExcel" element={<ReadFileExcel />} />
-        <Route path="/programming-csharp/EPPlus" element={<EPPlus />} />
-        <Route path="/programming-csharp/nameControlWinform" element={<NameControlWinform />} />
+          <Route path="/programming-csharp" element={<ProgrammingCSharp />} />
+          <Route path="/programming-csharp/connectOracle" element={<ConnectOracleCSharp />} />
+          <Route path="/programming-csharp/connectPostgresql" element={<ConnectPostgresqlCsharp />} />
+          <Route path="/programming-csharp/getAllFileInFolder" element={<GetAllFileInFolder />} />
+          <Route path="/programming-csharp/readFileExcel" element={<ReadFileExcel />} />
+          <Route path="/programming-csharp/EPPlus" element={<EPPlus />} />
+          <Route path="/programming-csharp/nameControlWinform" element={<NameControlWinform />} />
 
-        <Route path="/programming-java" element={<ProgrammingJava />} />
-        <Route path="/programming-java/settingMaven" element={<SettingMaven />} />
-        <Route path="/programming-java/selectData1" element={<SelectData1 />} />
-        <Route path="/programming-java/insertData1" element={<InsertData1 />} />
-        <Route path="/programming-java/updateData1" element={<UpdateData1 />} />
-        <Route path="/programming-java/deleteData1" element={<DeleteData1 />} />
-        <Route path="/programming-java/selectData2" element={<SelectData2 />} />
+          <Route path="/programming-java" element={<ProgrammingJava />} />
+          <Route path="/programming-java/settingMaven" element={<SettingMaven />} />
+          <Route path="/programming-java/selectData1" element={<SelectData1 />} />
+          <Route path="/programming-java/insertData1" element={<InsertData1 />} />
+          <Route path="/programming-java/updateData1" element={<UpdateData1 />} />
+          <Route path="/programming-java/deleteData1" element={<DeleteData1 />} />
+          <Route path="/programming-java/selectData2" element={<SelectData2 />} />
 
-        <Route path="/programming-php" element={<ProgrammingPHP />} />
-        <Route path="/programming-php/convertDatetime" element={<PHPConvertDatetime />} />
-        <Route path="/programming-php/convertUnicode" element={<PHPConvertUnicode />} />
-        <Route path="/programming-php/substringEllipses" element={<PHPSubstringEllipses />} />
-        <Route path="/programming-php/phpDeleteFile" element={<PHPDeleteFile />} />
+          <Route path="/programming-php" element={<ProgrammingPHP />} />
+          <Route path="/programming-php/convertDatetime" element={<PHPConvertDatetime />} />
+          <Route path="/programming-php/convertUnicode" element={<PHPConvertUnicode />} />
+          <Route path="/programming-php/substringEllipses" element={<PHPSubstringEllipses />} />
+          <Route path="/programming-php/phpDeleteFile" element={<PHPDeleteFile />} />
 
-        <Route path="/demo/connectAPI" element={<ConnectAPI />} />
-        <Route path="/demo/readExcel" element={<ReadExcelDemo />} />
-        <Route path="/demo/createExcel" element={<CreateExel />} />
-      </Routes>
+          <Route path="/demo/connectAPI" element={<ConnectAPI />} />
+          <Route path="/demo/readExcel" element={<ReadExcelDemo />} />
+          <Route path="/demo/createExcel" element={<CreateExel />} />
+        </Routes>
+      </MasterLayout>
     </HashRouter >
   );
 };

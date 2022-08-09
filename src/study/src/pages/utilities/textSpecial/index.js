@@ -1,9 +1,8 @@
 import { Col, Divider, Row } from "antd";
-import MasterLayout from "../../../themes/masterLayout";
 
 const TextSpecial = () => {
   return (
-    <MasterLayout>
+    <>
       <Divider orientation="left">Text Special</Divider>
       <Row justify="start">
         <Col span={24}>
@@ -37,7 +36,7 @@ const TextSpecial = () => {
           </table>
         </Col>
       </Row>
-    </MasterLayout>
+    </>
   );
 };
 

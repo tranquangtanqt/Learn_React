@@ -1,11 +1,10 @@
 import { Col, Row, Divider } from "antd";
 import Code from "../../../../../components/modules/code";
-import MasterLayout from "../../../../../themes/masterLayout";
 import { PostgreSQLChapter23Data } from "./data";
 
 const PostgreSQLChapter23 = () => {
   return (
-    <MasterLayout>
+    <>
       <Divider orientation="left">
         23. Backup script for a production DB
       </Divider>
@@ -82,7 +81,7 @@ const PostgreSQLChapter23 = () => {
           <Code code={PostgreSQLChapter23Data.one} language="sql" />
         </Col>
       </Row>
-    </MasterLayout>
+    </>
   );
 };
 

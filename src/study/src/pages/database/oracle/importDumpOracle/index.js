@@ -1,12 +1,11 @@
 import { Col, Row } from "antd";
 import React from "react";
 import Code from "../../../../components/modules/code";
-import MasterLayout from "../../../../themes/masterLayout";
 import { ImportDumpOracleData } from "./data";
 
 const ImportDumpOracle = () => {
   return (
-    <MasterLayout>
+    <>
       <h1>Import file dump Oracle</h1>
       <Row justify="start">
         <Col span={24}>
@@ -62,7 +61,7 @@ const ImportDumpOracle = () => {
           <p><i>Thư mục lưu file tablespace: D:\app\tantq\virtual\product\12.2.0\dbhome_1\database</i></p>
         </Col>
       </Row>
-    </MasterLayout>
+    </>
   );
 };
 

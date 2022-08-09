@@ -1,11 +1,10 @@
 import { Col, Row, Divider } from "antd";
 import Code from "../../../../../components/modules/code";
-import MasterLayout from "../../../../../themes/masterLayout";
 import { PostgreSQLChapter27Data } from "./data";
 
 const PostgreSQLChapter27 = () => {
   return (
-    <MasterLayout>
+    <>
       <Divider orientation="left">
         27. EXTENSION dblink and postgres_fdw
       </Divider>
@@ -132,7 +131,7 @@ const PostgreSQLChapter27 = () => {
           <Code code={PostgreSQLChapter27Data.thirteen} language="sql" />
         </Col>
       </Row>
-    </MasterLayout>
+    </>
   );
 };
 

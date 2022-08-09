@@ -45,14 +45,6 @@ const MasterLayout = ({ children }) => {
               </Menu.Item>
             </SubMenu>
           }
-          {/* {
-            <SubMenu key="sub_japan" title={ <span> <FileAddOutlined /> <span>Japan</span> </span> } >
-              <Menu.Item key={"sub_japan_vocabulary"}>
-                Vocabulary
-                <Link to={"/japan/vocabulary"} />
-              </Menu.Item>
-            </SubMenu>
-          } */}
           {
             <SubMenu key="sub_programming" title={ <span> <AndroidOutlined /> <span>Programming</span> </span> } >
               <Menu.Item key={"sub_programming-csharp"}>

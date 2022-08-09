@@ -6,6 +6,6 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <React.StrictMode>
-    <RoutesRoot />
+     <RoutesRoot />
   </React.StrictMode>
 );

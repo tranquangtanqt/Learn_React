@@ -1,10 +1,9 @@
 import { Col, Image, Row } from "antd";
 import React from "react";
-import MasterLayout from "../../../../themes/masterLayout";
 
 const SettingMaven = () => {
   return (
-    <MasterLayout>
+    <>
       <h1>Cài đặt maven và tạo project</h1>
       <Row justify="start">
         <Col span={24}>
@@ -112,7 +111,7 @@ const SettingMaven = () => {
           <p>Đến đây việc cài đặt Maven cho Eclipse hoàn thành.</p>
         </Col>
       </Row>
-    </MasterLayout>
+    </>
   );
 };
 

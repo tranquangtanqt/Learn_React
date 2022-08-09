@@ -2,11 +2,9 @@ import { Card, Col, Row } from "antd";
 import React from "react";
 import { Link } from "react-router-dom";
 
-import MasterLayout from "../../../themes/masterLayout";
-
 const DatabasePostgresql = () => {
   return (
-    <MasterLayout>
+    <>
       <h1>Database Postgresql</h1>
       <Row justify="start">
         <Col span={8}>
@@ -21,7 +19,7 @@ const DatabasePostgresql = () => {
           <Card title="TODO"></Card>
         </Col>
       </Row>
-    </MasterLayout>
+    </>
   );
 };
 

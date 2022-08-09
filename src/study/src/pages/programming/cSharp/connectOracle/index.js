@@ -1,12 +1,11 @@
 import { Col, Image, Row } from "antd";
 import React from "react";
 import Code from "../../../../components/modules/code";
-import MasterLayout from "../../../../themes/masterLayout";
 import { ConnectOracleData } from "./data";
 
 const ConnectOracleCSharp = () => {
   return (
-    <MasterLayout>
+    <>
       <h1>Connect and Select from database Oracle</h1>
       <Row justify="start">
         <Col span={24}>
@@ -23,7 +22,7 @@ const ConnectOracleCSharp = () => {
           <Code code={ConnectOracleData.function} language="csharp" />
         </Col>
       </Row>
-    </MasterLayout>
+    </>
   );
 };
 

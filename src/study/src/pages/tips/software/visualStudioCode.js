@@ -1,6 +1,5 @@
 import { Col, Image, Row } from "antd";
 import Code from "../../../components/modules/code";
-import MasterLayout from "../../../themes/masterLayout";
 
 const VisualStudioCode = () => {
   const keyBingding = `// Place your key bindings in this file to override the defaults
@@ -16,7 +15,7 @@ const VisualStudioCode = () => {
 ]`;
 
   return (
-    <MasterLayout>
+    <>
       <Row justify="start">
         <Col span={24}>
           <h1>Add hotkey</h1>
@@ -43,7 +42,7 @@ const VisualStudioCode = () => {
           <Code code={keyBingding} language="typescript" />
         </Col>
       </Row>
-    </MasterLayout>
+    </>
   );
 };
 

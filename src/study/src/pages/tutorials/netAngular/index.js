@@ -1,10 +1,9 @@
 import { Col, Row, Card } from "antd";
-import MasterLayout from "../../../themes/masterLayout";
 import { Link } from "react-router-dom";
 
 const NetAngular = () => {
   return (
-    <MasterLayout>
+    <>
       <Row justify="start">
         <Col span={8}>
           <Card title="Creating the .Net API Project">
@@ -62,7 +61,7 @@ const NetAngular = () => {
           </Card>
         </Col>
       </Row>
-    </MasterLayout>
+    </>
   );
 };
 

@@ -1,10 +1,8 @@
 import { Col, Image, Row } from "antd";
 
-import MasterLayout from "../../../../themes/masterLayout";
-
 const ExcelFilter1 = () => {
   return (
-    <MasterLayout>
+    <>
       <h1>Filter</h1>
       <Row>
         <Col span={24}>
@@ -36,7 +34,7 @@ const ExcelFilter1 = () => {
           />
         </Col>
       </Row>
-    </MasterLayout>
+    </>
   );
 };
 

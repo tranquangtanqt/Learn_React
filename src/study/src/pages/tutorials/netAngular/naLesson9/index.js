@@ -1,11 +1,10 @@
 import { Col, Row, Divider, Image } from "antd";
 import Code from "../../../../components/modules/code";
-import MasterLayout from "../../../../themes/masterLayout";
 import { naLesson3Data } from "./data";
 
 const NALesson9 = () => {
   return (
-    <MasterLayout>
+    <>
       <Divider orientation="left">
         Updating the user entity and Creating a base API controller
       </Divider>
@@ -44,7 +43,7 @@ const NALesson9 = () => {
 
         
       </Row>
-    </MasterLayout>
+    </>
   );
 };
 

@@ -1,6 +1,5 @@
 import { Button, Col, Divider, Input, Row } from "antd";
 import { useState } from "react";
-import MasterLayout from "../../../themes/masterLayout";
 import StringUtils from "../../../utils/StringUtils";
 
 const TextRepeat = () => {
@@ -34,7 +33,7 @@ const TextRepeat = () => {
   };
 
   return (
-    <MasterLayout>
+    <>
        <Divider orientation="left">Input</Divider>
         <Row justify="start">
           <Col span={24}>
@@ -75,7 +74,7 @@ const TextRepeat = () => {
             />
           </Col>
         </Row>
-    </MasterLayout>
+    </>
   );
 };
 

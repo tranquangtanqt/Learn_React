@@ -1,10 +1,9 @@
 import { Col, Row, Card } from "antd";
-import MasterLayout from "../../../themes/masterLayout";
 import { Link } from "react-router-dom";
 
 const Vocabulary = () => {
   return (
-    <MasterLayout>
+    <>
       <Row justify="start">
         <Col span={8}>
           <Card title="Vocabulary">
@@ -30,7 +29,7 @@ const Vocabulary = () => {
           </Card>
         </Col>
       </Row>
-    </MasterLayout>
+    </>
   );
 };
 

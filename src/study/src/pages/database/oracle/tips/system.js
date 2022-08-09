@@ -2,12 +2,10 @@ import { Col, Row } from "antd";
 import React from "react";
 import Code from "../../../../components/modules/code";
 
-import MasterLayout from "../../../../themes/masterLayout";
-
 const SystemOracle = () => {
  
   return (
-    <MasterLayout>
+    <>
       <Row justify="start">
         <Col span={24}>
           <h1>1. Hiển thị toàn bộ comments của table và view</h1>
@@ -62,7 +60,7 @@ const SystemOracle = () => {
           <Code code={`SELECT table_name, column_name, data_type, data_length FROM USER_TAB_COLUMNS`} language="sql" />
         </Col>
       </Row>
-    </MasterLayout>
+    </>
   );
 };
 

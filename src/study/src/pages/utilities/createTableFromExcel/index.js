@@ -1,6 +1,5 @@
 import { Button, Col, Divider, Input, Row } from "antd";
 import { useState } from "react";
-import MasterLayout from "../../../themes/masterLayout";
 import * as XLSX from "xlsx";
 import ExportExcel from "../../../components/modules/exportExcel";
 
@@ -144,7 +143,7 @@ const CreateTableFromExcel = () => {
   ];
 
   return (
-    <MasterLayout>
+    <>
       <Divider orientation="left">Create Table From Excel</Divider>
       <Row justify="start">
         <Col span={12}>
@@ -189,7 +188,7 @@ const CreateTableFromExcel = () => {
           />
         </Col>
       </Row>
-    </MasterLayout>
+    </>
   );
 };
 

@@ -1,11 +1,10 @@
 import { Col, Row, Divider } from "antd";
 import Code from "../../../../../components/modules/code";
-import MasterLayout from "../../../../../themes/masterLayout";
 import { PostgreSQLChapter17Data } from "./data";
 
 const PostgreSQLChapter17 = () => {
   return (
-    <MasterLayout>
+    <>
       <Divider orientation="left">17. Triggers and Trigger Functions</Divider>
       <Row justify="start" className="m-t-20">
         <Col span={24}>
@@ -99,7 +98,7 @@ const PostgreSQLChapter17 = () => {
           <Code code={PostgreSQLChapter17Data.nine} language="sql" />
         </Col>
       </Row>
-    </MasterLayout>
+    </>
   );
 };
 

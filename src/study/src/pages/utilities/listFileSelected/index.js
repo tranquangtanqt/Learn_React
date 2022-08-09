@@ -2,7 +2,6 @@
 import { Col, Row } from "antd";
 import { useState } from "react";
 import Code from "../../../components/modules/code";
-import MasterLayout from "../../../themes/masterLayout";
 
 const code = `<!DOCTYPE html>
 <html>
@@ -42,7 +41,7 @@ const ListFileSelected = () => {
     };
 
     return (
-        <MasterLayout>
+        <>
             <Row justify="start">
                 <Col span={24}>
                     <input type="file" id="file" onChange = { e => handleupload(e) }  multiple />
@@ -64,7 +63,7 @@ const ListFileSelected = () => {
                     <Code code={code} language={"HTML"}></Code>
                 </Col>
             </Row>
-        </MasterLayout>
+        </>
     )
 }
 

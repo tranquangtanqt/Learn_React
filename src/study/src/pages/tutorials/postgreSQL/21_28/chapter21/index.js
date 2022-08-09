@@ -1,11 +1,10 @@
 import { Col, Row, Divider } from "antd";
 import Code from "../../../../../components/modules/code";
-import MasterLayout from "../../../../../themes/masterLayout";
 import { PostgreSQLChapter21Data } from "./data";
 
 const PostgreSQLChapter21 = () => {
   return (
-    <MasterLayout>
+    <>
       <Divider orientation="left">21. Comments in PostgreSQL</Divider>
       <Row justify="start" className="m-t-20">
         <Col span={24}>
@@ -38,7 +37,7 @@ const PostgreSQLChapter21 = () => {
           <Code code={PostgreSQLChapter21Data.two} language="sql" />
         </Col>
       </Row>
-    </MasterLayout>
+    </>
   );
 };
 

@@ -1,10 +1,9 @@
 import { Col, Row, Card } from "antd";
-import MasterLayout from "../../themes/masterLayout";
 import { Link } from "react-router-dom";
 
 const Utilities = () => {
   return (
-    <MasterLayout>
+    <>
       <Row justify="start">
         <Col span={8}>
           <Card title="File">
@@ -48,7 +47,7 @@ const Utilities = () => {
           </Card>
         </Col>
       </Row>
-    </MasterLayout>
+    </>
   );
 };
 

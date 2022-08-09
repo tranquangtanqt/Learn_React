@@ -1,12 +1,11 @@
 import { Col, Row, Divider } from "antd";
 import Code from "../../../../components/modules/code";
-import MasterLayout from "../../../../themes/masterLayout";
 import { naLesson8Data } from './data';
 
 const NALesson8 = () => {
 
   return (
-    <MasterLayout>
+    <>
       <Divider orientation="left">Adding CORS support in the API</Divider>
       <Row justify="start">
         <Col span={24}>
@@ -27,7 +26,7 @@ const NALesson8 = () => {
           <Code code={naLesson8Data.app_component} language="html" />
         </Col>
       </Row>
-    </MasterLayout>
+    </>
   );
 };
 

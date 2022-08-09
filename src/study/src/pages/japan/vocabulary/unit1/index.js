@@ -1,6 +1,5 @@
 import { Col, Row, Divider, Button } from "antd";
 import { useState } from "react";
-import MasterLayout from "../../../../themes/masterLayout";
 import { Data } from "./data";
 
 const VocabularyUnit1 = () => {
@@ -65,7 +64,7 @@ const VocabularyUnit1 = () => {
   // scoreWrong: number = 0;
 
   return (
-    <MasterLayout>
+    <>
       <Divider orientation="left">Unit 1</Divider>
       <Button block type="primary" ghost style={{whiteSpace: "normal",height:'auto',marginBottom:'10px'}}>Wrap around text</Button>
       <Row justify="start">
@@ -104,7 +103,7 @@ const VocabularyUnit1 = () => {
           </Button>
         </Col>
       </Row>
-    </MasterLayout>
+    </>
   );
 };
 

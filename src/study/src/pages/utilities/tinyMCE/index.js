@@ -1,5 +1,4 @@
 import React, { useRef, useState } from 'react';
-import MasterLayout from "../../../themes/masterLayout";
 import { Editor } from '@tinymce/tinymce-react';
 import { Button, Col, Divider, Row } from 'antd';
 import Textarea from '../../../components/modules/textarea';
@@ -16,7 +15,7 @@ const TinyMCE = () => {
     };
 
   return (
-    <MasterLayout>
+    <>
        <Editor
          onInit={(evt, editor) => editorRef.current = editor}
          initialValue=""
@@ -37,7 +36,7 @@ const TinyMCE = () => {
             <Textarea value={ textareaVal }></Textarea>
         </Col>
         </Row>
-  </MasterLayout>
+  </>
   );
 };
 

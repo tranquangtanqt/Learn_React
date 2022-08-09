@@ -1,12 +1,11 @@
 import { Col, Row, Divider } from "antd";
 import Code from "../../../../components/modules/code";
-import MasterLayout from "../../../../themes/masterLayout";
 import { naLesson3Data } from './data';
 
 const NALesson3 = () => {
 
   return (
-    <MasterLayout>
+    <>
       <Divider orientation="left">Adding Entity Framework</Divider>
       <Row justify="start">
         <Col span={24}>
@@ -37,7 +36,7 @@ const NALesson3 = () => {
           <Code code={naLesson3Data.startUp} language="csharp" />
         </Col>
       </Row>
-    </MasterLayout>
+    </>
   );
 };
 

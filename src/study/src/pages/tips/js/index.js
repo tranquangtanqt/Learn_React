@@ -1,12 +1,10 @@
-import { Divider} from "antd";
-import MasterLayout from "../../../themes/masterLayout";
+import { Divider } from "antd";
 
 const TrickJS = () => {
-
   return (
-    <MasterLayout>
-       <Divider orientation="left">Input</Divider>
-    </MasterLayout>
+    <>
+      <Divider orientation="left">Input</Divider>
+    </>
   );
 };
 

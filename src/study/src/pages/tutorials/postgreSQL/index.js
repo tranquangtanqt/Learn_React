@@ -1,10 +1,9 @@
 import { Col, Row, Card } from "antd";
-import MasterLayout from "../../../themes/masterLayout";
 import { Link } from "react-router-dom";
 
 const PostgreSQL = () => {
   return (
-    <MasterLayout>
+    <>
       <Row justify="start">
         <Col span={8}>
           <Card title="Chapter 1 - 5">
@@ -237,7 +236,7 @@ const PostgreSQL = () => {
           </Card>
         </Col>
       </Row>
-    </MasterLayout>
+    </>
   );
 };
 

@@ -2,11 +2,9 @@ import { Card, Col, Row } from "antd";
 import React from "react";
 import { Link } from "react-router-dom";
 
-import MasterLayout from "../../themes/masterLayout";
-
 const Home = () => {
   return (
-    <MasterLayout>
+    <>
       <h1>Home page</h1>
       <Row justify="start">
         <Col span={8}>
@@ -86,8 +84,7 @@ const Home = () => {
           </Card>
         </Col>
       </Row>
-      
-    </MasterLayout>
+    </>
   );
 };
 

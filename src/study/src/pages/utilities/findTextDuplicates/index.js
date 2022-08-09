@@ -1,6 +1,5 @@
 import { Button, Col, Divider, Row } from "antd";
 import { useState } from "react";
-import MasterLayout from "../../../themes/masterLayout";
 
 const FindTextDuplicates = () => {
   const [input1, setInput1] = useState("");
@@ -25,7 +24,7 @@ const FindTextDuplicates = () => {
   };
 
   return (
-    <MasterLayout>
+    <>
       <Divider orientation="left">Find Text Duplicates</Divider>
       <Row justify="start">
         <Col span={12}>
@@ -64,7 +63,7 @@ const FindTextDuplicates = () => {
           />
         </Col>
       </Row>
-    </MasterLayout>
+    </>
   );
 };
 

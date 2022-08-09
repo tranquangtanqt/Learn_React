@@ -2,12 +2,11 @@ import { Col, Row } from "antd";
 import React from "react";
 import Code from "../../../../components/modules/code";
 
-import MasterLayout from "../../../../themes/masterLayout";
 import { ListenerAndTnsnamesData } from "./data";
 
 const ListenerAndTnsnames = () => {
   return (
-    <MasterLayout>
+    <>
       <h1>Database Oracle</h1>
       <Row justify="start">
         <Col span={24}>
@@ -35,7 +34,10 @@ const ListenerAndTnsnames = () => {
         </Col>
 
         <Col span={23} offset={1}>
-          <Code code={ListenerAndTnsnamesData.listenerRemote} language="javascript" />
+          <Code
+            code={ListenerAndTnsnamesData.listenerRemote}
+            language="javascript"
+          />
         </Col>
       </Row>
 
@@ -45,10 +47,13 @@ const ListenerAndTnsnames = () => {
         </Col>
 
         <Col span={23} offset={1}>
-          <Code code={ListenerAndTnsnamesData.tnsnamesRemote} language="javascript" />
+          <Code
+            code={ListenerAndTnsnamesData.tnsnamesRemote}
+            language="javascript"
+          />
         </Col>
       </Row>
-    </MasterLayout>
+    </>
   );
 };
 

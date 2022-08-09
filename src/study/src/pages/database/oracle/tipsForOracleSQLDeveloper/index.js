@@ -1,10 +1,9 @@
 import { Col, Image, Row } from "antd";
 import React from "react";
-import MasterLayout from "../../../../themes/masterLayout";
 
 const TipsForOracleSQLDeveloper = () => {
   return (
-    <MasterLayout>
+    <>
       <Row>
         <Col span={24}>
           <h1>1. Hotkey</h1>
@@ -114,7 +113,7 @@ const TipsForOracleSQLDeveloper = () => {
           />
         </Col>
       </Row>
-    </MasterLayout>
+    </>
   );
 };
 

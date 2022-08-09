@@ -1,8 +1,6 @@
 import React from "react";
 import Code from "../../../components/modules/code";
 
-import MasterLayout from "../../../themes/masterLayout";
-
 const code = `const App = props => {
     return (
       <div>
@@ -14,10 +12,12 @@ const code = `const App = props => {
   `;
 
 const HightLightCode = () => {
-  return <MasterLayout>
-       <h1>HightLightCode</h1>
-       <Code code={code} language="javascript" />
-  </MasterLayout>;
+  return (
+    <>
+      <h1>HightLightCode</h1>
+      <Code code={code} language="javascript" />
+    </>
+  );
 };
 
 export default HightLightCode;

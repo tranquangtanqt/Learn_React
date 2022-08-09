@@ -1,12 +1,11 @@
 import { Col, Row, Divider } from "antd";
 import Code from "../../../../components/modules/code";
-import MasterLayout from "../../../../themes/masterLayout";
 import { naLesson7Data } from './data';
 
 const NALesson7 = () => {
 
   return (
-    <MasterLayout>
+    <>
       <Divider orientation="left">Making HTTP requests in Angular</Divider>
       <Row justify="start">
         <Col span={24}>
@@ -25,7 +24,7 @@ const NALesson7 = () => {
           <Code code={naLesson7Data.app_component} language="javascript" />
         </Col>
       </Row>
-    </MasterLayout>
+    </>
   );
 };
 

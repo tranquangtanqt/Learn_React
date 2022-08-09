@@ -2,11 +2,9 @@ import { Card, Col, Row } from "antd";
 import React from "react";
 import { Link } from "react-router-dom";
 
-import MasterLayout from "../../../themes/masterLayout";
-
 const ProgrammingCSharp = () => {
   return (
-    <MasterLayout>
+    <>
       <h1>C Sharp</h1>
       <Row justify="start">
         <Col span={8}>
@@ -49,7 +47,7 @@ const ProgrammingCSharp = () => {
           </Card>
         </Col>
       </Row>
-    </MasterLayout>
+    </>
   );
 };
 

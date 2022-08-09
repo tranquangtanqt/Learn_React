@@ -1,11 +1,10 @@
 import { Col, Row, Divider } from "antd";
 import Code from "../../../../../components/modules/code";
-import MasterLayout from "../../../../../themes/masterLayout";
 import { PostgreSQLChapter11Data } from "./data";
 
 const PostgreSQLChapter11 = () => {
   return (
-    <MasterLayout>
+    <>
       <Divider orientation="left">11. Common Table Expressions (WITH)</Divider>
       <Row justify="start" className="m-t-20">
         <Col span={24}>
@@ -30,7 +29,7 @@ const PostgreSQLChapter11 = () => {
           <Code code={PostgreSQLChapter11Data.two} language="sql" />
         </Col>
       </Row>
-    </MasterLayout>
+    </>
   );
 };
 
