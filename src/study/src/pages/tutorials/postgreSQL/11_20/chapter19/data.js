@@ -36,11 +36,11 @@ postgres=> SHOW search_path;
 ----------------
 "$user",public
 (1 ROW)`,
-    nine: `postgres=> \c postgres postgres
+    nine: `postgres=> \\c postgres postgres
 You are now connected TO DATABASE "postgres" AS USER "postgres".
 postgres=# ALTER USER user1 SET search_path='my_schema, "$user", public';
 ALTER ROLE`,
-    ten: `postgres=# \c postgres user1
+    ten: `postgres=# \\c postgres user1
 PASSWORD FOR USER user1:
 You are now connected TO DATABASE "postgres" AS USER "user1".
 postgres=> SHOW search_path;
