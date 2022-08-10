@@ -1,240 +1,481 @@
 import { Col, Row, Card } from "antd";
+import { Fragment } from "react";
 import { Link } from "react-router-dom";
 
 const PostgreSQL = () => {
+  const cardData = [
+    {
+      title: "Chapter 1 - 5",
+      links: [
+        {
+          text: "Data Types",
+          path: "/tutorial/postgreSQL/chapter1",
+          contents: [
+            {
+              text: "Numeric Types",
+            },
+            {
+              text: "Date/ Time Types",
+            },
+            {
+              text: "Geometric Types",
+            },
+            {
+              text: "Network Adress Types",
+            },
+            {
+              text: "Character Types",
+            },
+            {
+              text: "Arrays",
+            },
+          ],
+        },
+        {
+          text: "Dates, Timestamps, and Intervals",
+          path: "/tutorial/postgreSQL/chapter2",
+          contents: [
+            {
+              text: "SELECT the last day of month",
+            },
+            {
+              text: "Cast a timestamp or interval to a string",
+            },
+            {
+              text: "Count the number of records per week",
+            },
+          ],
+        },
+        {
+          text: "Table Creation",
+          path: "/tutorial/postgreSQL/chapter3",
+          contents: [
+            {
+              text: "Show table definition",
+            },
+            {
+              text: "Create table from select",
+            },
+            {
+              text: "Create unlogged table",
+            },
+            {
+              text: "Table creation with Primary Key",
+            },
+            {
+              text: "Create a table that references other table",
+            },
+          ],
+        },
+        {
+          text: "SELECT",
+          path: "/tutorial/postgreSQL/chapter4",
+          contents: [],
+        },
+        {
+          text: "Find String Length/Character Length",
+          path: "/tutorial/postgreSQL/chapter5",
+          contents: [],
+        },
+      ],
+    },
+    {
+      title: "Chapter 6 - 10",
+      links: [
+        {
+          text: "COALESCE",
+          path: "tutorial/postgreSQL/chapter6",
+          contents: [
+            {
+              text: "Single non null argument"
+            },
+            {
+              text: "Multiple non null arguments"
+            },
+            {
+              text: "All null arguments"
+            }
+          ],
+        },
+        {
+          text: "INSERT",
+          path: "/tutorial/postgreSQL/chapter7",
+          contents: [
+            {
+              text: "Insert data using COPY"
+            },
+            {
+              text: "Inserting multiple rows"
+            },
+            {
+              text: "INSERT data and RETURING values"
+            },
+            {
+              text: "Basic INSERT"
+            },
+            {
+              text: "Insert from select"
+            },
+            {
+              text: "UPSERT - INSERT ... ON CONFLICT DO UPDATE.."
+            },
+            {
+              text: "SELECT data into file"
+            },
+          ],
+        },
+        {
+          text: "UPDATE",
+          path: "/tutorial/postgreSQL/chapter8",
+          contents: [
+            {
+              text: "Updating a table based on joining another table"
+            },
+            {
+              text: "Update all rows in a table"
+            },
+            {
+              text: " Update all rows meeting a condition"
+            },
+            {
+              text: "Updating multiple columns in table"
+            }
+          ],
+        },
+        {
+          text: "JSON Support",
+          path: "/tutorial/postgreSQL/chapter9",
+          contents: [
+            {
+              text: "Using JSONb operators"
+            },
+            {
+              text: "Querying complex JSON documentse"
+            },
+            {
+              text: "Creating a pure JSON table"
+            }
+          ],
+        },
+        {
+          text: "Aggregate Functions",
+          path: "/tutorial/postgreSQL/chapter10",
+          contents: [
+            {
+              text: "Simple statistics: min(), max(), avg()"
+            },
+            {
+              text: "regr_slope(Y, X)"
+            },
+            {
+              text: "string_agg(expression, delimiter)"
+            }
+          ],
+        },
+      ],
+    },
+    {
+      title: "Chapter 11 - 15",
+      links: [
+        {
+          text: "Common Table Expressions (WITH)",
+          path: "/tutorial/postgreSQL/chapter11",
+          contents: [
+            {
+              text: "Common Table Expressions in SELECT Queries"
+            },
+            {
+              text: "Traversing tree using WITH RECURSIVE"
+            }
+          ],
+        },
+        {
+          text: "Window Functions",
+          path: "/tutorial/postgreSQL/chapter12",
+          contents: [
+            {
+              text: "Generic example"
+            },
+            {
+              text: "Column values vs dense_rank vs rank vs row_number"
+            }
+          ],
+        },
+        {
+          text: "Recursive queries",
+          path: "/tutorial/postgreSQL/chapter13",
+          contents: [
+            {
+              text: "Sum of Integers"
+            }
+          ],
+        },
+        {
+          text: "Programming with PL/pgSQL",
+          path: "/tutorial/postgreSQL/chapter14",
+          contents: [
+            {
+              text: "Basic PL/pgSQL Function"
+            },
+            {
+              text: "Custom exceptions"
+            },
+            {
+              text: "PL/pgSQL Syntax"
+            },
+            {
+              text: "RETURNS Block"
+            }
+          ],
+        },
+        {
+          text: "Inheritance",
+          path: "/tutorial/postgreSQL/chapter15",
+          contents: [
+            {
+              text: "Creating children tables"
+            }
+          ],
+        },
+      ],
+    },
+    {
+      title: "Chapter 16 - 20",
+      links: [
+        {
+          text: "Export PostgreSQL database table header and data to CSV file",
+          path: "/tutorial/postgreSQL/chapter16",
+          contents: [
+            {
+              text: "Copy from query"
+            },
+            {
+              text: "Export PostgreSQL table to csv with header for some column(s)"
+            },
+            {
+              text: "Full table backup to csv with header"
+            }
+          ],
+        },
+        {
+          text: "Triggers and Trigger Functions",
+          path: "/tutorial/postgreSQL/chapter17",
+          contents: [
+            {
+              text: "Type of triggers"
+            },
+            {
+              text: "Basic PL/pgSQL Trigger Function"
+            }
+          ],
+        },
+        {
+          text: "Event Triggers",
+          path: "/tutorial/postgreSQL/chapter18",
+          contents: [
+            {
+              text: "Logging DDL Command Start Events"
+            }
+          ],
+        },
+        {
+          text: "Role Management",
+          path: "/tutorial/postgreSQL/chapter19",
+          contents: [
+            {
+              text: "Create a user with a password"
+            },
+            {
+              text: "Grant and Revoke Privileges"
+            },
+            {
+              text: "Create Role and matching database"
+            },
+            {
+              text: "Alter default search_path of user"
+            },
+            {
+              text: "Create Read Only User"
+            },
+            {
+              text: "Grant access privileges on objects created in the future"
+            },
+          ],
+        },
+        {
+          text: "Postgres cryptographic functions",
+          path: "/tutorial/postgreSQL/chapter20",
+          contents: [
+            {
+              text: "digest"
+            }
+          ],
+        }
+      ],
+    },
+    {
+      title: "Chapter 21 - 25",
+      links: [
+        {
+          text: "Comments in PostgreSQL",
+          path: "/tutorial/postgreSQL/chapter21",
+          contents: [
+            {
+              text: "COMMENT on Table"
+            },
+            {
+              text: "Remove Comment"
+            }
+          ],
+        },
+        {
+          text: "Backup and Restore",
+          path: "/tutorial/postgreSQL/chapter22",
+          contents: [
+            {
+              text: "Backing up one database"
+            },
+            {
+              text: "Restoring backups"
+            },
+            {
+              text: "Backing up the whole cluster"
+            },
+            {
+              text: "Using psql to export data"
+            },
+            {
+              text: "Using Copy to import"
+            },
+            {
+              text: "Using Copy to export"
+            },
+          ],
+        },
+        {
+          text: "Backup script for a production DB",
+          path: "/tutorial/postgreSQL/chapter23",
+          contents: [
+            {
+              text: "saveProdDb.sh"
+            },
+          ],
+        },
+        {
+          text: "Accessing Data Programmatically",
+          path: "/tutorial/postgreSQL/chapter24",
+          contents: [
+            {
+              text: "Accessing PostgreSQL with the C-API"
+            },
+            {
+              text: "Accessing PostgreSQL from python using psycopg2"
+            },
+            {
+              text: "Accessing PostgreSQL from .NET using the Npgsql provider"
+            },
+            {
+              text: "Accessing PostgreSQL from PHP using Pomm2"
+            }
+          ],
+        },
+        {
+          text: "Connect to PostgreSQL from Java",
+          path: "/tutorial/postgreSQL/chapter25",
+          contents: [
+            {
+              text: "Connecting with java.sql.DriverManager"
+            },
+            {
+              text: "Connecting with java.sql.DriverManager and Properties"
+            },
+            {
+              text: "Connecting with javax.sql.DataSource using a connection pool"
+            }
+          ],
+        },
+      ],
+    },
+    {
+      title: "Chapter 26 - 28",
+      links: [
+        {
+          text: "PostgreSQL High Availability",
+          path: "/tutorial/postgreSQL/chapter26",
+          contents: [
+            {
+              text: "Replication in PostgreSQL"
+            }
+          ],
+        },
+        {
+          text: "EXTENSION dblink and postgres_fdw",
+          path: "/tutorial/postgreSQL/chapter27",
+          contents: [
+            {
+              text: "Extention FDW"
+            },
+            {
+              text: "Foreign Data Wrapper"
+            },
+            {
+              text: "Extention dblink"
+            }
+          ],
+        },
+        {
+          text: "Postgres Tip and Tricks",
+          path: "/tutorial/postgreSQL/chapter28",
+          contents: [
+            {
+              text: "DATEADD alternative in Postgres"
+            },
+            {
+              text: "Comma separated values of a column"
+            },
+            {
+              text: "Delete duplicate records from postgres table"
+            },
+            {
+              text: "Update query with join between two tables alternative since Postresql does not support join in update query"
+            },
+            {
+              text: "Difference between two date timestamps month wise and year wise"
+            },
+            {
+              text: "Query to Copy/Move/Transafer table data from one database to other database table with same schema"
+            },
+          ],
+        },
+      ],
+    },
+  ];
+  let count = 1;
   return (
-    <>
-      <Row justify="start">
-        <Col span={8}>
-          <Card title="Chapter 1 - 5">
-            <Link to={"/tutorial/postgreSQL/chapter1"}>
-              <div>{"1. Data Types"}</div>
-              <div className="m-l-20">{"1.1 Numeric Types"}</div>
-              <div className="m-l-20">{"1.2 Date/ Time Types"}</div>
-              <div className="m-l-20">{"1.3 Geometric Types"}</div>
-              <div className="m-l-20">{"1.4 Network Adress Types"}</div>
-              <div className="m-l-20">{"1.5 Character Types"}</div>
-              <div className="m-l-20">{"1.6 Arrays"}</div>
-            </Link>
-            <br />
-            <Link to={"/tutorial/postgreSQL/chapter2"}>
-              <div>{"2. Dates, Timestamps, and Intervals"}</div>
-              <div className="m-l-20">{"2.1 SELECT the last day of month"}</div>
-              <div className="m-l-20">
-                {"2.2 Cast a timestamp or interval to a string"}
-              </div>
-              <div className="m-l-20">
-                {"2.3 Count the number of records per week"}
-              </div>
-            </Link>
-            <br />
-            <Link to={"/tutorial/postgreSQL/chapter3"}>
-              <div>{"3. Table Creation"}</div>
-              <div className="m-l-20">{"3.1 Show table definition"}</div>
-              <div className="m-l-20">{"3.2 Create table from select"}</div>
-              <div className="m-l-20">{"3.3 Create unlogged table"}</div>
-              <div className="m-l-20">
-                {"3.4 Table creation with Primary Key"}
-              </div>
-              <div className="m-l-20">
-                {"3.5 Create a table that references other table"}
-              </div>
-            </Link>
-            <br />
-            <Link to={"/tutorial/postgreSQL/chapter4"}>
-              <div>{"4. SELECT"}</div>
-            </Link>
-            <br />
-            <Link to={"/tutorial/postgreSQL/chapter5"}>
-              <div>{"5. Find String Length/Character Length "}</div>
-            </Link>
-          </Card>
-        </Col>
-
-        <Col span={8}>
-          <Card title="Chapter 6 - 10">
-            <Link to={"/tutorial/postgreSQL/chapter6"}>
-              <div>{"6. COALESCE"}</div>
-              <div className="m-l-20">{"6.1 Single non null argument"}</div>
-              <div className="m-l-20">{"6.2 Multiple non null arguments"}</div>
-              <div className="m-l-20">{"6.3 All null arguments"}</div>
-            </Link>
-            <br />
-            <Link to={"/tutorial/postgreSQL/chapter7"}>
-              <div>{"7. INSERT"}</div>
-              <div className="m-l-20">{"7.1 Insert data using COPY"}</div>
-              <div className="m-l-20">{"7.2 Inserting multiple rows"}</div>
-              <div className="m-l-20">{"7.3 INSERT data and RETURING values"}</div>
-              <div className="m-l-20">{"7.4 Basic INSERT"}</div>
-              <div className="m-l-20">{"7.5 Insert from select"}</div>
-              <div className="m-l-20">{"7.6 UPSERT - INSERT ... ON CONFLICT DO UPDATE.."}</div>
-              <div className="m-l-20">{"7.7 SELECT data into file"}</div>
-            </Link>
-            <br />
-            <Link to={"/tutorial/postgreSQL/chapter8"}>
-              <div>{"8. UPDATE"}</div>
-              <div className="m-l-20">{"8.1 Updating a table based on joining another table"}</div>
-              <div className="m-l-20">{"8.2 Update all rows in a table"}</div>
-              <div className="m-l-20">{"8.3 Update all rows meeting a condition"}</div>
-              <div className="m-l-20">{"8.4 Updating multiple columns in table"}</div>
-            </Link>
-            <br />
-            <Link to={"/tutorial/postgreSQL/chapter9"}>
-              <div>{"9. JSON Support"}</div>
-              <div className="m-l-20">{"9.1 Using JSONb operators"}</div>
-              <div className="m-l-20">{"9.2 Querying complex JSON documentse"}</div>
-              <div className="m-l-20">{"9.3 Creating a pure JSON table"}</div>
-            </Link>
-            <br />
-            <Link to={"/tutorial/postgreSQL/chapter10"}>
-              <div>{"10. Aggregate Functions"}</div>
-              <div className="m-l-20">{"10.1 Simple statistics: min(), max(), avg()"}</div>
-              <div className="m-l-20">{"10.2 regr_slope(Y, X)"}</div>
-              <div className="m-l-20">{"10.3 string_agg(expression, delimiter)"}</div>
-            </Link>
-
-          </Card>
-        </Col>
-
-        <Col span={8}>
-          <Card title="Chapter 11 - 15">
-            <Link to={"/tutorial/postgreSQL/chapter11"}>
-              <div>{"11. Common Table Expressions (WITH)"}</div>
-              <div className="m-l-20">{"11.1 Common Table Expressions in SELECT Queries"}</div>
-              <div className="m-l-20">{"11.2 Traversing tree using WITH RECURSIVE"}</div>
-            </Link>
-            <br />
-            <Link to={"/tutorial/postgreSQL/chapter12"}>
-              <div>{"12. Window Functions"}</div>
-              <div className="m-l-20">{"12.1 Generic example"}</div>
-              <div className="m-l-20">{"12.2 Column values vs dense_rank vs rank vs row_number"}</div>
-            </Link>
-            <br />
-            <Link to={"/tutorial/postgreSQL/chapter13"}>
-              <div>{"13. Recursive queries"}</div>
-              <div className="m-l-20">{"13.1 Sum of Integers"}</div>
-            </Link>
-            <br />
-            <Link to={"/tutorial/postgreSQL/chapter14"}>
-              <div>{"14. Programming with PL/pgSQL"}</div>
-              <div className="m-l-20">{"14.1 Basic PL/pgSQL Function"}</div>
-              <div className="m-l-20">{"14.2 Custom exceptions"}</div>
-              <div className="m-l-20">{"14.3 PL/pgSQL Syntax"}</div>
-              <div className="m-l-20">{"14.3 RETURNS Block"}</div>
-            </Link>
-            <br />
-            <Link to={"/tutorial/postgreSQL/chapter15"}>
-              <div>{"15. Inheritance"}</div>
-              <div className="m-l-20">{"15.1 Creating children tables"}</div>
-            </Link>
-          </Card>
-        </Col>
-      </Row>
-      <hr />
-      <Row justify="start">
-        <Col span={8}>
-          <Card title="Chapter 16 - 20">
-            <Link to={"/tutorial/postgreSQL/chapter16"}>
-              <div>{"16. Export PostgreSQL database table header and data to CSV file"}</div>
-              <div className="m-l-20">{"16.1 Copy from query"}</div>
-              <div className="m-l-20">{"16.2 Export PostgreSQL table to csv with header for some column(s)"}</div>
-              <div className="m-l-20">{"16.3 Full table backup to csv with header"}</div>
-            </Link>
-            <br />
-            <Link to={"/tutorial/postgreSQL/chapter17"}>
-              <div>{"17. Triggers and Trigger Functions"}</div>
-              <div className="m-l-20">{"17.1 Type of triggers"}</div>
-              <div className="m-l-20">{"17.2  Basic PL/pgSQL Trigger Function"}</div>
-            </Link>
-            <br />
-            <Link to={"/tutorial/postgreSQL/chapter18"}>
-              <div>{"18. Event Triggers"}</div>
-              <div className="m-l-20">{"18.1 Logging DDL Command Start Events"}</div>
-            </Link>
-            <br />
-            <Link to={"/tutorial/postgreSQL/chapter19"}>
-              <div>{"19. Role Management"}</div>
-              <div className="m-l-20">{"19.1 Create a user with a password"}</div>
-              <div className="m-l-20">{"19.2 Grant and Revoke Privileges"}</div>
-              <div className="m-l-20">{"19.3 Create Role and matching database"}</div>
-              <div className="m-l-20">{"19.4 Alter default search_path of user"}</div>
-              <div className="m-l-20">{"19.5 Create Read Only User"}</div>
-              <div className="m-l-20">{"19.6 Grant access privileges on objects created in the future"}</div>
-            </Link>
-            <br />
-            <Link to={"/tutorial/postgreSQL/chapter20"}>
-              <div>{"20. Postgres cryptographic functions"}</div>
-              <div className="m-l-20">{"20.1 digest"}</div>
-            </Link>
-
-          </Card>
-        </Col>
-
-        <Col span={8}>
-          <Card title="Chapter 21 - 25">
-            <Link to={"/tutorial/postgreSQL/chapter21"}>
-              <div>{"21. Comments in PostgreSQL"}</div>
-              <div className="m-l-20">{"21.1 COMMENT on Table"}</div>
-              <div className="m-l-20">{"21.2 Remove Comment"}</div>
-            </Link>
-            <br />
-             <Link to={"/tutorial/postgreSQL/chapter22"}>
-              <div>{"22. Backup and Restore"}</div>
-              <div className="m-l-20">{"22.1 Backing up one database"}</div>
-              <div className="m-l-20">{"22.2 Restoring backups"}</div>
-              <div className="m-l-20">{"22.3 Backing up the whole cluster"}</div>
-              <div className="m-l-20">{"22.4 Using psql to export data"}</div>
-              <div className="m-l-20">{"22.5 Using Copy to import"}</div>
-              <div className="m-l-20">{"22.6 Using Copy to export"}</div>
-            </Link>
-            <br />
-             <Link to={"/tutorial/postgreSQL/chapter23"}>
-              <div>{"23. Backup script for a production DB"}</div>
-              <div className="m-l-20">{"23.1 saveProdDb.sh"}</div>
-            </Link>
-            <br />
-             <Link to={"/tutorial/postgreSQL/chapter24"}>
-              <div>{"24. Accessing Data Programmatically"}</div>
-              <div className="m-l-20">{"24.1 Accessing PostgreSQL with the C-API"}</div>
-              <div className="m-l-20">{"24.2 Accessing PostgreSQL from python using psycopg2"}</div>
-              <div className="m-l-20">{"24.3 Accessing PostgreSQL from .NET using the Npgsql provider"}</div>
-              <div className="m-l-20">{"24.4 Accessing PostgreSQL from PHP using Pomm2"}</div>
-            </Link>
-            <br />
-             <Link to={"/tutorial/postgreSQL/chapter25"}>
-              <div>{"25. Connect to PostgreSQL from Java"}</div>
-              <div className="m-l-20">{"25.1 Connecting with java.sql.DriverManager"}</div>
-              <div className="m-l-20">{"25.2 Connecting with java.sql.DriverManager and Properties"}</div>
-              <div className="m-l-20">{"25.3 Connecting with javax.sql.DataSource using a"}</div>
-            </Link>
-          </Card>
-        </Col>
-
-        <Col span={8}>
-          <Card title="Chapter 26 - 28">
-            <Link to={"/tutorial/postgreSQL/chapter26"}>
-              <div>{"26. PostgreSQL High Availability"}</div>
-              <div className="m-l-20">{"26.1 Replication in PostgreSQL"}</div>
-            </Link>
-            <br />
-            <Link to={"/tutorial/postgreSQL/chapter27"}>
-              <div>{"27. EXTENSION dblink and postgres_fdw"}</div>
-              <div className="m-l-20">{"27.1 Extention FDW"}</div>
-              <div className="m-l-20">{"27.2 Foreign Data Wrapper"}</div>
-              <div className="m-l-20">{"27.3 Extention dblink"}</div>
-            </Link>
-            <br />
-            <Link to={"/tutorial/postgreSQL/chapter28"}>
-              <div>{"28. Postgres Tip and Tricks"}</div>
-              <div className="m-l-20">{"28.1 DATEADD alternative in Postgres"}</div>
-              <div className="m-l-20">{"28.2 Comma separated values of a column"}</div>
-              <div className="m-l-20">{"28.3 Delete duplicate records from postgres table"}</div>
-              <div className="m-l-20">{"28.4 Update query with join between two tables alternative since Postresql does not support join in update query"}</div>
-              <div className="m-l-20">{"28.5 Dierence between two date timestamps month wise and year wise"}</div>
-              <div className="m-l-20">{"28.6 Query to Copy/Move/Transafer table data from one database to other database table with same schema"}</div>
-            </Link>
-          </Card>
-        </Col>
+    <>       
+      <h1>PostgreSQL</h1>
+      <Row>
+        {cardData?.map((cards, keyParent) => (
+          <Fragment key={keyParent}>
+            <Col sm={24} md={8} lg={8}>
+              <Card title={cards?.title}>
+                {cards?.links?.map((link, key) => (
+                  <Fragment key={key}>
+                    <Link to={link.path}>
+                      {`${count++}. ${link.text}`}
+                      {link?.contents?.map((content, keySub) => (
+                        <div className="m-l-20" key={keySub}>
+                          {`${count - 1}.${keySub + 1} ${content.text}`}
+                        </div>
+                      ))}
+                    </Link>
+                    <br />
+                  </Fragment>
+                ))}
+              </Card>
+            </Col>
+          </Fragment>
+        ))}
       </Row>
     </>
   );

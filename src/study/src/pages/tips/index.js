@@ -1,18 +1,21 @@
-import { Col, Row, Card } from "antd";
-import { Link } from "react-router-dom";
+import CardList from "../../components/modules/cardList";
 
 const Tips = () => {
+  const cardData = [
+    {
+      title: "Software",
+      links: [
+        {
+          text: "Visual Studio Code",
+          path: "/tips/software/visualStudioCode",
+        },
+      ],
+    },
+  ];
   return (
     <>
-      <Row justify="start">
-        <Col span={8}>
-          <Card title="Software">
-            <Link to={"/tips/software/visualStudioCode"}>
-              {"1. Visual Studio Code"}
-            </Link>
-          </Card>
-        </Col>
-      </Row>
+      <h1>Tips</h1>
+      <CardList cardData={cardData}></CardList>
     </>
   );
 };

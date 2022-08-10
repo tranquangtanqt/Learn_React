@@ -1,25 +1,27 @@
 import React from "react";
 import Editor from "react-prism-editor";
 
-export default function Code({ code, language }) {
+const Code = ({ code, language }) => {
   return (
-    <div>
+    <>
       <Editor
         language={language}
         theme="okaidia"
         code={code}
-        lineNumber={true}
-        readOnly={true}
-        clipboard={true}
-        showLanguage={true}
-        changeCode={(code) => {
-          this.code = code;
+        lineNumber
+        readOnly
+        clipboard
+        showLanguage
+        changeCode={(_code) => {
+          _code = code;
         }}
       />
       <br />
-    </div>
+    </>
   );
-}
+};
+
+export default Code;
 
 /*
 ------ language of the code ------

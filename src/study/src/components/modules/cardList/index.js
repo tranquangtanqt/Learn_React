@@ -1,32 +1,10 @@
-import { Col, Row, Card } from "antd";
+import { Card, Col, Row } from "antd";
 import { Fragment } from "react";
-
 import { Link } from "react-router-dom";
 
-const ExcelTutorial = () => {
-  const cardData = [
-    {
-      title: "Title",
-      links: [
-        {
-          text: "Characters in Excel",
-          path: "/tutorial/excel/charactersInExcel",
-        },
-      ],
-    },
-    {
-      title: "Sort and Filter",
-      links: [
-        {
-          text: "Filter 1",
-          path: "/tutorial/excel/filter1",
-        },
-      ],
-    },
-  ];
+const CardList = ({ cardData }) => {
   return (
     <>
-       <h1>Excel</h1>
       <Row>
         {cardData?.map((cards, key) => (
           <Fragment key={key}>
@@ -46,5 +24,4 @@ const ExcelTutorial = () => {
     </>
   );
 };
-
-export default ExcelTutorial;
+export default CardList;

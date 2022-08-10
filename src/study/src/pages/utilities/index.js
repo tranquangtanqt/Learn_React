@@ -1,52 +1,72 @@
-import { Col, Row, Card } from "antd";
-import { Link } from "react-router-dom";
+import CardList from "../../components/modules/cardList";
 
 const Utilities = () => {
+  const cardData = [
+    {
+      title: "File",
+      links: [
+        {
+          text: "List file selected",
+          path: "/utilities/listFileSelected",
+        },
+        {
+          text: "Read content multi file",
+          path: "/utilities/readContentMultiFile",
+        },
+      ],
+    },
+    {
+      title: "Text",
+      links: [
+        {
+          text: "Common",
+          path: "/utilities/textCommon",
+        },
+        {
+          text: "Find Text Duplicates",
+          path: "/utilities/findTextDuplicates",
+        },
+        {
+          text: "Find Text ColumnJP_EN",
+          path: "/utilities/findTextColumnJP_EN",
+        },
+        {
+          text: "Repeat",
+          path: "/utilities/textRepeat",
+        },
+        {
+          text: "Replace",
+          path: "/utilities/textReplace",
+        },
+        {
+          text: "Special",
+          path: "/utilities/textSpecial",
+        },
+        {
+          text: "Tiny MCE",
+          path: "/utilities/tinyMC",
+        },
+      ],
+    },
+    {
+      title: "SQL",
+      links: [
+        {
+          text: "Random Insert SQL",
+          path: "/utilities/createTableFromExcel",
+        },
+        {
+          text: "Create Table From Excel",
+          path: "/utilities/randomInsertSQL",
+        },
+      ],
+    },
+  ];
+
   return (
     <>
-      <Row justify="start">
-        <Col span={8}>
-          <Card title="File">
-            <Link to={"/utilities/listFileSelected"}>
-              {"1. List file selected"}
-            </Link>
-            <br />
-            <Link to={"/utilities/readContentMultiFile"}>
-              {"2. Read content multi file"}
-            </Link>
-          </Card>
-        </Col>
-
-        <Col span={8}>
-          <Card title="Text">
-            <Link to={"/utilities/textCommon"}>{"1. Common"}</Link>
-            <br />
-            <Link to={"/utilities/findTextDuplicates"}>{"2. Find Text Duplicates"}</Link>
-            <br />
-            <Link to={"/utilities/findTextColumnJP_EN"}>{"3. Find Text ColumnJP_EN"}</Link>
-            <br />
-            <Link to={"/utilities/textRepeat"}>{"4. Repeat"}</Link>
-            <br />
-            <Link to={"/utilities/textReplace"}>{"5. Replace"}</Link>
-            <br />
-            <Link to={"/utilities/tinyMCE"}>{"6. Special"}</Link>
-            <br />
-            <Link to={"/utilities/tinyMCE"}>{"7. Tiny MCE"}</Link>
-          </Card>
-        </Col>
-
-        <Col span={8}>
-          <Card title="SQL">
-            <Link to={"/utilities/randomInsertSQL"}>
-              {"1. Random Insert SQL"}
-            </Link>
-            <br />
-            <Link to={"/utilities/createTableFromExcel"}>
-              {"2. Create Table From Excel"}
-            </Link>
-          </Card>
-        </Col>
-      </Row>
+      <h1>Utilities</h1>
+      <CardList cardData={cardData}></CardList>
     </>
   );
 };

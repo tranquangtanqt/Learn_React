@@ -3,26 +3,30 @@ import axios from "axios";
 
 const ConnectAPI = () => {
   const [users, setUsers] = useState([]);
+  const URI_API = "https://jsonplaceholder.typicode.com/users";
+  const callAPI = async () => {
+    try {
+      const { data: users} = await axios({
+        url: URI_API,
+        method: 'GET'
+      });
+      setUsers(users);
+    } catch (error) {
+      console.log(error);
+    }
+  }
 
   useEffect(() => {
-    axios
-      .get(`https://jsonplaceholder.typicode.com/users`)
-      .then((res) => {
-        const persons = res.data;
-        setUsers(persons);
-        console.log(persons);
-      })
-      .catch((error) => console.log(error));
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    callAPI();
   }, []);
 
   return (
     <>
-      <h1>Demo</h1>
+      <h1>List users</h1>
       <ul>
-        { users.map((person) => (
-          <li key={person.id}>{person.name}</li>
-          )
+        { users?.map((person) => (
+            <li key={person.id}>{person.name}</li>
+            )
           )
         }
       </ul>

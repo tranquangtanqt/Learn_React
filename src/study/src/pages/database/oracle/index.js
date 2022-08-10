@@ -1,56 +1,61 @@
-import { Card, Col, Row } from "antd";
 import React from "react";
-import { Link } from "react-router-dom";
+import CardList from "../../../components/modules/cardList";
 
 const DatabaseOracle = () => {
+  const cardData = [
+    {
+      title: "Oracle SQL Developer",
+      links: [
+        {
+          text: "Change Language Oracle SQL Developer",
+          path: "/database/oracle/changeLanguageOracleSQLDeveloper",
+        },
+        {
+          text: "Tips for oracle SQL developer",
+          path: "/database/oracle/tipsForOracleSQLDeveloper",
+        },
+      ],
+    },
+    {
+      title: "Dump",
+      links: [
+        {
+          text: "Import file dump Oracle",
+          path: "/database/oracle/importDumpOracle",
+        },
+      ],
+    },
+    {
+      title: "System",
+      links: [
+        {
+          text: "Tips system",
+          path: "/database/oracle/tips/system",
+        },
+        {
+          text: "Listener and Tnsnames",
+          path: "/database/oracle/listenerAndTnsnames",
+        },
+        {
+          text: "Sqltext Session Process",
+          path: "/database/oracle/sqltextSessionProcess",
+        },
+      ],
+    },
+    {
+      title: "Tips",
+      links: [
+        {
+          text: "String",
+          path: "/database/oracle/tips/string",
+        },
+      ],
+    },
+  ];
   return (
     <>
       <h1>Database Oracle</h1>
-      <Row justify="start">
-        <Col span={8}>
-          <Card title="Oracle SQL Developer">
-            <Link to={"/database/oracle/changeLanguageOracleSQLDeveloper"}>
-              {"1. Change Language Oracle SQL Developer"}
-            </Link>
-            <br />
-            <Link to={"/database/oracle/tipsForOracleSQLDeveloper"}>
-              {"2. Tips for oracle SQL developer"}
-            </Link>
-          </Card>
-        </Col>
-
-        <Col span={8}>
-          <Card title="Dump">
-            <Link to={"/database/oracle/importDumpOracle"}>
-              {"1. Import file dump Oracle"}
-            </Link>
-          </Card>
-        </Col>
-
-        <Col span={8}>
-          <Card title="System">
-            <Link to={"/database/oracle/tips/system"}>
-              {"1. Tips system"}
-            </Link>
-            <br />
-            <Link to={"/database/oracle/listenerAndTnsnames"}>
-              {"2. Listener and Tnsnames"}
-            </Link>
-            <br />
-            <Link to={"/database/oracle/sqltextSessionProcess"}>
-              {"3. Sqltext Session Process"}
-            </Link>
-          </Card>
-        </Col>
-      </Row>
-
-      <Row justify="start">
-        <Col span={8}>
-          <Card title="Tips">
-            <Link to={"/database/oracle/tips/string"}>{"1. String"}</Link>
-          </Card>
-        </Col>
-      </Row>
+      <CardList cardData={cardData}></CardList>
     </>
   );
 };
