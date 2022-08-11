@@ -23,8 +23,8 @@ const Utilities = () => {
           path: "/utilities/textCommon",
         },
         {
-          text: "Find Text Duplicates",
-          path: "/utilities/findTextDuplicates",
+          text: "Find Different Two List",
+          path: "/utilities/findDifferentTwoList",
         },
         {
           text: "Find Text ColumnJP_EN",

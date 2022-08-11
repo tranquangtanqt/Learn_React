@@ -61,8 +61,14 @@ import PHPDeleteFile from "./programming/PHP/phpDeleteFile";
 import CharactersInExcel from "./tutorials/excel/charactersInExcel";
 import NameControlWinform from "./programming/cSharp/nameControlWinform";
 import TextCommon from "./utilities/textCommon";
-import FindTextDuplicates from "./utilities/findTextDuplicates";
 import PostgreSQL from "./tutorials/postgreSQL";
+import ReadExcelDemo from "./demo/readExcel";
+import CreateTableFromExcel from "./utilities/createTableFromExcel";
+import CreateExel from "./demo/createExcel";
+import TextSpecial from "./utilities/textSpecial";
+import FindTextColumnJPEN from "./utilities/findTextColumnJP_EN";
+import FindDifferentTwoList from "./utilities/findDifferentTwoList";
+
 import PostgreSQLChapter1 from "./tutorials/postgreSQL/1_10/chapter1";
 import PostgreSQLChapter2 from "./tutorials/postgreSQL/1_10/chapter2";
 import PostgreSQLChapter3 from "./tutorials/postgreSQL/1_10/chapter3";
@@ -77,11 +83,6 @@ import PostgreSQLChapter11 from "./tutorials/postgreSQL/11_20/chapter11";
 import PostgreSQLChapter12 from "./tutorials/postgreSQL/11_20/chapter12";
 import PostgreSQLChapter13 from "./tutorials/postgreSQL/11_20/chapter13";
 import PostgreSQLChapter14 from "./tutorials/postgreSQL/11_20/chapter14";
-import ReadExcelDemo from "./demo/readExcel";
-import CreateTableFromExcel from "./utilities/createTableFromExcel";
-import CreateExel from "./demo/createExcel";
-import TextSpecial from "./utilities/textSpecial";
-import FindTextColumnJPEN from "./utilities/findTextColumnJP_EN";
 import PostgreSQLChapter15 from "./tutorials/postgreSQL/11_20/chapter15";
 import PostgreSQLChapter16 from "./tutorials/postgreSQL/11_20/chapter16";
 import PostgreSQLChapter17 from "./tutorials/postgreSQL/11_20/chapter17";
@@ -97,6 +98,7 @@ import PostgreSQLChapter26 from "./tutorials/postgreSQL/21_28/chapter26";
 import PostgreSQLChapter27 from "./tutorials/postgreSQL/21_28/chapter27";
 import PostgreSQLChapter28 from "./tutorials/postgreSQL/21_28/chapter28";
 import MasterLayout from "../themes/masterLayout";
+
 
 const RoutesRoot = () => {
   return (
@@ -128,7 +130,7 @@ const RoutesRoot = () => {
 
           <Route path="/utilities" element={<Utilities />} />
           <Route path="/utilities/createTableFromExcel" element={<CreateTableFromExcel />} />
-          <Route path="/utilities/findTextDuplicates" element={<FindTextDuplicates />} />
+          <Route path="/utilities/findDifferentTwoList" element={<FindDifferentTwoList />} />
           <Route path="/utilities/findTextColumnJP_EN" element={<FindTextColumnJPEN />} />
           <Route path="/utilities/listFileSelected" element={<ListFileSelected />} />
           <Route path="/utilities/randomInsertSQL" element={<RandomInsertSQL />} />

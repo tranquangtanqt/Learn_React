@@ -40,6 +40,8 @@ const Home = () => {
             <a href="https://projecteuler.net/" target="_blank" rel="noopener noreferrer">1. Project Euler</a>
             <br />
             <a href="http://oj.husc.edu.vn/" target="_blank" rel="noopener noreferrer">2. Husc</a>
+            <br />
+            <a href="https://www.techiedelight.com/" target="_blank" rel="noopener noreferrer">3. techiedelight</a>
           </Card>
         </Col>
         <Col span={8}>

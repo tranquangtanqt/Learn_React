@@ -32,6 +32,11 @@ https://www.databasestar.com/sql-developer-dbms_output/
 https://hotkeysworld.com/oracle-sql-developer-for-windows
 
 
+https://www.udemy.com/
+User: is.u03@enclave.vn
+Pass: Enclave@455
+
+
 conn sys/123456 as sysdba
 alter session set "_ORACLE_SCRIPT"=true;
 
