@@ -88,6 +88,11 @@ const MasterLayout = ({ children }) => {
                 Excel
                 <Link to={"/tutorial/excel"} />
               </Menu.Item>
+              <Menu.Item key={"sub_tutorial_java"}>
+                Java
+                <Link to={"/tutorial/java"} />
+              </Menu.Item>
+              
               <Menu.Item key={"sub_tutorial_net_angular"}>
                 Net - Angular
                 <Link to={"/tutorial/net-angular"} />

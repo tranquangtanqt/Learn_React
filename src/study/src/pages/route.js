@@ -98,6 +98,8 @@ import PostgreSQLChapter26 from "./tutorials/postgreSQL/21_28/chapter26";
 import PostgreSQLChapter27 from "./tutorials/postgreSQL/21_28/chapter27";
 import PostgreSQLChapter28 from "./tutorials/postgreSQL/21_28/chapter28";
 import MasterLayout from "../themes/masterLayout";
+import JavaTutorial from "./tutorials/java";
+import JavaTutorialChapter1 from "./tutorials/java/1_10/chapter1";
 
 
 const RoutesRoot = () => {
@@ -155,6 +157,9 @@ const RoutesRoot = () => {
           <Route path="/tutorial/net-angular/lesson7" element={<NALesson7 />} />
           <Route path="/tutorial/net-angular/lesson8" element={<NALesson8 />} />
           <Route path="/tutorial/net-angular/lesson9" element={<NALesson9 />} />
+
+          <Route path="/tutorial/java" element={<JavaTutorial />} />
+          <Route path="/tutorial/java/chapter1" element={<JavaTutorialChapter1 />} />
 
           <Route path="/tutorial/postgreSQL" element={<PostgreSQL />} />
           <Route path="/tutorial/postgreSQL/chapter1" element={<PostgreSQLChapter1 />} />
