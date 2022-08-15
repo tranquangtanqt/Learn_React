@@ -6,8 +6,12 @@ const Tips = () => {
       title: "Software",
       links: [
         {
-          text: "Visual Studio Code",
-          path: "/tips/software/visualStudioCode",
+          text: "Visual Studio Code - Extention",
+          path: "/tips/software/visualStudioCode_Extention",
+        },
+        {
+          text: "Visual Studio Code - Add hotkey",
+          path: "/tips/software/visualStudioCode_AddHotkey",
         },
       ],
     },

@@ -1,7 +1,7 @@
-import { Col, Image, Row } from "antd";
+import { Col, Divider, Image, Row } from "antd";
 import Code from "../../../components/modules/code";
 
-const VisualStudioCode = () => {
+const VisualStudioCode_AddHotkey = () => {
   const keyBingding = `// Place your key bindings in this file to override the defaults
 [
     {
@@ -16,10 +16,8 @@ const VisualStudioCode = () => {
 
   return (
     <>
+      <Divider orientation="left">Add hotkey</Divider>
       <Row justify="start">
-        <Col span={24}>
-          <h1>Add hotkey</h1>
-        </Col>
         <Col span={24}>
           <h1>1.</h1>
         </Col>
@@ -39,6 +37,8 @@ const VisualStudioCode = () => {
 
         <Col span={24}>
           <h1>3. Source</h1>
+        </Col>
+        <Col span={23} offset={1}>
           <Code code={keyBingding} language="typescript" />
         </Col>
       </Row>
@@ -46,4 +46,4 @@ const VisualStudioCode = () => {
   );
 };
 
-export default VisualStudioCode;
+export default VisualStudioCode_AddHotkey;

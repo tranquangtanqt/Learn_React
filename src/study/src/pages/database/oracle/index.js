@@ -20,6 +20,10 @@ const DatabaseOracle = () => {
       title: "Dump",
       links: [
         {
+          text: "Import file dump Oracle Full",
+          path: "/database/oracle/dumpFull",
+        },
+        {
           text: "Import file dump Oracle",
           path: "/database/oracle/importDumpOracle",
         },

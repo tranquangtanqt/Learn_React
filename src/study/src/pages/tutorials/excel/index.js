@@ -23,6 +23,15 @@ const ExcelTutorial = () => {
         },
       ],
     },
+    {
+      title: "Tips",
+      links: [
+        {
+          text: "Swap data two cell",
+          path: "/tutorial/excel/swapDataTwoCell",
+        },
+      ],
+    },
   ];
   return (
     <>

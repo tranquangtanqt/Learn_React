@@ -16,16 +16,6 @@ Nice tip Chester. There is also a keyboard shortcut, by following the below step
 3) Press Ctrl + Shift + = on the keyboard
 
 
-extends:
-+ Auto Import
-+ Git history
-+ Git lens
-+ Live server
-+ One Monokai themes
-+ Prettier
-+ Auto Close Tag
-
-
 https://www.databasestar.com/sql-developer-dbms_output/
 
 
@@ -36,54 +26,3 @@ https://www.udemy.com/
 User: is.u03@enclave.vn
 Pass: Enclave@455
 
-
-conn sys/123456 as sysdba
-alter session set "_ORACLE_SCRIPT"=true;
-
-
-//Xóa User 
-DROP USER COMMON CASCADE;
-
-//Tạo User
-CREATE USER NSHM IDENTIFIED BY NSHM;
-
-//Cấp quyền
-GRANT DBA TO NSHM;
-
-GRANT EXP_FULL_DATABASE TO NSHM;
-
-GRANT IMP_FULL_DATABASE TO NSHM;
-
-GRANT CREATE ANY TABLE TO NSHM;
-
-GRANT DELETE ANY TABLE TO NSHM;
-
-GRANT DROP ANY TABLE TO NSHM;
-
-GRANT INSERT ANY TABLE TO NSHM;
-
-GRANT SELECT ANY SEQUENCE TO NSHM;
-
-GRANT SELECT ANY TABLE TO NSHM;
-
-GRANT UNLIMITED TABLESPACE TO NSHM;
-
-GRANT UPDATE ANY TABLE TO NSHM;
-
-//Tạo thư mục impport cho trường hợp dùng impdb
-CREATE DIRECTORY NISSO_NSKS AS 'D:\NISSO\20151020';
-
-//Command chạy ở máy server
-CD D:\app\Administrator\product\11.2.0\dbhome_1\BIN
-D:
-impdp [UserName]/[Password]@[DataBaseID]:[Port]/[ORACLE_SID] DUMPFILE=[FILENAME(NOT FILEPATH)] DIRECTORY=[FOLDERID] log=[LOGFILENAME]
-impdp NSMST/NSNSMST_1@192.168.136.72:1521/SIG4ORCL DUMPFILE='HON06_NSMST_EXPDP.DMP' DIRECTORY=NISSO_20151111 log='20151111_NSMST_NSHM.log'
-
-
-//
-//Export
-expdp NSKP/NSKP DIRECTORY=NISSO_20160823 DUMPFILE= NSKP10.dmp SCHEMAS=NSKP LOGFILE=NSKP10.log
-//Import
-impdp NSKB/NSKB@192.168.136.72:1521/SIG4ORCL DUMPFILE='NSKP10.DMP' DIRECTORY=NISSO_20160823 REMAP_SCHEMA=NSKP:N
-SKB log='20160823_NSKB.log'
-//---------------------------

@@ -41,7 +41,7 @@ import StringOracle from "./database/oracle/tips/string";
 import SystemOracle from "./database/oracle/tips/system";
 import SqltextSessionProcess from "./database/oracle/sqltextSessionProcess";
 import Tips from "./tips";
-import VisualStudioCode from "./tips/software/visualStudioCode";
+import VisualStudioCodeAddHotkey from "./tips/software/visualStudioCode_AddHotkey.js";
 import ExcelTutorial from "./tutorials/excel";
 import ExcelFilter1 from "./tutorials/excel/sortAndFilter/filter1.js";
 
@@ -100,6 +100,9 @@ import PostgreSQLChapter28 from "./tutorials/postgreSQL/21_28/chapter28";
 import MasterLayout from "../themes/masterLayout";
 import JavaTutorial from "./tutorials/java";
 import JavaTutorialChapter1 from "./tutorials/java/1_10/chapter1";
+import DumpFull from "./database/oracle/importDumpOracle/dumpFull";
+import VisualStudioCodeExtention from "./tips/software/visualStudioCode_Extention.js";
+import SwapDataTwoCell from "./tutorials/excel/swapDataTwoCell";
 
 
 const RoutesRoot = () => {
@@ -118,6 +121,7 @@ const RoutesRoot = () => {
           <Route path="/database/oracle" element={<DatabaseOracle />} />
           <Route path="/database/oracle/changeLanguageOracleSQLDeveloper" element={<ChangeLanguageOracleSQLDeveloper />} />
           <Route path="/database/oracle/importDumpOracle" element={<ImportDumpOracle />} />
+          <Route path="/database/oracle/dumpFull" element={<DumpFull />} />
           <Route path="/database/oracle/listenerAndTnsnames" element={<ListenerAndTnsnames />} />
           <Route path="/database/oracle/sqltextSessionProcess" element={<SqltextSessionProcess />} />
           <Route path="/database/oracle/tips/string" element={<StringOracle />} />
@@ -128,7 +132,8 @@ const RoutesRoot = () => {
           <Route path="/japan/vocabulary/unit1" element={<VocabularyUnit1 />} /> */}
 
           <Route path="/tips" element={<Tips />} />
-          <Route path="/tips/software/visualStudioCode" element={<VisualStudioCode />} />
+          <Route path="/tips/software/visualStudioCode_AddHotkey" element={<VisualStudioCodeAddHotkey />} />
+          <Route path="/tips/software/visualStudioCode_Extention" element={<VisualStudioCodeExtention />} />
 
           <Route path="/utilities" element={<Utilities />} />
           <Route path="/utilities/createTableFromExcel" element={<CreateTableFromExcel />} />
@@ -146,6 +151,7 @@ const RoutesRoot = () => {
           <Route path="/tutorial/excel" element={<ExcelTutorial />} />
           <Route path="/tutorial/excel/filter1" element={<ExcelFilter1 />} />
           <Route path="/tutorial/excel/charactersInExcel" element={<CharactersInExcel />} />
+          <Route path="/tutorial/excel/swapDataTwoCell" element={<SwapDataTwoCell />} />
 
           <Route path="/tutorial/net-angular" element={<NetAngular />} />
           <Route path="/tutorial/net-angular/lesson1" element={<NALesson1 />} />
