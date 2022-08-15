@@ -1,0 +1,6 @@
+- Thông tin DB
+- Cách kết nối
+- Phiên bản VS, Eclipse
+- Phiên bản ear
+- Các bước thực hiện (PG, PD, SD...)
+- Máy ảo (nếu có)

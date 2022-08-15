@@ -1,0 +1,14 @@
+applib 3.3c: 
+	N:\(BiMat)Projects\(Bi mat) PE Addon\PE Demokit\PE33cDEMOKIT\PE33cDEMO\PEWEB\appLib
+
+properties 3.3c:
+	N:\(BiMat)Projects\(Bi mat) PE Addon\PE Demokit\PE33cDEMOKIT\PE33cDEMO\PEWEB\properties
+
+ear 3.3c:
+	N:\(BiMat)Projects\(Bi mat) PE Addon\PE Demokit\PE33cDEMOKIT\PE33cDEMO\PEWEB\ear
+
+DB:
+	N:\(BiMat)Projects\(Bi mat) PE Addon\PE Demokit\PE33cDEMOKIT\PE33cDEMO\PEDB
+
+Tài liệu + SRC:
+	N:\(BiMat)Projects\(Bi mat) L2\6.Du an\調査依頼】経費精算のEdge非互換について

@@ -1,0 +1,18 @@
+Tiêu chi PGR:
++ Cách viết source đúng chuẩn (sample)
++ Tất cả chức năng cùng 1 dạng thì cách viết phải giống nhau (tránh tình trạng bạn A làm kiểu này bạn B làm kiểu khác)
++ Chạy qua 1 cái, đảm bảo xuất được (nếu thấy bất thường/kỳ kỳ) thì bắt
++ Tất cả lỗi phải được post redmine
+
+
+Nên mỗi ngày trước 9h các ngoài việc điền tiến độ trên PE thì nhờ các bạn báo cáo thêm trên skype dùm nhé.
+
+※Hôm qua (18/7):
+・ PD/UT chức năng ABC: xong xx%
+・ PD/UT chức năng XYZ: xong xx%
+ Vấn đê: NNNNNNNNNNNNNNNNNNNNNNNNNNN
+
+※Dự định hôm nay (19/7):
+・ PD/UT chức năng ABC: dự định xong xx%
+・ PD/UT chức năng XYZ: dự định xong xx%
+ Vấn đê: Cần nhờ hỗ trợ NNNNNNNNNNNNNNNNN
