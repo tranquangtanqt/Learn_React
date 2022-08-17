@@ -11,6 +11,10 @@ const JavaTutorial = () => {
           text: "Type Conversion",
           path: "/tutorial/java/chapter1",
         },
+        {
+          text: "Getters and Setters",
+          path: "/tutorial/java/chapter2",
+        },
       ],
     },
 

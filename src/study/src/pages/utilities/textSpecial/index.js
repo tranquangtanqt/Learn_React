@@ -1,6 +1,25 @@
 import { Col, Divider, Row } from "antd";
+import { Fragment } from "react";
 
 const TextSpecial = () => {
+  const tableData = [
+    {
+      jp: `対応しました。`,
+      vn: `Đã đối ứng`,
+    },
+    {
+      jp: `対応したものを送り致します。`,
+      vn: `Gửi lại phần đã đối ứng`,
+    },
+    {
+      jp: `送りました。`,
+      vn: `Đã gửi`,
+    },
+    {
+      jp: `LOT_NOの値を取得する。`,
+      vn: `lấy giá trị của LOT_NO`,
+    },
+  ];
   return (
     <>
       <Divider orientation="left">Text Special</Divider>
@@ -20,18 +39,14 @@ const TextSpecial = () => {
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>対応しました。</td>
-                <td>Đã đối ứng</td>
-              </tr>
-              <tr>
-                <td>対応したものを送り致します。</td>
-                <td>Gửi lại phần đã đối ứng</td>
-              </tr>
-              <tr>
-                <td>送りました。</td>
-                <td>Đã gửi</td>
-              </tr>
+              {tableData?.map((data, key) => (
+                <Fragment key={key}>
+                  <tr>
+                    <td>{data.jp}</td>
+                    <td>{data.vn}</td>
+                  </tr>
+                </Fragment>
+              ))}
             </tbody>
           </table>
         </Col>
