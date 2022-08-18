@@ -44,7 +44,7 @@ const Utilities = () => {
         },
         {
           text: "Tiny MCE",
-          path: "/utilities/tinyMC",
+          path: "/utilities/tinyMCE",
         },
       ],
     },

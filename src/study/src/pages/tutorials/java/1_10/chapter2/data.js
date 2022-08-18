@@ -9,8 +9,7 @@ export const JavaTutorialChapter2Data = {
         if(name!=null && name.length()>2)
         this.name = name;
     } 
-}
-`,
+}`,
 
     two: `public String getName(){
     if(name.length()>16)
@@ -24,8 +23,7 @@ export const JavaTutorialChapter2Data = {
 
     public int getCount() { return count; }
     public void setCount(int c) { count = c; }
-}
-`,
+}`,
 
     four: `public class CountHolder {
     public int count = 0;
@@ -55,7 +53,7 @@ export const JavaTutorialChapter2Data = {
     }
 }`,
 
-    seven: ` getVariableName() //Getter, The variable name should start with uppercase
+    seven: `getVariableName() //Getter, The variable name should start with uppercase
 setVariableName(..) //Setter, The variable name should start with uppercase`,
 
     eight: `isVariableName() //Getter, The variable name should start with uppercase

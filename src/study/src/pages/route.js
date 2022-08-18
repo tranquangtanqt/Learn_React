@@ -104,6 +104,10 @@ import DumpFull from "./database/oracle/importDumpOracle/dumpFull";
 import VisualStudioCodeExtention from "./tips/software/visualStudioCode_Extention.js";
 import SwapDataTwoCell from "./tutorials/excel/swapDataTwoCell";
 import JavaTutorialChapter2 from "./tutorials/java/1_10/chapter2";
+import JavaTutorialChapter3 from "./tutorials/java/1_10/chapter3";
+import JavaTutorialChapter4 from "./tutorials/java/1_10/chapter4";
+import JavaTutorialChapter5 from "./tutorials/java/1_10/chapter5";
+import JavaTutorialChapter6 from "./tutorials/java/1_10/chapter6";
 
 
 const RoutesRoot = () => {
@@ -168,6 +172,10 @@ const RoutesRoot = () => {
           <Route path="/tutorial/java" element={<JavaTutorial />} />
           <Route path="/tutorial/java/chapter1" element={<JavaTutorialChapter1 />} />
           <Route path="/tutorial/java/chapter2" element={<JavaTutorialChapter2 />} />
+          <Route path="/tutorial/java/chapter3" element={<JavaTutorialChapter3 />} />
+          <Route path="/tutorial/java/chapter4" element={<JavaTutorialChapter4 />} />
+          <Route path="/tutorial/java/chapter5" element={<JavaTutorialChapter5 />} />
+          <Route path="/tutorial/java/chapter6" element={<JavaTutorialChapter6 />} />
 
           <Route path="/tutorial/postgreSQL" element={<PostgreSQL />} />
           <Route path="/tutorial/postgreSQL/chapter1" element={<PostgreSQLChapter1 />} />

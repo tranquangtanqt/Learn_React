@@ -18,7 +18,7 @@ const JavaTutorialChapter2 = () => {
           </p>
         </Col>
         <Col span={22} offset={2}>
-          <Code code={JavaTutorialChapter2Data.one} language="sql" />
+          <Code code={JavaTutorialChapter2Data.one} language="java" />
         </Col>
 
         <Col span={23} offset={1}>
@@ -31,7 +31,7 @@ const JavaTutorialChapter2 = () => {
           </p>
         </Col>
         <Col span={22} offset={2}>
-          <Code code={JavaTutorialChapter2Data.two} language="sql" />
+          <Code code={JavaTutorialChapter2Data.two} language="java" />
         </Col>
         <Col span={23} offset={1}>
           <p>
@@ -50,7 +50,7 @@ const JavaTutorialChapter2 = () => {
           <p>Consider a basic class containing an object with getters and setters in Java:</p>
         </Col>
         <Col span={22} offset={2}>
-          <Code code={JavaTutorialChapter2Data.three} language="sql" />
+          <Code code={JavaTutorialChapter2Data.three} language="java" />
         </Col>
 
         <Col span={23} offset={1}>
@@ -61,7 +61,7 @@ const JavaTutorialChapter2 = () => {
           </p>
         </Col>
         <Col span={22} offset={2}>
-          <Code code={JavaTutorialChapter2Data.four} language="sql" />
+          <Code code={JavaTutorialChapter2Data.four} language="java" />
         </Col>
         <Col span={23} offset={1}>
           <p>
@@ -88,7 +88,7 @@ const JavaTutorialChapter2 = () => {
           </p>
         </Col>
         <Col span={22} offset={2}>
-          <Code code={JavaTutorialChapter2Data.five} language="sql" />
+          <Code code={JavaTutorialChapter2Data.five} language="java" />
         </Col>
         <Col span={23} offset={1}>
           <p>
@@ -138,7 +138,7 @@ const JavaTutorialChapter2 = () => {
           </p>
         </Col>
         <Col span={22} offset={2}>
-          <Code code={JavaTutorialChapter2Data.six} language="sql" />
+          <Code code={JavaTutorialChapter2Data.six} language="java" />
         </Col>
 
         <Col span={23} offset={1}>

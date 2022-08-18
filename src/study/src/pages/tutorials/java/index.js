@@ -15,6 +15,22 @@ const JavaTutorial = () => {
           text: "Getters and Setters",
           path: "/tutorial/java/chapter2",
         },
+        {
+          text: "Reference Data Types",
+          path: "/tutorial/java/chapter3",
+        },
+        {
+          text: "Java Compiler - 'javac'",
+          path: "/tutorial/java/chapter4",
+        },
+        {
+          text: "Documenting Java Code",
+          path: "/tutorial/java/chapter5",
+        },
+        {
+          text: "Command line Argument Processing",
+          path: "/tutorial/java/chapter6",
+        },
       ],
     },
 
