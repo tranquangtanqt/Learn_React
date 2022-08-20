@@ -16,6 +16,30 @@ const TextSpecial = () => {
       vn: `Đã gửi`,
     },
     {
+      jp: `テーブルAの一覧を表示する。`,
+      vn: `Hiển thị danh sách bảng A`,
+    },
+    {
+      jp: `テーブルAにデータを新規追加する。`,
+      vn: `Thêm dữ liệu mới vào bảng A.`,
+    },
+    {
+      jp: `テーブルAのデータを更新する。`,
+      vn: `Cập nhật dữ liệu của bảng A`,
+    },
+    {
+      jp: `テーブルAのデータを削除る。`,
+      vn: `Xóa dữ liệu của table A`,
+    },
+    {
+      jp: `テーブルAの「MM」列を更新する。`,
+      vn: `Cập nhật cột MM của bảng A`,
+    },
+    {
+      jp: `Aの合計を取得する。`,
+      vn: `Lấy tổng của A`,
+    },
+    {
       jp: `LOT_NOの値を取得する。`,
       vn: `lấy giá trị của LOT_NO`,
     },
