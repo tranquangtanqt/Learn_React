@@ -53,11 +53,11 @@ const Utilities = () => {
       links: [
         {
           text: "Random Insert SQL",
-          path: "/utilities/createTableFromExcel",
+          path: "/utilities/randomInsertSQL",
         },
         {
           text: "Create Table From Excel",
-          path: "/utilities/randomInsertSQL",
+          path: "/utilities/createTableFromExcel",
         },
       ],
     },
