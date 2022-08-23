@@ -108,6 +108,7 @@ import JavaTutorialChapter3 from "./tutorials/java/1_10/chapter3";
 import JavaTutorialChapter4 from "./tutorials/java/1_10/chapter4";
 import JavaTutorialChapter5 from "./tutorials/java/1_10/chapter5";
 import JavaTutorialChapter6 from "./tutorials/java/1_10/chapter6";
+import TodoApp from "./utilities/todoApp";
 
 
 const RoutesRoot = () => {
@@ -152,6 +153,7 @@ const RoutesRoot = () => {
           <Route path="/utilities/textCommon" element={<TextCommon />} />
           <Route path="/utilities/textSpecial" element={<TextSpecial />} />
           <Route path="/utilities/tinyMCE" element={<TinyMCE />} />
+          <Route path="/utilities/todoApp" element={<TodoApp />} />
 
           <Route path="/tutorial/excel" element={<ExcelTutorial />} />
           <Route path="/tutorial/excel/filter1" element={<ExcelFilter1 />} />

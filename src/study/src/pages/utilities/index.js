@@ -61,6 +61,15 @@ const Utilities = () => {
         },
       ],
     },
+    {
+      title: "App",
+      links: [
+        {
+          text: "Todo",
+          path: "/utilities/todoApp",
+        },
+      ],
+    },
   ];
 
   return (
