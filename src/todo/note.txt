@@ -28,3 +28,5 @@ https://www.udemy.com/
 User: is.u03@enclave.vn
 Pass: Enclave@455
 
+Tham khảo
+https://github.com/paulnguyen-mn/redux-photo-app
