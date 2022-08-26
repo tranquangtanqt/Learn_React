@@ -15,6 +15,15 @@ const Tips = () => {
         },
       ],
     },
+    {
+      title: "Batch",
+      links: [
+        {
+          text: "Common",
+          path: "/tips/batch/common",
+        },
+      ],
+    },
   ];
   return (
     <>

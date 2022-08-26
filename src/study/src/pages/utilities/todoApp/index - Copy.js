@@ -1,9 +1,8 @@
-import { Button, Card, Col, Form, Input, Row, Select } from "antd";
+import { Button, Col, Form, Input, Row } from "antd";
 import React, { Fragment, useEffect, useState } from "react";
 import "./index.scss";
 
 import TodoApi from "../../../api/todoApi";
-import TextArea from "antd/lib/input/TextArea";
 
 const TodoApp = () => {
   const [todos, setTodos] = useState([]);
@@ -24,7 +23,6 @@ const TodoApp = () => {
         if (response.status === "OK") {
           setTodos(response);
           setTodoDetails(response.data[0].todoDetail);
-          console.log(response.data[0].todoDetail)
         }
       } catch (error) {
         console.log("Failed to fetch todo list: ", error);
@@ -35,29 +33,35 @@ const TodoApp = () => {
 
   return (
     <>
-      <Row gutter={16}>
-        <Col span={8}>
-          <Card
-            title="Danh sách công việc"
-            // headStyle={{ backgroundColor: "#5c6cfa", color: "#ffffff" }}
-            // rgb(96, 125, 139)
-            headStyle={{ backgroundColor: "#607d8b", color: "#ffffff" }}
-            bodyStyle={{ backgroundColor: "rgb(198 218 227)" }}
-          >
-            <Form.Item label="Nhiệm vụ">
-              <Input placeholder="Tên nhiệm vụ" />
-            </Form.Item>
-            <ul>
-            {todoDetails?.map((detail) => (
-              <li key={detail.id}>{detail.name}</li>
-            ))}
-          </ul>
-          </Card>
-        </Col>
-      </Row>
+      <Row justify="start">
+        <Col sm={24} md={24}>
+          <Row justify="start" className="todo-list">
+            <Col sm={24} md={24} lg={24}>
+              <h1>
+                Danh sách
+                <span>Việc hôm nay không để ngày mai.</span>
+              </h1>
 
-      <Row>
-      <Col sm={24} md={12}>
+              <Form
+                // labelCol={{ span: 4 }}
+                wrapperCol={{ span: 24 }}
+                layout="horizontal"
+                // onValuesChange={onFormLayoutChange}
+                // disabled={componentDisabled}
+              >
+                <Form.Item label="Input" wrapperCol={{ sm: 0, md: 14 }}>
+                  <Input />
+                </Form.Item>
+
+                <Form.Item label="Button">
+                  <Button>Button</Button>
+                </Form.Item>
+              </Form>
+            </Col>
+          </Row>
+        </Col>
+
+        {/* <Col sm={24} md={12}>
           <main id="todolist">
             <h1>
               Danh sách
@@ -97,6 +101,15 @@ const TodoApp = () => {
             </li>
             <p>Danh sách nhiệm vụ trống.</p> 
           </main>
+        </Col> */}
+
+        <Col sm={24} md={12}>
+          <h1>List users</h1>
+          <ul>
+            {todos.data?.map((todo) => (
+              <li key={todo.id}>{todo.name}</li>
+            ))}
+          </ul>
         </Col>
       </Row>
     </>

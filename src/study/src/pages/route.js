@@ -109,6 +109,7 @@ import JavaTutorialChapter4 from "./tutorials/java/1_10/chapter4";
 import JavaTutorialChapter5 from "./tutorials/java/1_10/chapter5";
 import JavaTutorialChapter6 from "./tutorials/java/1_10/chapter6";
 import TodoApp from "./utilities/todoApp";
+import BatchCommon from "./tips/batch/batchCommon";
 
 
 const RoutesRoot = () => {
@@ -140,6 +141,7 @@ const RoutesRoot = () => {
           <Route path="/tips" element={<Tips />} />
           <Route path="/tips/software/visualStudioCode_AddHotkey" element={<VisualStudioCodeAddHotkey />} />
           <Route path="/tips/software/visualStudioCode_Extention" element={<VisualStudioCodeExtention />} />
+          <Route path="/tips/batch/common" element={<BatchCommon />} />
 
           <Route path="/utilities" element={<Utilities />} />
           <Route path="/utilities/createTableFromExcel" element={<CreateTableFromExcel />} />
