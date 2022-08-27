@@ -24,7 +24,6 @@ const { Header, Sider, Content } = Layout;
 const MasterLayout = ({ children }) => {
   const [collapsed, setCollapsed] = useState(false);
   const [hidden, setHidden] = useState(false);
-
   const toggle = () => {
     setCollapsed(!collapsed);
   };
@@ -78,9 +77,9 @@ const MasterLayout = ({ children }) => {
           }
           {
             <Menu.Item key={"sub_tips"} >
-            <span> <QuestionCircleOutlined /> <span>Tips</span> </span>
-            <Link to={"/tips"} />
-          </Menu.Item>
+              <span> <QuestionCircleOutlined /> <span>Tips</span> </span>
+              <Link to={"/tips"} />
+            </Menu.Item>
           }
           {
             <SubMenu key="sub_tutorial" title={ <span> <HighlightOutlined /> <span>Tutorials</span> </span> } >

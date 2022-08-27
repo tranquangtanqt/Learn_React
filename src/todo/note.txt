@@ -30,3 +30,9 @@ Pass: Enclave@455
 
 Tham khảo
 https://github.com/paulnguyen-mn/redux-photo-app
+
+màu xanh lá: #87d068
+xanh da trời: #5c6cfa
+
+
+https://www.codegrepper.com/code-examples/javascript/axios+interceptors+request

@@ -1,19 +1,17 @@
-import { Button, Card, Col, Form, Input, Row, Select } from "antd";
-import React, { Fragment, useEffect, useState } from "react";
+import { Col, Form, Input, Row, List, Avatar, Button } from "antd";
+import React, { useEffect, useState } from "react";
 import "./index.scss";
+// import InfiniteScroll from "react-infinite-scroll-component";
 
 import TodoApi from "../../../api/todoApi";
-import TextArea from "antd/lib/input/TextArea";
+
+import { LoadingOutlined, DeleteOutlined, EditOutlined } from "@ant-design/icons";
 
 const TodoApp = () => {
-  const [todos, setTodos] = useState([]);
+  // const [todos, setTodos] = useState([]);
   const [todoDetails, setTodoDetails] = useState([]);
 
-  useEffect(() => {
-    callAPI();
-  }, []);
-
-  const callAPI = () => {
+  const loadDataApi = () => {
     const fetchTodoList = async () => {
       try {
         const params = {
@@ -22,9 +20,9 @@ const TodoApp = () => {
         };
         const response = await TodoApi.getAll(params);
         if (response.status === "OK") {
-          setTodos(response);
+          // setTodos(response);
           setTodoDetails(response.data[0].todoDetail);
-          console.log(response.data[0].todoDetail)
+          console.log(response.data[0].todoDetail);
         }
       } catch (error) {
         console.log("Failed to fetch todo list: ", error);
@@ -33,10 +31,47 @@ const TodoApp = () => {
     fetchTodoList();
   };
 
+  const editDetail = (id) => {
+    alert(id);
+  };
+
+  const createTaskDetail = (event) => {
+    if (event.key === "Enter") {
+      const createTaskDetailAPI = async () => {
+        try {
+          let todo = JSON.stringify({id: 1});
+          let bodyFormData = new FormData();
+          bodyFormData.append("name", event.target.value);
+          bodyFormData.append("sortOrder", 10);
+          bodyFormData.append("todo", todo);
+
+          let todoDeails = {};
+          todoDeails.name = event.target.value;
+          todoDeails.sortOrder = 10;
+          todoDeails.todo = todo;
+
+          const params = {
+            data: bodyFormData,
+          };
+          const response = await TodoApi.create(bodyFormData);
+
+          console.log(response);
+        } catch (error) {
+          console.log("Failed to fetch todo list: ", error);
+        }
+      };
+      createTaskDetailAPI();
+    }
+  };
+
+  useEffect(() => {
+    loadDataApi();
+  }, []);
+
   return (
     <>
-      <Row gutter={16}>
-        <Col span={8}>
+      {/* <Row gutter={24}>
+        <Col sm={24} md={8}>
           <Card
             title="Danh sách công việc"
             // headStyle={{ backgroundColor: "#5c6cfa", color: "#ffffff" }}
@@ -48,16 +83,46 @@ const TodoApp = () => {
               <Input placeholder="Tên nhiệm vụ" />
             </Form.Item>
             <ul>
-            {todoDetails?.map((detail) => (
-              <li key={detail.id}>{detail.name}</li>
-            ))}
-          </ul>
+              {todoDetails?.map((detail) => (
+                <li key={detail.id}>{detail.name}</li>
+              ))}
+            </ul>
           </Card>
+        </Col>
+      </Row> */}
+
+      <Row gutter={24}>
+        <Col sm={24} md={12}></Col>
+        <Col sm={24} md={12}>
+          <h1>
+            Danh sách công việc
+            {/* <span>Việc hôm nay không để ngày mai.</span> */}
+          </h1>
+          <Form.Item label="Nhiệm vụ">
+            <Input placeholder="Tên nhiệm vụ" onKeyDown={(event) => createTaskDetail(event)} />
+          </Form.Item>
+          <List
+            dataSource={todoDetails}
+            renderItem={(item) => (
+              <List.Item key={item.id}>
+                <List.Item.Meta
+                  avatar={<Avatar style={{ backgroundColor: "rgb(221 109 109)" }} icon={<LoadingOutlined />} />}
+                  title={item.name}
+                />
+                <Button type="link" size={"small"} onClick={() => editDetail(item.id)}>
+                  <EditOutlined />
+                </Button>
+                <Button type="link" size={"small"} onClick={() => editDetail(item.id)}>
+                  <DeleteOutlined />
+                </Button>
+              </List.Item>
+            )}
+          />
         </Col>
       </Row>
 
-      <Row>
-      <Col sm={24} md={12}>
+      <Row justify="start">
+        <Col sm={24} md={12}>
           <main id="todolist">
             <h1>
               Danh sách
@@ -95,7 +160,7 @@ const TodoApp = () => {
                 </button>
               </div>
             </li>
-            <p>Danh sách nhiệm vụ trống.</p> 
+            <p>Danh sách nhiệm vụ trống.</p>
           </main>
         </Col>
       </Row>
