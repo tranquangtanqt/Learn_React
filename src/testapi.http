@@ -1,0 +1,23 @@
+@baseUrl = https://learning-spring-boot-api.herokuapp.com/api/v1
+@baseUrlUser = {{baseUrl}}/user
+
+
+###todo
+GET {{baseUrlUser}}/todo/getall
+content-type: application/json
+
+###todoDetail
+GET {{baseUrlUser}}/todo/detail/getall
+content-type: application/json
+###
+POST {{baseUrlUser}}/todo/detail/create
+accept: */*
+content-type: application/json
+
+{
+  "name": "new2",
+  "sortOrder": 12,
+  "todo": {
+    "id": 1
+  }
+}

@@ -14,15 +14,11 @@ const TodoApp = () => {
   const loadDataApi = () => {
     const fetchTodoList = async () => {
       try {
-        const params = {
-          // _page: 1,
-          // _limit: 10,
-        };
+        const params = {};
         const response = await TodoApi.getAll(params);
         if (response.status === "OK") {
           // setTodos(response);
           setTodoDetails(response.data[0].todoDetail);
-          console.log(response.data[0].todoDetail);
         }
       } catch (error) {
         console.log("Failed to fetch todo list: ", error);
@@ -39,25 +35,34 @@ const TodoApp = () => {
     if (event.key === "Enter") {
       const createTaskDetailAPI = async () => {
         try {
-          let todo = JSON.stringify({id: 1});
+          let todo = {
+            id: 1
+          };
           let bodyFormData = new FormData();
           bodyFormData.append("name", event.target.value);
           bodyFormData.append("sortOrder", 10);
           bodyFormData.append("todo", todo);
 
-          let todoDeails = {};
-          todoDeails.name = event.target.value;
-          todoDeails.sortOrder = 10;
-          todoDeails.todo = todo;
+          let todoDetailDto = {};
+          todoDetailDto.updatedAt = null;
+          todoDetailDto.createAt = null;
+          todoDetailDto.id = null;
+          todoDetailDto.name = event.target.value;
+          todoDetailDto.sortOrder = 11;
+          todoDetailDto.todo = todo;
+          // console.log(todoDetailDto)
 
           const params = {
-            data: bodyFormData,
+            todoDetailDto: todoDetailDto
           };
-          const response = await TodoApi.create(bodyFormData);
-
+          // console.log(params)
+          const response = await TodoApi.create(params);
           console.log(response);
         } catch (error) {
           console.log("Failed to fetch todo list: ", error);
+            if( error.response ){
+              console.log(error.response.data); // => the response payload 
+          }
         }
       };
       createTaskDetailAPI();

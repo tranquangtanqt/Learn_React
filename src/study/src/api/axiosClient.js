@@ -7,11 +7,12 @@ const AxiosClient = axios.create({
   headers: {
     "content-type": "application/json",
   },
-  paramsSerializer: (params) => { queryString.stringify(params); console.log(params) },
+  // paramsSerializer: (params) => queryString.stringify(params)
 });
 
 AxiosClient.interceptors.request.use(async (config) => {
   // Handle token here ...
+  config.params = config.params || {};
   return config;
 });
 
