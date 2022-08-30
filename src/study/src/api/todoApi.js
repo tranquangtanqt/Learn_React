@@ -1,14 +1,14 @@
 import AxiosClient from "./axiosClient";
 
 const TodoApi = {
-  getAll: (params) => {
+  getAll: () => {
     const url = "/todo/getall";
-    return AxiosClient.get(url, { params });
+    return AxiosClient.get(url);
   },
 
   create: (params) => {
     const url = "/todo/detail/create";
-    return AxiosClient.postForm(url, {params});
+    return AxiosClient.postForm(url, params);
   }
 };
 

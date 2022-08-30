@@ -1,132 +1,86 @@
-import { Col, Form, Input, Row, List, Avatar, Button } from "antd";
-import React, { useEffect, useState } from "react";
-import "./index.scss";
-// import InfiniteScroll from "react-infinite-scroll-component";
-
+import { Avatar, Button, Col, Form, Input, List, message, Row } from "antd";
+import React, { memo, useEffect, useState } from "react";
+import { DeleteOutlined, EditOutlined, LoadingOutlined } from "@ant-design/icons";
 import TodoApi from "../../../api/todoApi";
-
-import { LoadingOutlined, DeleteOutlined, EditOutlined } from "@ant-design/icons";
+import "./index.scss";
 
 const TodoApp = () => {
-  // const [todos, setTodos] = useState([]);
   const [todoDetails, setTodoDetails] = useState([]);
 
-  const loadDataApi = () => {
-    const fetchTodoList = async () => {
-      try {
-        const params = {};
-        const response = await TodoApi.getAll(params);
-        if (response.status === "OK") {
-          // setTodos(response);
-          setTodoDetails(response.data[0].todoDetail);
-        }
-      } catch (error) {
-        console.log("Failed to fetch todo list: ", error);
+  const fetchTodoList = async () => {
+    try {
+      const response = await TodoApi.getAll();
+      if (response.status === "OK") {
+        setTodoDetails(response?.data ? response?.data[0]?.todoDetail : []);
       }
-    };
-    fetchTodoList();
+    } catch (error) {
+      message.error(error?.response?.data);
+    }
   };
 
   const editDetail = (id) => {
     alert(id);
   };
 
-  const createTaskDetail = (event) => {
-    if (event.key === "Enter") {
-      const createTaskDetailAPI = async () => {
-        try {
-          let todo = {
-            id: 1
-          };
-          let bodyFormData = new FormData();
-          bodyFormData.append("name", event.target.value);
-          bodyFormData.append("sortOrder", 10);
-          bodyFormData.append("todo", todo);
+  const createTaskDetail = async (event) => {
+    try {
+      await TodoApi.create({
+        name: event.target.value,
+        sortOrder: 11,
+        todo: {
+          id: 1
+        },
+      });
 
-          let todoDetailDto = {};
-          todoDetailDto.updatedAt = null;
-          todoDetailDto.createAt = null;
-          todoDetailDto.id = null;
-          todoDetailDto.name = event.target.value;
-          todoDetailDto.sortOrder = 11;
-          todoDetailDto.todo = todo;
-          // console.log(todoDetailDto)
+      // setTodoDetails([
+      //   ...todoDetails,
+      //   data
+      // ]);
 
-          const params = {
-            todoDetailDto: todoDetailDto
-          };
-          // console.log(params)
-          const response = await TodoApi.create(params);
-          console.log(response);
-        } catch (error) {
-          console.log("Failed to fetch todo list: ", error);
-            if( error.response ){
-              console.log(error.response.data); // => the response payload 
-          }
-        }
-      };
-      createTaskDetailAPI();
+      message.success("Create successful!");
+    } catch (error) {
+      message.error(error?.response?.data);
     }
   };
 
   useEffect(() => {
-    loadDataApi();
+    fetchTodoList();
   }, []);
 
   return (
     <>
-      {/* <Row gutter={24}>
-        <Col sm={24} md={8}>
-          <Card
-            title="Danh sách công việc"
-            // headStyle={{ backgroundColor: "#5c6cfa", color: "#ffffff" }}
-            // rgb(96, 125, 139)
-            headStyle={{ backgroundColor: "#607d8b", color: "#ffffff" }}
-            bodyStyle={{ backgroundColor: "rgb(198 218 227)" }}
-          >
-            <Form.Item label="Nhiệm vụ">
-              <Input placeholder="Tên nhiệm vụ" />
-            </Form.Item>
-            <ul>
-              {todoDetails?.map((detail) => (
-                <li key={detail.id}>{detail.name}</li>
-              ))}
-            </ul>
-          </Card>
-        </Col>
-      </Row> */}
-
-      <Row gutter={24}>
-        <Col sm={24} md={12}></Col>
+      <Row gutter={24} justify={"center"}>
+        {/* <Col sm={24} md={12}></Col> */}
         <Col sm={24} md={12}>
           <h1>
             Danh sách công việc
-            {/* <span>Việc hôm nay không để ngày mai.</span> */}
           </h1>
           <Form.Item label="Nhiệm vụ">
-            <Input placeholder="Tên nhiệm vụ" onKeyDown={(event) => createTaskDetail(event)} />
+            <Input placeholder="Tên nhiệm vụ" onPressEnter={createTaskDetail} />
           </Form.Item>
-          <List
-            dataSource={todoDetails}
-            renderItem={(item) => (
-              <List.Item key={item.id}>
-                <List.Item.Meta
-                  avatar={<Avatar style={{ backgroundColor: "rgb(221 109 109)" }} icon={<LoadingOutlined />} />}
-                  title={item.name}
-                />
-                <Button type="link" size={"small"} onClick={() => editDetail(item.id)}>
-                  <EditOutlined />
-                </Button>
-                <Button type="link" size={"small"} onClick={() => editDetail(item.id)}>
-                  <DeleteOutlined />
-                </Button>
-              </List.Item>
-            )}
-          />
+          {
+            <List
+              dataSource={todoDetails}
+              renderItem={(item) => (
+                <List.Item key={item?.id}>
+                  <List.Item.Meta
+                    avatar={<Avatar style={{ backgroundColor: "rgb(221 109 109)" }} icon={<LoadingOutlined />} />}
+                    title={item?.name}
+                  />
+                  <Button type="link" size={"small"} onClick={() => editDetail(item?.id)}>
+                    <EditOutlined />
+                  </Button>
+                  <Button type="link" size={"small"} onClick={() => editDetail(item?.id)}>
+                    <DeleteOutlined />
+                  </Button>
+                </List.Item>
+              )}
+            />
+          }
         </Col>
       </Row>
 
-      <Row justify="start">
+      {/* <Row justify="start">
         <Col sm={24} md={12}>
           <main id="todolist">
             <h1>
@@ -168,9 +122,9 @@ const TodoApp = () => {
             <p>Danh sách nhiệm vụ trống.</p>
           </main>
         </Col>
-      </Row>
+      </Row> */}
     </>
   );
 };
 
-export default TodoApp;
+export default memo(TodoApp);
