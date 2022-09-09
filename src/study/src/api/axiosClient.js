@@ -1,9 +1,10 @@
+import { message } from "antd";
 import axios from "axios";
 import queryString from "query-string";
 
 const AxiosClient = axios.create({
-  // baseURL: process.env.REACT_APP_API_URL,
   baseURL: process.env.REACT_APP_API_URL,
+  // baseURL: 'http://localhost:8081/api/v1',
   headers: {
     "content-type": "application/json",
   },
@@ -26,7 +27,12 @@ AxiosClient.interceptors.response.use(
   },
   (error) => {
     // Handle errors
-    throw error;
+    if(error.response?.data?.code === 417){
+      message.error(error.response.data.status);
+    } else {
+      message.error(error?.response.status);
+    }
+    // throw error;
   }
 );
 

@@ -1,15 +1,19 @@
-import AxiosClient from "./axiosClient";
+import axiosClient from "./axiosClient";
 
-const TodoApi = {
+const todoApi = {
   getAll: () => {
-    const url = "/todo/getall";
-    return AxiosClient.get(url);
+    const url = "/todo";
+    return axiosClient.get(url);
   },
 
-  create: (params) => {
-    const url = "/todo/detail/create";
-    return AxiosClient.postForm(url, params);
+  getById: (id) => {
+    const url = `/todo/${id}`;
+    return axiosClient.get(url);
   }
+  // create: (params) => {
+  //   const url = "/todo/detail/create";
+  //   return axiosClient.postForm(url, params);
+  // }
 };
 
-export default TodoApi;
+export default todoApi;

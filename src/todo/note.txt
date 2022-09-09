@@ -36,3 +36,9 @@ xanh da trời: #5c6cfa
 
 
 https://www.codegrepper.com/code-examples/javascript/axios+interceptors+request
+
+--Get all file in folder
+SET DIR=D:\test\Backup
+for %%f in (%DIR%\*.*) do (
+	echo %%~nxf
+)
