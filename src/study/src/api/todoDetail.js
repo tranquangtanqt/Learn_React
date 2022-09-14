@@ -1,13 +1,13 @@
 import axiosClient from "./axiosClient";
 
 const todoDetailApi = {
-  create: (params) => {
+  create: (todoDetail) => {
     const url = "/todo/detail";
-    return axiosClient.postForm(url, params);
+    return axiosClient.postForm(url, todoDetail);
   },
-  update: (params) => {
+  update: (todoDetail) => {
     const url = "/todo/detail";
-    return axiosClient.put(url, params);
+    return axiosClient.put(url, todoDetail);
   },
   delete: (id) => {
     const url = `/todo/detail/${id}`;

@@ -1,5 +1,5 @@
-import { Avatar, Button, Col, Form, Input, List, message, Popconfirm, Row } from "antd";
-import React, { memo, useEffect, useRef, useState } from "react";
+import { Avatar, Button, Col, Form, Input, List, message, Popconfirm, Row, Modal } from "antd";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { DeleteOutlined, EditOutlined, LoadingOutlined } from "@ant-design/icons";
 import todoApi from "../../../api/todoApi";
@@ -9,13 +9,9 @@ import "./index.scss";
 
 const TodoApp = () => {
   const [todoList, setTodoList] = useState([]);
-  const [createFlg, setCreateFlg] = useState(true);
   const [form] = Form.useForm();
-  const inputRef = useRef(null);
-  const sharedProps = {
-    defaultValue: '',
-    ref: inputRef,
-  };
+  const [isModalVisible, setIsModalVisible] = useState(false);
+
   let params = useParams();
 
   const fetchTodoList = async (id) => {
@@ -27,7 +23,6 @@ const TodoApp = () => {
         details = details.filter((obj) => !obj.delFlg);
         details.sort((a, b) => a.sortOrder - b.sortOrder);
         setTodoList(details);
-        
       }
     }
     // console.log(response);
@@ -39,41 +34,26 @@ const TodoApp = () => {
 
   const initScreen = () => {
     form.resetFields(["name"]);
-    setCreateFlg(true);
-  }
-
-  const editDetail = (id) => {
-    setCreateFlg(false);
-    let detail = todoList.filter((obj) => obj.id === id);
-    form.setFieldsValue({name: detail[0]?.name});
-    inputRef.current.focus({
-      cursor: 'start',
-    })
   };
 
-  const createOrUpdateTodoDetail = async () => {
+  const editDetail = (id) => {
+    let detail = todoList.filter((obj) => obj.id === id);
+    form.setFieldsValue({ "name-edit": detail[0]?.name });
+    form.setFieldsValue({ "id_detail_edit": id });
+    setIsModalVisible(true);
+  };
+
+  const createTodoDetail = async () => {
     if (form.getFieldValue("name").trim() === "") {
       return;
     }
 
-    let response;
-    if(createFlg){
-      response = await todoDetailApi.create({
-        name: form.getFieldValue("name"),
-        todo: {
-          id: params.todo_id,
-        },
-      });
-      console.log(response);
-    } else {
-      response = await todoDetailApi.update({
-        name: form.getFieldValue("name"),
-        todo: {
-          id: params.todo_id,
-        },
-      });
-      console.log(response);
-    }
+    const response = await todoDetailApi.create({
+      name: form.getFieldValue("name"),
+      todo: {
+        id: params.todo_id,
+      },
+    });
 
     if (response?.status === "OK") {
       setTodoList([]);
@@ -87,6 +67,27 @@ const TodoApp = () => {
       initScreen();
       message.success("Thêm thành công!");
     }
+  };
+
+  const updateTodoDetail = async () => {
+    const response = await todoDetailApi.update({
+      id: form.getFieldValue("id_detail_edit"),
+      name: form.getFieldValue("name-edit"),
+    });
+
+    if (response?.status === "OK") {
+      setTodoList([]);
+      if (response.data?.todoDetail) {
+        let details = response.data?.todoDetail;
+        details = details.filter((obj) => !obj.delFlg);
+        details.sort((a, b) => a.sortOrder - b.sortOrder);
+        setTodoList(details);
+      }
+
+      initScreen();
+      message.success("Sửa thành công!");
+    }
+    setIsModalVisible(false);
   };
 
   const deleteTodoDetail = async (id) => {
@@ -106,7 +107,12 @@ const TodoApp = () => {
 
   return (
     <>
-      <Form form={form}>
+      <Form
+        form={form}
+        initialValues={{
+          name: "",
+        }}
+      >
         <Row gutter={24} justify={"start"}>
           <Col sm={24} md={12}>
             Mô tả
@@ -114,10 +120,7 @@ const TodoApp = () => {
           <Col sm={24} md={12}>
             <h1>Danh sách công việc</h1>
             <Form.Item label="Nhiệm vụ" name={"name"}>
-              <Input {...sharedProps}
-                placeholder="Tên nhiệm vụ"
-                onPressEnter={createOrUpdateTodoDetail}
-              />
+              <Input placeholder="Tên nhiệm vụ" onPressEnter={createTodoDetail} />
             </Form.Item>
             {
               <List
@@ -128,15 +131,10 @@ const TodoApp = () => {
                       avatar={<Avatar style={{ backgroundColor: "rgb(221 109 109)" }} icon={<LoadingOutlined />} />}
                       title={item?.name}
                     />
-                    <Button type="link" size={"small"} onClick={() => editDetail(item?.id)}>
+                    <Button type="link" size={"small"} onClick={() => editDetail(item.id)}>
                       <EditOutlined />
                     </Button>
-                    <Popconfirm
-                      title="Bạn có chắc xóa nhiệm vụ này?"
-                      onConfirm={() => deleteTodoDetail(item?.id)}
-                      okText="Có"
-                      cancelText="Không"
-                    >
+                    <Popconfirm title="Bạn có chắc xóa nhiệm vụ này?" onConfirm={() => deleteTodoDetail(item?.id)} okText="Có" cancelText="Không">
                       <Button type="link" size={"small"}>
                         <DeleteOutlined />
                       </Button>
@@ -145,54 +143,27 @@ const TodoApp = () => {
                 )}
               />
             }
+
+            <Modal
+              title="Chỉnh sửa tên"
+              visible={isModalVisible}
+              onOk={updateTodoDetail}
+              onCancel={() => {
+                setIsModalVisible(false);
+              }}
+            >
+              <Form.Item name={"name-edit"}>
+                <Input placeholder="Tên nhiệm vụ" />
+              </Form.Item>
+              <Form.Item name={"id_detail_edit"} hidden>
+                <Input type="hidden" />
+              </Form.Item>
+            </Modal>
           </Col>
         </Row>
       </Form>
-      {/* <Row justify="start">
-        <Col sm={24} md={12}>
-          <main id="todolist">
-            <h1>
-              Danh sách
-              <span>Việc hôm nay không để ngày mai.</span>
-            </h1>
-
-            <form>
-              <input type="text" name="name" id="name" />
-              <input type="text" name="id" id="name" />
-              <button type="button">Thêm mới</button>
-            </form>
-
-            {todoDetails?.map((detail, key) => (
-              <li key={key}>
-                <span className="label">{detail.name}</span>
-                <div className="actions">
-                  <button className="btn-picto" type="button">
-                    <i className="fas fa-user-edit"></i>
-                  </button>
-                  <button className="btn-picto" type="button" aria-label="Delete" title="Delete">
-                    <i className="fas fa-trash"></i>
-                  </button>
-                </div>
-              </li>
-            ))}
-
-            <li className="done">
-              <span className="label">123</span>
-              <div className="actions">
-                <button className="btn-picto" type="button">
-                  <i className="fas fa-edit"></i>
-                </button>
-                <button className="btn-picto" type="button" aria-label="Delete" title="Delete">
-                  <i className="fas fa-trash"></i>
-                </button>
-              </div>
-            </li>
-            <p>Danh sách nhiệm vụ trống.</p>
-          </main>
-        </Col>
-      </Row> */}
     </>
   );
 };
 
-export default memo(TodoApp);
+export default TodoApp;
